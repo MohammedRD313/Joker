@@ -1,12 +1,12 @@
 databases:
-  - name: joker2
+  - name: hussein
     ipAllowList: []
     region: frankfurt
     plan: free
 services:
   - type: web
-    name: joker1
     plan: free
+    name: joker
     env: python
     buildCommand: pip install -U -r requirements.txt
     startCommand: python3 ser.py & python3 -m JoKeRUB
@@ -30,6 +30,6 @@ services:
         value: Asia/Baghdad 
       - key: DATABASE_URL
         fromDatabase:
-          name: joker2
+          name: hussein
           property: connectionString   
     autoDeploy: false

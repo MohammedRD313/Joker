@@ -1,7 +1,5 @@
 telethon
 pydub
-flask
-flask_restful
 ocrspace
 ShazamAPI
 selenium
@@ -10,6 +8,7 @@ flask_restful
 setuptools
 wheel
 cloudscraper
+pymongo[srv]
 speechrecognition
 colour
 qrcode
