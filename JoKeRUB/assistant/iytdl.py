@@ -60,10 +60,10 @@ async def iytdl_inline(event):
         input_url = (reply.text).strip()
     if not input_url:
         return await edit_delete(
-            event, "**▾∮ اكتب الرابط او قم بالرد ع رابط يوتيوب ✓**"
+            event, "**✎┊‌ اكتب الرابط او قم بالرد ع رابط يوتيوب ✓**"
         )
     catevent = await edit_or_reply(
-        event, f"**▾∮ جاري البحث في اليوتيوب : ☟** \n`'{input_url}'`"
+        event, f"**✎┊‌ جاري البحث في اليوتيوب : ☟** \n`'{input_url}'`"
     )
     flag = True
     cout = 0
@@ -83,7 +83,7 @@ async def iytdl_inline(event):
         await catevent.delete()
         await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
     else:
-        await catevent.edit("**▾∮ عذرًا لم أستطيع ايجاد اي نتائج! ✘**")
+        await catevent.edit("**✎┊‌ عذرًا لم أستطيع ايجاد اي نتائج! ✘**")
 
 
 @l313l.tgbot.on(
@@ -121,11 +121,11 @@ async def ytdl_download_callback(c_q: CallbackQuery):  # sourcery no-metrics
     callback_continue += f"\n\nكود التنسيق : {disp_str}"
     await c_q.answer(callback_continue, alert=True)
     upload_msg = await c_q.client.send_message(
-        BOTLOG_CHATID, "**▾∮ جارٍ التحميل الرجاء الانتظار ...**"
+        BOTLOG_CHATID, "**✎┊‌ جارٍ التحميل الرجاء الانتظار ...**"
     )
     yt_url = BASE_YT_URL + yt_code
     await c_q.edit(
-        f"<b>▾∮ جارٍ تنزيل 🎧 {media_type} ...</b>\n\n  <a href={yt_url}> <b>الرابط 🔗</b></a>\n🆔  <b>كود التنسيق</b> : {disp_str}",
+        f"<b>✎┊‌ جارٍ تنزيل 🎧 {media_type} ...</b>\n\n  <a href={yt_url}> <b>الرابط 🔗</b></a>\n🆔  <b>كود التنسيق</b> : {disp_str}",
         parse_mode="html",
     )
     if downtype == "v":
@@ -142,7 +142,7 @@ async def ytdl_download_callback(c_q: CallbackQuery):  # sourcery no-metrics
         else:
             _fpath = _path
     if not _fpath:
-        await edit_delete(upload_msg, "**▾∮ لم يتم العثور على شيء!**")
+        await edit_delete(upload_msg, "**✎┊‌ لم يتم العثور على شيء!**")
         return
     if not thumb_pic and downtype == "v":
         thumb_pic = str(await pool.run_in_thread(download)(await get_ytthumb(yt_code)))
@@ -172,7 +172,7 @@ async def ytdl_download_callback(c_q: CallbackQuery):  # sourcery no-metrics
     uploaded_media = await c_q.client.send_file(
         BOTLOG_CHATID,
         file=media,
-        caption=f"<b>▾∮ اسم الملف : \n</b><code>{os.path.basename(Path(_fpath))}</code>",
+        caption=f"<b>✎┊‌ اسم الملف : \n</b><code>{os.path.basename(Path(_fpath))}</code>",
         parse_mode="html",
     )
     await upload_msg.delete()
@@ -205,7 +205,7 @@ async def ytdl_callback(c_q: CallbackQuery):
     )
     if not os.path.exists(PATH):
         return await c_q.answer(
-            "**▾∮ لم تعد بيانات البحث موجودة \nيرجى إجراء البحث مرة أخرى ...**",
+            "**✎┊‌ لم تعد بيانات البحث موجودة \nيرجى إجراء البحث مرة أخرى ...**",
             alert=True,
         )
     with open(PATH) as f:
