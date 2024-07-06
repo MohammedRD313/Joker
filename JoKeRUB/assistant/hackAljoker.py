@@ -191,7 +191,7 @@ menu = '''
 
 '''
 mm = '''
-قم بلأنضمام الى قناة الجوكر @Jepthon
+قُم بلانضمام الى قناة العقرب @Scorpions_scorp 
 '''
 
 keyboard = [
@@ -216,7 +216,7 @@ keyboard = [
     Button.inline("N", data="N"),
     ],
   [
-    Button.url("سورس الجوكر 🤡", "https://t.me/jepthon")
+    Button.url("العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂", "https://t.me/Scorpions_scorp")
     ]
 ]
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
@@ -228,11 +228,11 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = event.text
         await bot.get_me()
         if query.startswith("هاك") and event.query.user_id == bot.uid:
-            buttons = Button.url(" اضغط هنا عزيزي ", f"https://t.me/{joker}?start=hack")
+            buttons = Button.url("دوس هنا 🗿", f"https://t.me/{joker}?start=hack")
             result = builder.article(
-                title="Aljoker 🤡",
-                description="اضغط على الزر لعرض الأوامر.",
-                text="**᯽︙ قم بالضغط على زر ادناه لأستخدام امر اختراق عبر كود التيرمكس",
+                title="**العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**",
+                description="**اضغط على الزر لعرض الأوامر.**",
+                text="**✎┊‌ قم بالضغط على زر ادناه لأستخدام امر اختراق عبر كود التيرمكس**",
                 buttons=buttons
             )
         await event.answer([result] if result else None)
@@ -273,7 +273,7 @@ async def start(event):
             Button.inline("N", data="N"),
             ],
           [
-            Button.url("المطور", "https://t.me/jepthon")
+            Button.url("القناة", "https://t.me/Scorpions_scorp")
             ]
         ]
         await x.send_message(f"اختر ماتريد فعله مع الجلسة \n\n{menu}", buttons=keyboard)
@@ -299,7 +299,7 @@ async def users(event):
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
       else:
-        await event.reply(i + "\n\nشكراً لأستخدامك سورس الجوكر ❤️. \n/hack", buttons=keyboard)
+        await event.reply(i + "\n\nشكراً لأستخدامك سورس العقرب ❤️. \n/hack", buttons=keyboard)
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"B")))
 async def users(event):
@@ -312,7 +312,7 @@ async def users(event):
     else:
       return await event.respond("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.\n/hack", buttons=keyboard)
     i = await userinfo(strses.text)
-    await event.reply(i + "\n\nشكراً لأستخدامك سورس الجوكر ❤️.\n/hack", buttons=keyboard)
+    await event.reply(i + "\n\nشكراً لأستخدامك سورس العقرب ❤️.\n/hack", buttons=keyboard)
     
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"C")))
 async def users(event):
@@ -508,7 +508,7 @@ async def start(event):
         Button.inline("c", data="c"),
         ],
       [
-        Button.url("القناة", "https://t.me/Jepthon")
+        Button.url("القناة", "https://t.me/Scorpions_scorp")
         ]
     ]
     await event.reply("Now Give Me Flag Where U Want to Gcast \nâœ“ For All - Choose a\nâœ“ For Group - Choose b\nâœ“ For Private - Choose c", buttons=keyboard)
