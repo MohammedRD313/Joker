@@ -150,12 +150,12 @@ class HuReClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**تقرير خطا الجوكر**\n\n"
-                        link = "[هنا](https://t.me/jepthonSupport)"
+                        text = "**تقرير خطا العقرب 🦂**\n\n"
+                        link = "[هنا](https://t.me/Scorpions_scorp)"
                         text += "إذا كنت تريد يمكنك الإبلاغ عن ذلك"
                         text += f"- فقط قم بإعادة توجيه هذه الرسالة {link}.\n"
                         text += "لا يتم تسجيل اي خطا فقط التاريخ والوقت\n\n"
-                        text += f"**⌯︙تقرير الخطأ : ** [{new['error']}]({pastelink})"
+                        text += f"**✎┊‌تقرير الخطأ : ** [{new['error']}]({pastelink})"
                         await check.client.send_message(
                             Config.PRIVATE_GROUP_BOT_API_ID, text, link_preview=False
                         )
@@ -256,7 +256,7 @@ class HuReClient(TelegramClient):
                             "error": str(sys.exc_info()[1]),
                             "date": datetime.datetime.now(),
                         }
-                        ftext += "\n\n--------END JoKeRUB TRACEBACK LOG--------"
+                        ftext += "\n\n"
                         command = 'git log --pretty=format:"%an: %s" -5'
                         ftext += "\n\n\nLast 5 commits:\n"
                         output = (await runcmd(command))[:2]
@@ -265,12 +265,12 @@ class HuReClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**تقرير خطا الجوكر**\n\n"
-                        link = "[هنا](https://t.me/GroupHuRe)"
+                        text = "**تقرير خطا العقرب 🦂**\n\n"
+                        link = "[هنا](https://t.me/Scorpions_scorp)"
                         text += "إذا كنت تريد يمكنك الإبلاغ عن ذلك"
                         text += f"- فقط قم بإعادة توجيه هذه الرسالة {link}.\n"
                         text += "لا يتم تسجيل اي خطا فقط التاريخ والوقت\n\n"
-                        text += f"**⌯︙تقرير الخطأ : ** [{new['error']}]({pastelink})"
+                        text += f"**✎┊‌تقرير الخطأ : ** [{new['error']}]({pastelink})"
                         await check.client.send_message(
                             Config.PRIVATE_GROUP_BOT_API_ID, text, link_preview=False
                         )
