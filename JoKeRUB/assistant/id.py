@@ -11,19 +11,19 @@ async def _(event):
             bot_api_file_id = pack_bot_file_id(r_msg.media)
             await tgbot.send_message(
                 event.chat_id,
-                "⌯︙ايـدي الـدردشة: `{}`\n⌯︙ايدي المستخدم: `{}`".format(
+                "✎┊‌ ايـدي الـدردشة: `{}`\n✎┊‌ايدي المستخدم: `{}`".format(
                     str(event.chat_id), str(r_msg.from_id), bot_api_file_id
                 ),
             )
         else:
             await tgbot.send_message(
                 event.chat_id,
-                "⌯︙ايـدي الـدردشة: `{}`\n⌯︙ايدي المستخدم: `{}`".format(
+                "✎┊‌ايـدي الـدردشة: `{}`\n✎┊‌ايدي المستخدم: `{}`".format(
                     str(event.chat_id), str(r_msg.from_id)
                 ),
             )
     else:
         await tgbot.send_message(
-            event.chat_id, "⌯︙ايـدي الـدردشة: `{}`".format(str(event.chat_id))
+            event.chat_id, "✎┊‌ايـدي الـدردشة: `{}`".format(str(event.chat_id))
         )
 
