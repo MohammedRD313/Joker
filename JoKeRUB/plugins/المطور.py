@@ -49,7 +49,7 @@ async def amireallyalive(event):
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  - "
     CUSTOM_ALIVE_TEXT = gvarstatus("ALIVE_TEXT")
-    CAT_IMG = "https://images.squarespace-cdn.com/content/v1/561b8ec9e4b0fcd88caa0732/1614152685578-J3H29R1XVTI8FN2TF5WW/REDA.jpg"
+    CAT_IMG = "https://telegra.ph/file/e35ea3f43faab1e0d9d91.jpg"
     if CAT_IMG:
         CAT = [x for x in CAT_IMG.split()]
         A_IMG = list(CAT)
