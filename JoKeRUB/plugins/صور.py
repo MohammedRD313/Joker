@@ -37,9 +37,9 @@ async def img_sampler(event):
         query = str(event.pattern_match.group(2))
     if not query:
         return await edit_or_reply(
-            event, "** ᯽︙ قم بكتابة النص مع الامر او بالرد على النص **"
+            event, "** ✎┊‌ قم بكتابة النص مع الامر او بالرد على النص **"
         )
-    cat = await edit_or_reply(event, "** ᯽︙  جارِ البحث عن الصور انتظر قليلاً ✓ **")
+    cat = await edit_or_reply(event, "** ✎┊‌  جارِ البحث عن الصور انتظر قليلاً ✓ **")
     if event.pattern_match.group(1) != "":
         lim = int(event.pattern_match.group(1))
         lim = min(lim, 10)

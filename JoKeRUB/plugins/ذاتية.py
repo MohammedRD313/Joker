@@ -24,30 +24,32 @@ async def dato(event):
     await bot.send_file(
         "me",
         pic,
-        caption=f"""
-- تـم حفظ الصـورة بنجـاح ✓ 
-- غير مبري الذمه اذا استخدمت الامر للابتزاز
-- CH: @Jepthon
-- Dev: @lMl10l
-  """,
+        caption=f"""**
+- تـم حفظ الصـورة بنجـاح ✓
+ 
+- اذا تستخدمها للابتزاز نخرب 😑
+- Dev: @ZS_QS
+- Dev: @Zo_r0
+- CH: @Scorpions_scorp
+  **""",
     )
     await event.delete()
 #By @jepthon For You 🌹
 @l313l.on(admin_cmd(pattern="(الذاتية تشغيل|ذاتية تشغيل)"))
 async def reda(event):
     if gvarstatus ("savepicforme"):
-        return await edit_delete(event, "**᯽︙حفظ الذاتيات مفعل وليس بحاجة للتفعيل مجدداً **")
+        return await edit_delete(event, "**✎┊‌حفظ الذاتيات مفعل وليس بحاجة للتفعيل مجدداً **")
     else:
         addgvar("savepicforme", "reda")
-        await edit_delete(event, "**᯽︙تم تفعيل ميزة حفظ الذاتيات بنجاح ✓**")
+        await edit_delete(event, "**✎┊‌تم تفعيل ميزة حفظ الذاتيات بنجاح ✓**")
  
 @l313l.on(admin_cmd(pattern="(الذاتية تعطيل|ذاتية تعطيل)"))
 async def Reda_Is_Here(event):
     if gvarstatus ("savepicforme"):
         delgvar("savepicforme")
-        return await edit_delete(event, "**᯽︙تم تعطيل حفظت الذاتيات بنجاح ✓**")
+        return await edit_delete(event, "**✎┊‌تم تعطيل حفظت الذاتيات بنجاح ✓**")
     else:
-        await edit_delete(event, "**᯽︙انت لم تفعل حفظ الذاتيات لتعطيلها!**")
+        await edit_delete(event, "**✎┊‌انت لم تفعل حفظ الذاتيات لتعطيلها!**")
 
 def joker_unread_media(message):
     return message.media_unread and (message.photo or message.video)
@@ -70,12 +72,14 @@ async def Hussein(event, caption):
 async def Reda(event):
     if gvarstatus("savepicforme"):
         caption = """**
-           ♡  غير مبري الذمة اذا استعملته للأبتزاز  ♡
-♡ تم حفظ الذاتية بنجاح ✓
-♡ تم الصنع : @Jepthon
-♡ أسم المرسل : [{0}](tg://user?id={1})
-♡  تاريخ الذاتية : `{2}`
-♡  أرسلت في يوم `{3}`
-       ♡    ALJOKER    ♡
+           ها لك تبتز بالعالم 🗿 
+           
+✎┊‌ تم حفظ الذاتية بنجاح ✓
+✎┊‌ تم الصنع بواسطة : @Scorpions_scorp
+✎┊‌ أسم المرسل : [{0}](tg://user?id={1})
+✎┊‌  تاريخ الذاتية : `{2}`
+✎┊‌  أرسلت في يوم `{3}`
+
+      العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂
         **"""
         await Hussein(event, caption)

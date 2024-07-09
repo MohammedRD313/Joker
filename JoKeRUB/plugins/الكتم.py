@@ -18,8 +18,8 @@ from . import BOTLOG, BOTLOG_CHATID, admin_groups, get_user_from_event
 
 plugin_category = "admin"
 joker_users = []
-joker_mute = "https://telegra.ph/file/c5ef9550465a47845c626.jpg"
-joker_unmute = "https://telegra.ph/file/e9473ddef0b58cdd7f9e7.jpg"
+joker_mute = "https://telegra.ph/file/396efcfa71389027e4f5c.jpg"
+joker_unmute = "https://telegra.ph/file/f9adf9269eb7a5aa2f122.jpg"
 #=================== الكـــــــــــــــتم  ===================  #
 
 @l313l.ar_cmd(pattern=f"كتم(?:\s|$)([\s\S]*)")
@@ -32,9 +32,9 @@ async def mutejep(event):
                 "**- هـذا المسـتخـدم مڪتـوم . . سـابقـاً **"
             )
         if event.chat_id == l313l.uid:
-            return await edit_delete(event, "**𖡛... . لمـاذا تࢪيـد كتم نفسـك؟  ...𖡛**")
-        if event.chat_id == 705475246:
-            return await edit_delete(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  ╰**")
+            return await edit_delete(event, "**‌ . لمـاذا تࢪيـد كتم نفسـك؟  **")
+        if event.chat_id ==815010872:
+            return await edit_delete(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  **")
         try:
             mute(event.chat_id, event.chat_id)
             joker_users.append(replied_user)
@@ -44,7 +44,7 @@ async def mutejep(event):
             return await event.client.send_file(
                 event.chat_id,
                 joker_mute,
-                caption="** تم ڪتـم الـمستخـدم  . . بنجـاح 🔕✓**",
+                caption="** تم ڪتـم الـمستخـدم  . . بنجـاح ✓**",
             )
         if BOTLOG:
             await event.client.send_message(
@@ -64,9 +64,9 @@ async def mutejep(event):
         if not user:
             return
         if user.id == l313l.uid:
-            return await edit_or_reply(event, "**𖡛... . لمـاذا تࢪيـد كتم نفسـك؟  ...𖡛**")
-        if user.id == 705475246:
-            return await edit_or_reply(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  ╰**")
+            return await edit_or_reply(event, "** . لمـاذا تࢪيـد كتم نفسـك؟  **")
+        if user.id == 7045643989:
+            return await edit_or_reply(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  **")
         if is_muted(user.id, event.chat_id):
             return await edit_or_reply(
                 event, "**عــذراً .. هـذا الشخـص مكتــوم سـابقــاً هنـا**"
@@ -187,13 +187,13 @@ async def unmutejep(event):
 @l313l.ar_cmd(pattern=r"قائمة المكتومين")
 async def show_muted_users(event):
     if len(joker_users) > 0:
-        joker_list = "**᯽︙ قائمة المستخدمين المكتومين:**\n"
+        joker_list = "**✎┊‌ قائمة المستخدمين المكتومين:**\n"
         for i, user in enumerate(joker_users, start=1):
             joker_link = f"[{user.first_name}](tg://user?id={user.id})"
             joker_list += f"{i}. {joker_link}\n"
         await event.edit(joker_list)
     else:
-        await event.edit("**᯽︙ لا يوجد مستخدمين مكتومين حاليًا**")
+        await event.edit("**✎┊‌ لا يوجد مستخدمين مكتومين حاليًا**")
 # ===================================== # 
 
 @l313l.ar_cmd(incoming=True)

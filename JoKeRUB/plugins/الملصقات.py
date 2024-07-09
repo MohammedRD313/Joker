@@ -55,7 +55,7 @@ EMOJI_SEN = [
 ]
 
 KANGING_STR = [
-    " ᯽︙ انتظر يتم صنع الملصق ",
+    " ✎┊‌ انتظر يتم صنع الملصق ",
 ]
 
 
@@ -598,12 +598,12 @@ hash=0
         if document_sticker.emoticon not in pack_emojis:
             pack_emojis.append(document_sticker.emoticon)
     OUTPUT = (
-        f"**᯽︙ عنوان الملصق:** `{get_stickerset.set.title}\n`"
-        f"**᯽︙ الاسم القصير للملصق:** `{get_stickerset.set.short_name}`\n"
-        f"**᯽︙ المـسؤل:** `{get_stickerset.set.official}`\n"
-        f"**᯽︙ الارشيف:** `{get_stickerset.set.archived}`\n"
-        f"**᯽︙ حزمة الملصق:** `{get_stickerset.set.count}`\n"
-        f"**᯽︙ الايموجي المستخدم**\n{' '.join(pack_emojis)}"
+        f"**✎┊‌ عنوان الملصق:** `{get_stickerset.set.title}\n`"
+        f"**✎┊‌ الاسم القصير للملصق:** `{get_stickerset.set.short_name}`\n"
+        f"**✎┊‌ المـسؤل:** `{get_stickerset.set.official}`\n"
+        f"**✎┊‌ الارشيف:** `{get_stickerset.set.archived}`\n"
+        f"**✎┊‌ حزمة الملصق:** `{get_stickerset.set.count}`\n"
+        f"**✎┊‌ الايموجي المستخدم**\n{' '.join(pack_emojis)}"
     )
     await catevent.edit(OUTPUT)
 

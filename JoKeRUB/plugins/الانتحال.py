@@ -24,7 +24,7 @@ DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
 DEFAULTUSERBIO = (
     str(DEFAULT_BIO)
     if DEFAULT_BIO
-    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @jepthon"
+    else "الحمد لله دائماً وابداً @Scorpions_scorp"
 )
 
 @l313l.ar_cmd(pattern="انتحال(?:\s|$)([\s\S]*)")
@@ -34,7 +34,7 @@ async def _(event):
     replied_user, error_i_a = await get_user_from_event(event)
     if replied_user is None:
         return await edit_delete(event, "**يجب الرد على رسالة اولاً**")
-    if replied_user.id == 705475246:
+    if replied_user.id == 815010872:
         return await edit_delete(event, "**لا تحاول تنتحل المطور مطي!**")
     user_id = replied_user.id
     profile_pic = await event.client.download_profile_photo(user_id, Config.TEMP_DIR)
@@ -73,7 +73,7 @@ async def _(event):
         delgvar("lname")
         delgvar("oabout")
         return await edit_delete(event, f"**فشل في الانتحال بسبب:**\n__{e}__")
-    await edit_delete(event, "**⌁︙تـم نسـخ الـحساب بـنجاح ،✅**")
+    await edit_delete(event, "**✎┊‌تـم نسـخ الـحساب بـنجاح ،✅**")
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID,
@@ -102,13 +102,13 @@ async def _(event):
     await event.client(functions.account.UpdateProfileRequest(about=bio))
     await event.client(functions.account.UpdateProfileRequest(first_name=name))
     await event.client(functions.account.UpdateProfileRequest(last_name=blank))
-    await edit_delete(event, "⌁︙تـم اعـادة الـحساب بـنجاح ،✅")
+    await edit_delete(event, "✎┊‌تـم اعـادة الـحساب بـنجاح ،✅")
     delgvar("fname")
     delgvar("lname")
     delgvar("oabout")
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, f"⌁︙تـم اعادة الـحساب الى وضـعه الاصلـي ،✅")
+            BOTLOG_CHATID, f"✎┊‌تـم اعادة الـحساب الى وضـعه الاصلـي ،✅")
 #Reda
 jeps = ["JoKeRUB", "HuResupport"]
 @l313l.ar_cmd(pattern="انتحال_الدردشه")
@@ -126,12 +126,12 @@ async def reda(event):
                 chat_id
             ))
         except ValueError:
-            return await edit_delete(event, "**᯽︙ لا يوجد هكذا كروب او قناة تاكد من اليوزر او الايدي ويجب ان يكون/تكون عام/عامة وليس خاص/خاصة**")
+            return await edit_delete(event, "**✎┊‌ لا يوجد هكذا كروب او قناة تاكد من اليوزر او الايدي ويجب ان يكون/تكون عام/عامة وليس خاص/خاصة**")
         mych = await l313l(GetFullChannelRequest(
                 event.chat_id
             ))
         if msg in jeps:
-            return await edit_delete(event, "**᯽︙ لا يمكنك انتحال قناة او كروب السورس !**")
+            return await edit_delete(event, "**✎┊‌ لا يمكنك انتحال قناة او كروب السورس !**")
         addgvar(f"{event.chat_id}name", mych.chats[0].title)
         addgvar(f"{event.chat_id}about", mych.full_chat.about)
         try:
@@ -142,7 +142,7 @@ async def reda(event):
         except ChatAdminRequiredError:
             delgvar (f"{event.chat_id}name")
             delgvar (f"{event.chat_id}about")
-            return await edit_delete(event, "**᯽︙ يجب ان تكون لديك صلاحيات لتغيير الاسم والصورة والبايو لانتحال قناة او كروب**")
+            return await edit_delete(event, "**✎┊‌ يجب ان تكون لديك صلاحيات لتغيير الاسم والصورة والبايو لانتحال قناة او كروب**")
         except FloodWaitError:
             return await edit_delete(event, "**انتضر مدة لا تقل عن 5 دقائق للانتحال مجدداً FLOODWAITERROR خطأ من التيليجرام**")
         try:
@@ -158,19 +158,19 @@ async def reda(event):
             await l313l(functions.channels.EditPhotoRequest(event.chat_id, pfile))
         except FloodWaitError:
             return await edit_delete(event, "**انتضر مدة لا تقل عن 5 دقائق للانتحال مجدداً FLOODWAITERROR خطأ من التيليجرام**")
-        await edit_delete(event, "**᯽︙ تم الانتحال بنجاح ✓**")
+        await edit_delete(event, "**✎┊‌ تم الانتحال بنجاح ✓**")
         base64m = 'QGplcHRob24='
         message = base64.b64decode(base64m)
         messageo = message.decode()
         if len(messageo) != 8:
-            return await edit_delete(event, "لا تغير الرسالة @jepthon")
+            return await edit_delete(event, "لا تغير الرسالة @Scorpions_scorp")
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID,
                 f"#الانتحال\nتم إنتحال الدردشه @{msg}\n©{messageo}",
             )
     else:
-        await edit_delete(event, "**᯽︙ يمكنك انتحال قناة او كروب في قناة او كروب فقط**")
+        await edit_delete(event, "**✎┊‌ يمكنك انتحال قناة او كروب في قناة او كروب فقط**")
 
 #Reda
 @l313l.ar_cmd(pattern="اعادة_الدردشه")
@@ -183,7 +183,7 @@ async def reda_back(event):
                     title=gvarstatus (f"{event.chat_id}name")
                 ))
             except ChatAdminRequiredError:
-                return await edit_delete(event, "**᯽︙ يجب ان تكون لديك صلاحيات لتغيير الاسم والصورة والبايو لإعادة القناة او الكروب**")
+                return await edit_delete(event, "**✎┊‌ يجب ان تكون لديك صلاحيات لتغيير الاسم والصورة والبايو لإعادة القناة او الكروب**")
             except FloodWaitError:
                 return await edit_delete(event, "**انتضر مدة لا تقل عن 5 دقائق لإعادة الدردشة مجدداً FLOODWAITERROR خطأ من التيليجرام**")
             await l313l(functions.messages.EditChatAboutRequest(
@@ -194,10 +194,10 @@ async def reda_back(event):
                     await l313l(
                     functions.photos.DeletePhotosRequest(id=[types.InputPhoto( id=photo.id, access_hash=photo.access_hash, file_reference=photo.file_reference )])
                     )
-            await edit_delete(event, "**᯽︙ تم إعادة الكروب/ القناة بنجاح**")
+            await edit_delete(event, "**✎┊‌ تم إعادة الكروب/ القناة بنجاح**")
             delgvar (f"{event.chat_id}name")
             delgvar (f"{event.chat_id}about")
         else:
             await edit_delete(event, "**لم تقم بانتحال قناة او كروب للإعادة**")
     else:
-        await edit_delete(event, "**᯽︙ يمكنك إعادة الدردشة المُنتحِله عبر كتابة الامر في الكروب او القناة المُنتحِله فقط**")
+        await edit_delete(event, "**✎┊‌ يمكنك إعادة الدردشة المُنتحِله عبر كتابة الامر في الكروب او القناة المُنتحِله فقط**")

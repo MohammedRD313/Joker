@@ -40,12 +40,12 @@ async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await edit_or_reply(event, "** ᯽︙ يتـم التـأكـد انتـظر قليلا رجاءا**")
+    await edit_or_reply(event, "** ✎┊‌ 𝗣𝗹𝗲𝗮𝘀𝗲 𝘄𝗮𝗶𝘁 𝗳𝗼𝗿 𝘄𝗮𝗶𝘁𝗶𝗻𝗴 ⏳**")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "⿻┊‌‎"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**父[ 𝙹𝙾𝙺𝙴𝚁 𝙸𝚂 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 ✓ ](t.me/jepthon)父**"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**╔==========================╗ **"
     HuRe_IMG = gvarstatus("ALIVE_PIC") or Config.A_PIC
     l313l_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = l313l_caption.format(
@@ -87,10 +87,19 @@ async def amireallyalive(event):
 
 
 temp = """{ALIVE_TEXT}
-**‎{EMOJI}‌‎𝙽𝙰𝙼𝙴 𖠄 {mention}** ٫
-**‌‎{EMOJI}‌‎𝙿𝚈𝚃𝙷𝙾𝙽 𖠄 `{pyver}`** ٫
-**‌‎{EMOJI}‌‎𝙹𝙾𝙺𝙴𝚁 𖠄 `{telever}`** ٫
-**‌‎{EMOJI}‌‎𝚄𝙿𝚃𝙸𝙼𝙴 𖠄 `{uptime}`** ٫
-‌‎**{EMOJI}‌‎‌‎𝙿𝙸𝙽𝙶 𖠄 `{ping}`** ٫
-‌‎**{EMOJI}‌‎‌‎𝚂𝙴𝚃𝚄𝙿 𝙳𝙰𝚃𝙴 𖠄 `{Tare5}`** ٫
-**𖠄 J𝗼𝗸𝗲𝗿 𝘂𝘀𝗲𝗿𝗯𝗼𝘁 𖠄**"""
+    [𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆](t.me/Scorpions_scorp) ✅
+
+**‎{EMOJI}‌‎𝐍𝐢𝐦𝐞 | {mention}** ٫
+
+**‌‎{EMOJI}‌‎𝐏𝐲𝐭𝐡𝐨𝐧 | `{pyver}`** ٫
+
+**‌‎{EMOJI}‌‎𝐒𝐜𝐨𝐫𝐩𝐢𝐨𝐧 | `{telever}`** ٫
+
+**‌‎{EMOJI}‌‎𝐔𝐩𝐭𝐢𝐦𝐞 | `{uptime}`** ٫
+
+‌‎**{EMOJI}‌‎‌‎𝐏𝐢𝐧𝐠 | `{ping}`** ٫
+
+‌‎**{EMOJI}‌‎‌‎𝐒𝐞𝐭𝐮𝐩 𝐃𝐚𝐭𝐞 | `{Tare5}`** ٫
+
+**     - 𝗚𝗼 𝗮𝗻𝗱 𝗲𝗻𝗷𝗼𝘆 😉**
+╚==========================╝"""

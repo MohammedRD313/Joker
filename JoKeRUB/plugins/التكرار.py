@@ -44,26 +44,26 @@ async def spam_function(event, JoKeRUB, l313l, sleeptimem, sleeptimet, DelaySpam
                 if event.is_private:
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        "**⌔∮ التڪرار  **\n"
-                        + f"**⌔∮ تم تنفيذ التكرار بنجاح في ** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع** {counter} **عدد المرات مع الرسالة أدناه**",
+                        "**✎┊‌ التڪرار  **\n"
+                        + f"**✎┊‌ تم تنفيذ التكرار بنجاح في ** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع** {counter} **عدد المرات مع الرسالة أدناه**",
                     )
                 else:
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        "**⌔∮ التڪرار  **\n"
-                        + f"**⌔∮ تم تنفيذ التكرار بنجاح في ** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **مع** {counter} **عدد المرات مع الرسالة أدناه**",
+                        "**✎┊‌ التڪرار  **\n"
+                        + f"**✎┊‌ تم تنفيذ التكرار بنجاح في ** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **مع** {counter} **عدد المرات مع الرسالة أدناه**",
                     )
             elif event.is_private:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    "**⌔∮ التكرار الوقتي **\n"
-                    + f"**⌔∮ تم تنفيذ التكرار الوقتي  بنجاح في ** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع** {counter} **عدد المرات مع الرسالة أدناه مع التأخير** {sleeptimet} ** الثواني **",
+                    "**✎┊‌ التكرار الوقتي **\n"
+                    + f"**✎┊‌ تم تنفيذ التكرار الوقتي  بنجاح في ** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع** {counter} **عدد المرات مع الرسالة أدناه مع التأخير** {sleeptimet} ** الثواني **",
                 )
             else:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    "**⌔∮ التكرار الوقتي **\n"
-                    + f"**⌔∮ تم تنفيذ التكرار الوقتي  بنجاح في ** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **مع** {counter} **عدد المرات مع الرسالة أدناه مع التأخير** {sleeptimet} ** الثواني **",
+                    "**✎┊‌ التكرار الوقتي **\n"
+                    + f"**✎┊‌ تم تنفيذ التكرار الوقتي  بنجاح في ** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **مع** {counter} **عدد المرات مع الرسالة أدناه مع التأخير** {sleeptimet} ** الثواني **",
                 )
 
             JoKeRUB = await event.client.send_file(BOTLOG_CHATID, JoKeRUB)
@@ -83,31 +83,31 @@ async def spam_function(event, JoKeRUB, l313l, sleeptimem, sleeptimet, DelaySpam
             if event.is_private:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    "**⌔∮ التڪرار  **\n"
-                    + f"**⌔∮ تم تنفيذ التكرار بنجاح في ** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع** {counter} **رسائل ال   :** \n"
-                    + f"⌔∮ `{spam_message}`",
+                    "**✎┊‌ التڪرار  **\n"
+                    + f"**✎┊‌ تم تنفيذ التكرار بنجاح في ** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع** {counter} **رسائل ال   :** \n"
+                    + f"✎┊‌ `{spam_message}`",
                 )
             else:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    "**⌔∮ التڪرار  **\n"
-                    + f"**⌔∮ تم تنفيذ التكرار بنجاح في ** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع** {counter} **رسائل الـ   :** \n"
-                    + f"⌔∮ `{spam_message}`",
+                    "**✎┊‌ التڪرار  **\n"
+                    + f"**✎┊‌ تم تنفيذ التكرار بنجاح في ** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع** {counter} **رسائل الـ   :** \n"
+                    + f"✎┊‌ `{spam_message}`",
                 )
     elif BOTLOG:
         if event.is_private:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "**⌔∮ التكرار الوقتي **\n"
-                + f"**⌔∮ تم تنفيذ التكرار الوقتي  بنجاح في ** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع** {sleeptimet} seconds and with {counter} **رسائل الـ   :** \n"
-                + f"⌔∮ `{spam_message}`",
+                "**✎┊‌ التكرار الوقتي **\n"
+                + f"**✎┊‌ تم تنفيذ التكرار الوقتي  بنجاح في ** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع** {sleeptimet} seconds and with {counter} **رسائل الـ   :** \n"
+                + f"✎┊‌ `{spam_message}`",
             )
         else:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "**⌔∮ التكرار الوقتي **\n"
-                + f"**⌔∮ تم تنفيذ التكرار الوقتي  بنجاح في ** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع** {sleeptimet} **الثواني و مع** {counter} **رسائل الـ  ️ :** \n"
-                + f"⌔∮ `{spam_message}`",
+                "**✎┊‌ التكرار الوقتي **\n"
+                + f"**✎┊‌ تم تنفيذ التكرار الوقتي  بنجاح في ** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع** {sleeptimet} **الثواني و مع** {counter} **رسائل الـ  ️ :** \n"
+                + f"✎┊‌ `{spam_message}`",
             )
 
 
@@ -119,7 +119,7 @@ async def spammer(event):
         counter = int(l313l[0])
     except Exception:
         return await edit_delete(
-            event, "⌔∮ يجي استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
+            event, "✎┊‌ يجي استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
         )
     if counter > 50:
         sleeptimet = 0.5
@@ -139,7 +139,7 @@ async def spammer(event):
         sleeptimet = sleeptimem = int(input_str[0])
     except Exception:
         return await edit_delete(
-            event, "⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
+            event, "✎┊‌ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
         )
     l313l = input_str[1:]
     await event.delete()
@@ -152,18 +152,18 @@ async def stickerpack_spam(event):
     reply = await event.get_reply_message()
     if not reply or media_type(reply) is None or media_type(reply) != "Sticker":
         return await edit_delete(
-            event, "**⌔∮ قم بالردّ على أيّ ملصق لإرسال جميع ملصقات الحزمة  **"
+            event, "**✎┊‌ قم بالردّ على أيّ ملصق لإرسال جميع ملصقات الحزمة  **"
         )
     hmm = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
     try:
         stickerset_attr = reply.document.attributes[1]
         catevent = await edit_or_reply(
-            event, "**⌔∮ جاري إحضار تفاصيل حزمة الملصقات، يرجى الإنتظار قليلا  ⏱**"
+            event, "**✎┊‌ جاري إحضار تفاصيل حزمة الملصقات، يرجى الإنتظار قليلا  ⏱**"
         )
     except BaseException:
         await edit_delete(
             event,
-            "⌔∮ أعتقد أنّ هذا الملصق ليس جزءًا من أيّ حزمة لذا لا أستطيع إيجاد حزمته ⚠️",
+            "✎┊‌ أعتقد أنّ هذا الملصق ليس جزءًا من أيّ حزمة لذا لا أستطيع إيجاد حزمته ⚠️",
             5,
         )
         return
@@ -179,7 +179,7 @@ async def stickerpack_spam(event):
     except Exception:
         return await edit_delete(
             catevent,
-            "⌔∮ أعتقد أنّ هذا الملصق ليس جزءًا من أيّ حزمة لذا لا أستطيع إيجاد حزمته ⚠️",
+            "✎┊‌ أعتقد أنّ هذا الملصق ليس جزءًا من أيّ حزمة لذا لا أستطيع إيجاد حزمته ⚠️",
         )
     try:
         hmm = Get(hmm)
@@ -203,14 +203,14 @@ async def stickerpack_spam(event):
         if event.is_private:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "**⌔∮ تكرار الملصق :**\n"
-                + f"**⌔∮ تم تنفيذ الإزعاج بواسطة حزمة الملصقات في  :** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع الحزمة **",
+                "**✎┊‌ تكرار الملصق :**\n"
+                + f"**✎┊‌ تم تنفيذ الإزعاج بواسطة حزمة الملصقات في  :** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع الحزمة **",
             )
         else:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "**⌔∮ تكرار الملصق :**\n"
-                + f"**⌔∮ تم تنفيذ الإزعاج بواسطة حزمة الملصقات في   :** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع الحزمة **",
+                "**✎┊‌ تكرار الملصق :**\n"
+                + f"**✎┊‌ تم تنفيذ الإزعاج بواسطة حزمة الملصقات في   :** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع الحزمة **",
             )
         await event.client.send_file(BOTLOG_CHATID, reqd_sticker_set.documents[0])
 
@@ -229,14 +229,14 @@ async def tmeme(event):
         if event.is_private:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "**⌔∮ تكرار بالحرف 📝 :**\n"
-                + f"**⌔∮ تم تنفيذ الإزعاج بواسطة الأحرف في   ▷  :** [User](tg://user?id={event.chat_id}) **الدردشة مع** : `{message}`",
+                "**✎┊‌ تكرار بالحرف 📝 :**\n"
+                + f"**✎┊‌ تم تنفيذ الإزعاج بواسطة الأحرف في   ▷  :** [User](tg://user?id={event.chat_id}) **الدردشة مع** : `{message}`",
             )
         else:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "**⌔∮ تكرار بالحرف 📝 :**\n"
-                + f"**⌔∮ تم تنفيذ الإزعاج بواسطة الأحرف في   ▷  :** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع** : `{message}`",
+                "**✎┊‌ تكرار بالحرف 📝 :**\n"
+                + f"**✎┊‌ تم تنفيذ الإزعاج بواسطة الأحرف في   ▷  :** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع** : `{message}`",
             )
 
 
@@ -254,14 +254,14 @@ async def tmeme(event):
         if event.is_private:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "**⌔∮ تكرار بالكلمه : **\n"
-                + f"**⌔∮ تم تنفيذ التكرار بواسطة الڪلمات في   :** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع :** `{message}`",
+                "**✎┊‌ تكرار بالكلمه : **\n"
+                + f"**✎┊‌ تم تنفيذ التكرار بواسطة الڪلمات في   :** [المستخدم](tg://user?id={event.chat_id}) **الدردشة مع :** `{message}`",
             )
         else:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "**⌔∮ تكرار بالكلمه : **\n"
-                + f"**⌔∮ تم تنفيذ التكرار بواسطة الڪلمات في   :** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع :** `{message}`",
+                "**✎┊‌ تكرار بالكلمه : **\n"
+                + f"**✎┊‌ تم تنفيذ التكرار بواسطة الڪلمات في   :** {get_display_name(await event.get_chat())}(`{event.chat_id}`) **الدردشة مع :** `{message}`",
             )
 
 
@@ -269,8 +269,8 @@ async def tmeme(event):
 async def stopspamrz(event):
     if gvarstatus("spamwork") is not None and gvarstatus("spamwork") == "true":
         delgvar("spamwork")
-        return await edit_delete(event, "**⌔∮ تم بنجاح ايقاف التكرار **")
-    return await edit_delete(event, "**⌔∮ عذرا لم يتم تفعيل التكرار بالاصل**")
+        return await edit_delete(event, "**✎┊‌ تم بنجاح ايقاف التكرار **")
+    return await edit_delete(event, "**✎┊‌ عذرا لم يتم تفعيل التكرار بالاصل**")
 #جميع الاكواد ادناه تمت كتابتها من قبل مطورين الجوكر ممنوع السرقة !
 async def aljoker_nshr(l313l, sleeptimet, chat, message, seconds):
     global yaAli
@@ -287,7 +287,7 @@ async def Hussein(event):
     parameters = re.split(r'\s+', event.text.strip(), maxsplit=2)
     if len(parameters) != 3:
         return await edit_delete(
-            event, "⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
+            event, "✎┊‌ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
         )
     seconds = int(parameters[1])
     chat_usernames = parameters[2].split()
@@ -301,7 +301,7 @@ async def Hussein(event):
             await aljoker_nshr(l313l, seconds, chat.id, message, seconds)  # تمرير قيمة seconds هنا لكل مجموعة
         except Exception as e:
             await edit_delete(
-                event, f"⌔∮ لا يمكن العثور على المجموعة أو الدردشة {chat_username}: {str(e)}"
+                event, f"✎┊‌ لا يمكن العثور على المجموعة أو الدردشة {chat_username}: {str(e)}"
             )
         await asyncio.sleep(1)
     
@@ -329,7 +329,7 @@ async def Hussein(event):
         sleeptimet = int(seconds[0])
     except Exception:
         return await edit_delete(
-            event, "⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
+            event, "✎┊‌ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
         )
     l313l = event.client
     global yaAli
@@ -361,7 +361,7 @@ async def Hussein(event):
         sleeptimet = int(seconds[0])
     except Exception:
         return await edit_delete(
-            event, "⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
+            event, "✎┊‌ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
         )
     l313l = event.client
     global yaAli
@@ -371,4 +371,4 @@ async def Hussein(event):
 async def stop_aljoker(event):
     global yaAli
     yaAli = False
-    await event.edit("**᯽︙ تم ايقاف النشر التلقائي بنجاح ✓** ")
+    await event.edit("**✎┊‌ تم ايقاف النشر التلقائي بنجاح ✓** ")

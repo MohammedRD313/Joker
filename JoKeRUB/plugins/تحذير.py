@@ -31,23 +31,23 @@ async def _(event):
         sql.reset_warns(str(reply_message.sender_id), event.chat_id)
         if soft_warn:
             logger.info("TODO: kick user")
-            reply = "**▸┊بسبب تخطي التحذيرات الـ {} ، يجب طرد المستخدم! 🚷**".format(
+            reply = "**✎┊‌بسبب تخطي التحذيرات الـ {} ، يجب طرد المستخدم! 🚷**".format(
                 limit, reply_message.sender_id
             )
         else:
             try:
                 await event.client(EditBannedRequest(event.chat_id, reply_message.sender_id, ChatBannedRights(until_date=None, view_messages=True)))
-                reply = "**▸┊بسبب تخطي التحذيرات الـ {} ، تم حظر المستخدم! ⛔️**".format(
+                reply = "**✎┊‌بسبب تخطي التحذيرات الـ {} ، تم حظر المستخدم! ⛔️**".format(
                     limit, reply_message.sender_id
                 )
             except Exception as e:
-                reply = "**▸┊حدث خطأ أثناء محاولة طرد المستخدم! ⚠️**"
+                reply = "**✎┊‌حدث خطأ أثناء محاولة طرد المستخدم! ⚠️**"
     else:
-        reply = "**▸┊[ المستخدم 👤](tg://user?id={}) **لديه {}/{} تحذيرات، احذر!**".format(
+        reply = "**✎┊‌[ المستخدم 👤](tg://user?id={}) **لديه {}/{} تحذيرات، احذر!**".format(
             reply_message.sender_id, num_warns, limit
         )
         if warn_reason:
-            reply += "\n▸┊سبب التحذير الأخير \n{}".format(html.escape(warn_reason))
+            reply += "\n✎┊‌سبب التحذير الأخير \n{}".format(html.escape(warn_reason))
     await edit_or_reply(event, reply)
 
 
@@ -64,19 +64,19 @@ async def _(event):
     reply_message = await event.get_reply_message()
     if not reply_message:
         return await edit_delete(
-            event, "**▸┊قم بالرد ع المستخدم للحصول ع تحذيراته . ☻**"
+            event, "**✎┊‌قم بالرد ع المستخدم للحصول ع تحذيراته . ☻**"
         )
     result = sql.get_warns(str(reply_message.sender_id), event.chat_id)
     if not result or result[0] == 0:
-        return await edit_or_reply(event, "__▸┊هذا المستخدم ليس لديه أي تحذير! ツ__")
+        return await edit_or_reply(event, "__✎┊‌هذا المستخدم ليس لديه أي تحذير! ツ__")
     num_warns, reasons = result
     limit, soft_warn = sql.get_warn_setting(event.chat_id)
     if not reasons:
         return await edit_or_reply(
             event,
-            f"▸┊هذا المستخدم لديه {num_warns} / {limit} تحذيرات ، لكن لا توجد اسباب !",
+            f"✎┊‌هذا المستخدم لديه {num_warns} / {limit} تحذيرات ، لكن لا توجد اسباب !",
         )
-    text = f"▸┊هذا المستخدم لديه {num_warns} / {limit} تحذيرات ، للأسباب : ↶"
+    text = f"✎┊‌هذا المستخدم لديه {num_warns} / {limit} تحذيرات ، للأسباب : ↶"
     text += "\r\n"
     text += reasons
     await event.edit(text)
@@ -97,4 +97,4 @@ async def _(event):
     "لحذف او اعادة تحذيرات المستخدم الذي تم الرد عليه"
     reply_message = await event.get_reply_message()
     sql.reset_warns(str(reply_message.sender_id), event.chat_id)
-    await edit_or_reply(event, "**▸┊تم إعادة ضبط التحذيرات!**")
+    await edit_or_reply(event, "**✎┊‌تم إعادة ضبط التحذيرات!**")

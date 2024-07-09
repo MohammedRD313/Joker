@@ -52,7 +52,7 @@ async def _(event):
         text = text.strip()
         lan = lan.strip()
 
-    HuReevent = await edit_or_reply(event, "⌔∮ جـار التسجيل انتـظر قليلا")
+    HuReevent = await edit_or_reply(event, "✎┊‌ جـار التسجيل انتـظر قليلا")
 
 
     if not os.path.isdir("./temp/"):

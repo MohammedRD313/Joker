@@ -114,12 +114,12 @@ async def _(event):
     reply = await event.get_reply_message()
     if not reply:
         return await edit_delete(
-            event, "᯽︙ يجـب عليـك الرد عـلى الملصق لتحويـله الـى صورة ⚠️"
+            event, "✎┊‌ يجـب عليـك الرد عـلى الملصق لتحويـله الـى صورة ⚠️"
         )
     output = await _cattools.media_to_pic(event, reply)
     if output[1] is None:
         return await edit_delete(
-            output[0], "᯽︙ غـير قـادر على تحويل الملصق إلى صورة من هـذا الـرد ⚠️"
+            output[0], "✎┊‌ غـير قـادر على تحويل الملصق إلى صورة من هـذا الـرد ⚠️"
         )
     meme_file = convert_toimage(output[1])
     await event.client.send_file(
@@ -224,12 +224,12 @@ async def _(event):
     reply = await event.get_reply_message()
     if not reply:
         return await edit_delete(
-            event, "᯽︙ يجـب عليـك الرد عـلى الصـورة لتحويـلها الـى مـلصق ⚠️"
+            event, "✎┊‌ يجـب عليـك الرد عـلى الصـورة لتحويـلها الـى مـلصق ⚠️"
         )
     output = await _cattools.media_to_pic(event, reply)
     if output[1] is None:
         return await edit_delete(
-            output[0], "᯽︙ غـير قـادر على استـخراج الـملصق من هـذا الـرد ⚠️"
+            output[0], "✎┊‌ غـير قـادر على استـخراج الـملصق من هـذا الـرد ⚠️"
         )
     meme_file = convert_tosticker(output[1])
     await event.client.send_file(
@@ -251,14 +251,14 @@ async def _(event):
 async def _(event):
     "Converts the required media file to voice or mp3 file."
     if not event.reply_to_msg_id:
-        await edit_or_reply(event, "**᯽︙ يـجب الـرد على اي مـلف اولا ⚠️**")
+        await edit_or_reply(event, "**✎┊‌ يـجب الـرد على اي مـلف اولا ⚠️**")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await edit_or_reply(event, "**᯽︙ يـجب الـرد على اي مـلف اولا ⚠️**")
+        await edit_or_reply(event, "**✎┊‌ يـجب الـرد على اي مـلف اولا ⚠️**")
         return
     input_str = event.pattern_match.group(1)
-    event = await edit_or_reply(event, "᯽︙ يتـم التـحويل انتـظر قليـلا ⏱")
+    event = await edit_or_reply(event, "✎┊‌ يتـم التـحويل انتـظر قليـلا ⏱")
     try:
         start = datetime.now()
         c_time = time.time()
@@ -275,7 +275,7 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).seconds
         await event.edit(
-            "᯽︙ التحـميل الى `{}` في {} من الثواني ⏱".format(downloaded_file_name, ms)
+            "✎┊‌ التحـميل الى `{}` في {} من الثواني ⏱".format(downloaded_file_name, ms)
         )
         new_required_file_name = ""
         new_required_file_caption = ""
@@ -318,7 +318,7 @@ async def _(event):
             voice_note = False
             supports_streaming = True
         else:
-            await event.edit("᯽︙ غـير مدعوم ❕")
+            await event.edit("✎┊‌ غـير مدعوم ❕")
             os.remove(downloaded_file_name)
             return
         process = await asyncio.create_subprocess_exec(
@@ -364,7 +364,7 @@ async def _(event):
     reply = await event.get_reply_message()
     mediatype = media_type(event)
     if mediatype and mediatype != "video":
-        return await edit_delete(event, "᯽︙ يجـب عليك الـرد على فيديو اولا لتحـويله ⚠️")
+        return await edit_delete(event, "✎┊‌ يجـب عليك الـرد على فيديو اولا لتحـويله ⚠️")
     args = event.pattern_match.group(1)
     if not args:
         args = 2.0
@@ -373,12 +373,12 @@ async def _(event):
             args = float(args)
         except ValueError:
             args = 2.0
-    catevent = await edit_or_reply(event, "**᯽︙ يتـم التحويل الى متـحركه انتـظر ⏱**")
+    catevent = await edit_or_reply(event, "**✎┊‌ يتـم التحويل الى متـحركه انتـظر ⏱**")
     inputfile = await reply.download_media()
     outputfile = os.path.join(Config.TEMP_DIR, "vidtogif.gif")
     result = await vid_to_gif(inputfile, outputfile, speed=args)
     if result is None:
-        return await edit_delete(event, "**᯽︙ عـذرا لا يمكـنني تحويل هذا الى متـحركة ⚠️**")
+        return await edit_delete(event, "**✎┊‌ عـذرا لا يمكـنني تحويل هذا الى متـحركة ⚠️**")
     jasme = await event.client.send_file(event.chat_id, result, reply_to=reply)
     await _catutils.unsavegif(event, jasme)
     await catevent.delete()
@@ -393,7 +393,7 @@ async def _(event):
 async def pinterestAljoker(event):
     if not event.out and not is_fullsudo(event.sender_id):
         return await edit_or_reply(event, "هـذا الامـر مقـيد ")
-    event = await edit_or_reply(event, "** ᯽︙ يتـم جـلـب الـوسـائـط مـن مـوقـع بـنـتـريـست، انتـظر قليلا**")
+    event = await edit_or_reply(event, "** ✎┊‌ يتـم جـلـب الـوسـائـط مـن مـوقـع بـنـتـريـست، انتـظر قليلا**")
     pinterest_jok = event.pattern_match.group(1)
     try:
         response = requests.get(pinterest_jok, stream=True)
@@ -404,11 +404,11 @@ async def pinterestAljoker(event):
                 img.save("media.jpg", "JPEG", quality=100)
                 await event.reply(file="media.jpg")
             else:
-                await event.edit("** ᯽︙ هـذا لـيس رابـط صـورة**")
+                await event.edit("** ✎┊‌ هـذا لـيس رابـط صـورة**")
                 return
         else:
-            await event.edit("** ᯽︙ حـدث خـطـأ أثـنـاء جـلـب الـوسـائـط مـن مـوقـع بـنـتـريـست**")
+            await event.edit("** ✎┊‌ حـدث خـطـأ أثـنـاء جـلـب الـوسـائـط مـن مـوقـع بـنـتـريـست**")
             return
     except Exception as e:
-        await event.edit(f"** ᯽︙ حـدث خـطـأ: {str(e)}**")
+        await event.edit(f"** ✎┊‌ حـدث خـطـأ: {str(e)}**")
         return

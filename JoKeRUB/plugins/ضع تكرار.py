@@ -43,7 +43,7 @@ async def _(event):
         )
         await asyncio.sleep(4)
         await no_admin_privilege_message.edit(
-            "** هذا التكرار ما يفيدك اخي استمتع بالدردشة مثل الناس 🧸💞** "
+            "** هذا التكرار ما يفيدك اخي استمتع بالدردشة مثل الناس ** "
         )
     else:
         await event.client.send_message(
@@ -73,7 +73,7 @@ async def _(event):
 async def _(event):
     "To setup antiflood in a group to prevent spam"
     input_str = event.pattern_match.group(1)
-    event = await edit_or_reply(event, "** تم تحديث عدد التكرار 🧸♥**")
+    event = await edit_or_reply(event, "** تم تحديث عدد التكرار **")
     await asyncio.sleep(2)
     try:
         sql.set_flood(event.chat_id, input_str)

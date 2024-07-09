@@ -94,16 +94,16 @@ async def log_tagged_messages(event):
         messaget = await media_type(event)
     except BaseException:
         messaget = None
-    resalt = f"#التــاكــات\n\n<b>⌔┊الكــروب : </b><code>{hmm.title}</code>"
+    resalt = f"#التــاكــات\n\n<b>✎┊‌الكــروب : </b><code>{hmm.title}</code>"
     if full is not None:
         resalt += (
-            f"\n\n<b>⌔┊المـرسـل : </b> {_format.htmlmentionuser(full.first_name , full.id)}"
+            f"\n\n<b>✎┊‌المـرسـل : </b> {_format.htmlmentionuser(full.first_name , full.id)}"
         )
     if messaget is not None:
-        resalt += f"\n\n<b>⌔┊رسـالـة ميـديـا : </b><code>{messaget}</code>"
+        resalt += f"\n\n<b>✎┊‌رسـالـة ميـديـا : </b><code>{messaget}</code>"
     else:
-        resalt += f"\n\n<b>⌔┊الرســالـه : </b>{event.message.message}"
-    resalt += f"\n\n<b>⌔┊رابـط الرسـاله : </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'> link</a>"
+        resalt += f"\n\n<b>✎┊‌الرســالـه : </b>{event.message.message}"
+    resalt += f"\n\n<b>✎┊‌رابـط الرسـاله : </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'> link</a>"
     if not event.is_private:
         await event.client.send_message(
             Config.PM_LOGGER_GROUP_ID,
@@ -134,11 +134,11 @@ async def log(log_text):
             textx = user + log_text.pattern_match.group(1)
             await log_text.client.send_message(BOTLOG_CHATID, textx)
         else:
-            await log_text.edit("**⌔┊بالــرد على اي رسـاله لحفظهـا في كـروب التخــزين**")
+            await log_text.edit("**✎┊‌بالــرد على اي رسـاله لحفظهـا في كـروب التخــزين**")
             return
-        await log_text.edit("**⌔┊تـم الحفـظ في كـروب التخـزين .. بنجـاح ✓**")
+        await log_text.edit("**✎┊‌تـم الحفـظ في كـروب التخـزين .. بنجـاح ✓**")
     else:
-        await log_text.edit("**⌔┊عـذراً .. هـذا الامـر يتطلـب تفعيـل فـار التخـزين اولاً**")
+        await log_text.edit("**✎┊‌عـذراً .. هـذا الامـر يتطلـب تفعيـل فـار التخـزين اولاً**")
     await asyncio.sleep(2)
     await log_text.delete()
 
@@ -160,7 +160,7 @@ async def set_no_log_p_m(event):
         if no_log_pms_sql.is_approved(chat.id):
             no_log_pms_sql.disapprove(chat.id)
             await edit_delete(
-                event, "**⌔┊تـم تفعيـل التخـزين لهـذه الدردشـه .. بنجـاح ✓**", 5
+                event, "**✎┊‌تـم تفعيـل التخـزين لهـذه الدردشـه .. بنجـاح ✓**", 5
             )
 
 
@@ -181,7 +181,7 @@ async def set_no_log_p_m(event):
         if not no_log_pms_sql.is_approved(chat.id):
             no_log_pms_sql.approve(chat.id)
             await edit_delete(
-                event, "**⌔┊تـم تعطيـل التخـزين لهـذه الدردشـه .. بنجـاح ✓**", 5
+                event, "**✎┊‌تـم تعطيـل التخـزين لهـذه الدردشـه .. بنجـاح ✓**", 5
             )
 
 

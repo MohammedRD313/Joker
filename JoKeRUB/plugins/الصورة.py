@@ -54,7 +54,7 @@ async def potocmd(event):
                     photo = await event.client.download_profile_photo(event.input_chat)
                 await event.client.send_file(event.chat_id, photo)
             except Exception:
-                return await edit_delete(event, "** هذا المـستخدم ليس لـديه صـورة لـعرضها 🧸♥**")
+                return await edit_delete(event, "**✎┊‌ هذا المـستخدم ليس لـديه صـورة لـعرضها **")
     else:
         try:
             uid = int(uid)

@@ -19,7 +19,7 @@ async def reda(event):
     list = "**قائمة المكاتب المثبته**\n"
     for i in installed_packages_list:
         list += f"{i}\n"
-    list += "**سورس الجوكر**"
+    list += "**سورس العقرب **"
     await edit_or_reply(event, list)
 
 @l313l.ar_cmd(
@@ -76,17 +76,17 @@ async def _(event):
     else:
         result = event.date
     await edit_or_reply(
-        event, f"**᯽︙ نـشـرت هـذه الـرسالة فـي  :** `{yaml_format(result)}`"
+        event, f"**✎┊‌ نـشـرت هـذه الـرسالة فـي  :** `{yaml_format(result)}`"
     )
 @l313l.ar_cmd(pattern="رابط مباشر")
 async def upload_reda(event):
     r = await event.get_reply_message()
     if r is None:
-        return await edit_delete(event, "**᯽︙قم بالرد على ملف لرفعهُ**")
+        return await edit_delete(event, "**✎┊‌قم بالرد على ملف لرفعهُ**")
     if r.media is None:
-        return await edit_delete(event, "**᯽︙قم بالرد على ملف لرفعهُ**")
+        return await edit_delete(event, "**✎┊‌قم بالرد على ملف لرفعهُ**")
     file = await event.client.download_media(r, Config.TEMP_DIR)
-    await edit_or_reply(event, "**᯽︙ يُجري عملية الرفع . .**")
+    await edit_or_reply(event, "**✎┊‌ يُجري عملية الرفع . .**")
     payload = {}
     image = {"file": open(file, "rb")}
     response = requests.request("POST", "https://api.anonfiles.com/upload", files=image, data = payload)
@@ -96,5 +96,5 @@ async def upload_reda(event):
         return await edit_delete(event, f"حدث خطأ عند رفع الملف\n{er}") 
     url = res["data"]["file"]["url"]["short"]
     size = res["data"]["file"]["metadata"]["size"]["readable"]
-    await edit_or_reply(event, f"**تم رفع الملف ✓**\n**᯽︙ الرابط:** {url}\n**᯽︙الحجم:** {size}")
+    await edit_or_reply(event, f"**تم رفع الملف ✓**\n**✎┊‌ الرابط:** {url}\n**✎┊‌الحجم:** {size}")
     os.remove(file)

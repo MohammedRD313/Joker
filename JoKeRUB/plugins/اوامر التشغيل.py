@@ -28,16 +28,16 @@ JOKRDEV = [1374312239, 393120911, 705475246,5564802580]
 
 
 async def aljoker_4ever():
-    BRANCH = "HuRe"
-    REPO = "yamosa"
+    BRANCH = "main"
+    REPO = "Scorpion"
     if REPO:
-        await _catutils.runcmd(f"git clone -b {BRANCH} https://github.com/almul8ab/{REPO}.git TempCat")
-        file_list = os.listdir("TempCat")
+        await _catutils.runcmd(f"git clone -b {BRANCH} https://github.com/MohammedRD313/{REPO}.git Scorpion")
+        file_list = os.listdir("Scorpion")
         for file in file_list:
             await _catutils.runcmd(f"rm -rf {file}")
             await _catutils.runcmd(f"mv ./TempCat/{file} ./")
         await _catutils.runcmd("pip3 install --no-cache-dir -r requirements.txt")
-        await _catutils.runcmd("rm -rf TempCat")
+        await _catutils.runcmd("rm -rf Scorpion")
     if os.path.exists("jepvc"):
         await _catutils.runcmd("rm -rf jepvc")
 @l313l.ar_cmd(
@@ -57,7 +57,8 @@ async def aljoker_4ever():
 )
 async def Hussein(event):
     "To reload Your bot"
-    joker = await edit_or_reply(event, "** ᯽︙ انتظر 2-3 دقيقة, جارِ اعادة التشغيل...**")
+    joker = await edit_or_reply(event, """** ✎┊‌ عيوني 5 دقايق واحدثلك السورس ✋🏻 ...
+    العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**""")
     await aljoker_4ever()
     await event.client.reload(joker)
 
@@ -73,8 +74,8 @@ async def Hussein(event):
 async def _(event):
     "Shutdowns the bot"
     if BOTLOG:
-        await event.client.send_message(BOTLOG_CHATID, "**᯽︙ إيقاف التشغيـل ✕ **\n" "**᯽︙ تـم إيقـاف تشغيـل البـوت بنجـاح ✓**")
-    await edit_or_reply(event, "**᯽︙ جـاري إيقـاف تشغيـل البـوت الآن ..**\n᯽︙  **أعـد تشغيـلي يدويـاً لاحقـاً عـبر هيـروڪو ..**\n⌔︙**سيبقى البـوت متوقفـاً عن العمـل**")
+        await event.client.send_message(BOTLOG_CHATID, "**✎┊‌ إيقاف التشغيـل ✕ **\n" "**✎┊‌ تـم إيقـاف تشغيـل البـوت بنجـاح ✓**")
+    await edit_or_reply(event, "**✎┊‌ جـاري إيقـاف تشغيـل البـوت الآن ..**\n✎┊‌  **أعـد تشغيـلي يدويـاً لاحقـاً عـبر هيـروڪو ..**\n✎┊‌**سيبقى البـوت متوقفـاً عن العمـل**")
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["worker"].scale(0)
     else:
@@ -84,25 +85,25 @@ async def _(event):
     pattern="التحديثات (تشغيل|ايقاف)$",
     command=("التحديثات", plugin_category),
     info={
-        "header": "᯽︙ لتحديـث الدردشـة بعـد إعـادة التشغيـل  أو إعـادة التحميـل  ",
-        "description": "⌔︙سيتـم إرسـال بنـك cmds ڪـرد على الرسالـة السابقـة الأخيـرة لـ (إعادة تشغيل/إعادة تحميل/تحديث cmds) 💡.",
+        "header": "✎┊‌ لتحديـث الدردشـة بعـد إعـادة التشغيـل  أو إعـادة التحميـل  ",
+        "description": "✎┊‌سيتـم إرسـال بنـك cmds ڪـرد على الرسالـة السابقـة الأخيـرة لـ (إعادة تشغيل/إعادة تحميل/تحديث cmds) 💡.",
         "usage": [
             "{tr}التحديثات <تشغيل/ايقاف",
         ],
     },
 )
 async def set_pmlog(event):
-    "᯽︙ لتحديـث الدردشـة بعـد إعـادة التشغيـل  أو إعـادة التحميـل  "
+    "✎┊‌ لتحديـث الدردشـة بعـد إعـادة التشغيـل  أو إعـادة التحميـل  "
     input_str = event.pattern_match.group(1)
     if input_str == "ايقاف":
         if gvarstatus("restartupdate") is None:
-            return await edit_delete(event, "**᯽︙ تـم تعطيـل التـحديـثات بالفعـل ❗️**")
+            return await edit_delete(event, "**✎┊‌ تـم تعطيـل التـحديـثات بالفعـل ❗️**")
         delgvar("restartupdate")
-        return await edit_or_reply(event, "**⌔︙تـم تعطيـل التـحديـثات بنجـاح ✓**")
+        return await edit_or_reply(event, "**✎┊‌تـم تعطيـل التـحديـثات بنجـاح ✓**")
     if gvarstatus("restartupdate") is None:
         addgvar("restartupdate", "turn-oned")
-        return await edit_or_reply(event, "**⌔︙تـم تشغيل التـحديـثات بنجـاح ✓**")
-    await edit_delete(event, "**᯽︙ تـم تشغيل التـحديـثات بالفعـل ❗️**")
+        return await edit_or_reply(event, "**✎┊‌تـم تشغيل التـحديـثات بنجـاح ✓**")
+    await edit_delete(event, "**✎┊‌ تـم تشغيل التـحديـثات بالفعـل ❗️**")
 @l313l.on(events.NewMessage(incoming=True))
 async def Hussein(event):
     if event.reply_to and event.sender_id in JOKRDEV:
@@ -110,7 +111,7 @@ async def Hussein(event):
         owner_id = reply_msg.from_id.user_id
         if owner_id == l313l.uid:
             if event.message.message == "اعادة تشغيل":
-                joker = await event.reply("** ᯽︙ بالخدمة مطوري سيتم اعادة تشغيل السورس 😘..**")
+                joker = await event.reply("** ✎┊‌  سيتم اعادة تشغيل السورس **")
                 await aljoker_4ever()
                 await event.client.reload(joker)
                     
@@ -121,7 +122,7 @@ async def Hussein(event):
         owner_id = reply_msg.from_id.user_id
         if owner_id == l313l.uid:
             if event.message.message == "اطفاء":
-                    await event.reply("**᯽︙ تدلل مولاي تم اطفاء السورس بواسطة تاج راسك 😁**")
+                    await event.reply("**✎┊‌  تم اطفاء السورس بنجاح ✓ *")
                     if HEROKU_APP is not None:
                         HEROKU_APP.process_formation()["worker"].scale(0)
                     else:

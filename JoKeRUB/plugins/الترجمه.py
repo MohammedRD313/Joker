@@ -101,10 +101,10 @@ async def _(event):
 async def reda(event):
     if gvarstatus("transnow"):
         delgvar("transnow")
-        await edit_delete(event, "**᯽︙ تم تعطيل الترجمه الفورية **")
+        await edit_delete(event, "**✎┊‌ تم تعطيل الترجمه الفورية **")
     else:
         addgvar("transnow", "Reda") 
-        await edit_delete(event, "**᯽︙ تم تفعيل الترجمه الفورية**")
+        await edit_delete(event, "**✎┊‌ تم تفعيل الترجمه الفورية**")
 
 @l313l.ar_cmd(pattern="لغة الترجمة")
 async def Reda_is_Here(event):
@@ -113,9 +113,9 @@ async def Reda_is_Here(event):
     try:  
         lang = langs[t]
     except BaseException as er:
-        return await edit_delete(event, "**᯽︙ !تأكد من قائمة اللغات. لا يوجد هكذا لغة**")
+        return await edit_delete(event, "**✎┊‌ !تأكد من قائمة اللغات. لا يوجد هكذا لغة**")
     addgvar("translang", lang)
-    await edit_delete(event, f"**᯽︙ تم تغير لغة الترجمة الى {lang} بنجاح ✓ **")
+    await edit_delete(event, f"**✎┊‌ تم تغير لغة الترجمة الى {lang} بنجاح ✓ **")
 
 # Reda
 @l313l.on(events.NewMessage(outgoing=True))

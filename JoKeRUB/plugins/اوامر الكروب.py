@@ -110,7 +110,7 @@ async def remoteaccess(event):
 )
 async def kickme(leave):
     "to leave the group."
-    await leave.edit("᯽︙  حسنا سأغادر المجموعه وداعا ")
+    await leave.edit("✎┊‌  حسنا سأغادر المجموعه وداعا ")
     await leave.client.kick_participant(leave.chat_id, "me")
 
 @l313l.ar_cmd(
@@ -133,7 +133,7 @@ async def _(event):
     )
     if not result.participant.admin_rights.ban_users:
         return await edit_or_reply(
-            event, "᯽︙ - يبدو انه ليس لديك صلاحيات الحذف في هذه الدردشة "
+            event, "✎┊‌ - يبدو انه ليس لديك صلاحيات الحذف في هذه الدردشة "
         )
     admins = await event.client.get_participants(
         event.chat_id, filter=ChannelParticipantsAdmins
@@ -152,7 +152,7 @@ async def _(event):
             LOGS.info(str(e))
             await sleep(0.5)
     await event.reply(
-        f"᯽︙  تم بنجاح طرد من {total} الاعضاء ✅ "
+        f"✎┊‌  تم بنجاح طرد من {total} الاعضاء ✅ "
     )
 
 @l313l.ar_cmd(
@@ -175,7 +175,7 @@ async def _(event):
     )
     if not result:
         return await edit_or_reply(
-            event, "᯽︙ - يبدو انه ليس لديك صلاحيات الحذف في هذه الدردشة ❕"
+            event, "✎┊‌ - يبدو انه ليس لديك صلاحيات الحذف في هذه الدردشة ❕"
         )
     admins = await event.client.get_participants(
         event.chat_id, filter=ChannelParticipantsAdmins
@@ -195,7 +195,7 @@ async def _(event):
         except Exception as e:
             LOGS.info(str(e))
     await event.reply(
-        f"᯽︙  تم بنجاح حظر من {total} الاعضاء ✅ "
+        f"✎┊‌  تم بنجاح حظر من {total} الاعضاء ✅ "
     )
 
 
@@ -215,7 +215,7 @@ async def _(event):
 async def _(event):
     "To unban all banned users from group."
     catevent = await edit_or_reply(
-        event, "**᯽︙ يتـم الـغاء حـظر الجـميع فـي هذه الـدردشـة**"
+        event, "**✎┊‌ يتـم الـغاء حـظر الجـميع فـي هذه الـدردشـة**"
     )
     succ = 0
     total = 0
@@ -247,11 +247,11 @@ async def _(event):
             try:
                 if succ % 10 == 0:
                     await catevent.edit(
-                        f"᯽︙  الغاء حظر جميع الحسابات\nتم الغاء حظر جميع الاعضاء بنجاح ✅"
+                        f"✎┊‌  الغاء حظر جميع الحسابات\nتم الغاء حظر جميع الاعضاء بنجاح ✅"
                     )
             except MessageNotModifiedError:
                 pass
-    await catevent.edit(f"᯽︙ الغاء حظر :__{succ}/{total} في الدردشه {chat.title}__")
+    await catevent.edit(f"✎┊‌ الغاء حظر :__{succ}/{total} في الدردشه {chat.title}__")
 
 # Ported by ©[NIKITA](t.me/kirito6969) and ©[EYEPATCH](t.me/NeoMatrix90)
 @l313l.ar_cmd(
@@ -268,17 +268,17 @@ async def rm_deletedacc(show):
     "To check deleted accounts and clean"
     con = show.pattern_match.group(1).lower()
     del_u = 0
-    del_status = "᯽︙  لم يتم العثور على حسابات متروكه او حسابات محذوفة الكروب نظيف"
+    del_status = "✎┊‌  لم يتم العثور على حسابات متروكه او حسابات محذوفة الكروب نظيف"
     if con != "اطردهم":
         event = await edit_or_reply(
-            show, "᯽︙  يتم البحث عن حسابات محذوفة او حسابات متروكة انتظر"
+            show, "✎┊‌  يتم البحث عن حسابات محذوفة او حسابات متروكة انتظر"
         )
         async for user in show.client.iter_participants(show.chat_id):
             if user.deleted:
                 del_u += 1
                 await sleep(0.5)
         if del_u > 0:
-            del_status = f"᯽︙ تـم العـثور : **{del_u}** على حسابات محذوفة ومتروكه في هذه الدردشه من الحسابات في هذه الدردشه,\
+            del_status = f"✎┊‌ تـم العـثور : **{del_u}** على حسابات محذوفة ومتروكه في هذه الدردشه من الحسابات في هذه الدردشه,\
                            \nاطردهم بواسطه  `.المحذوفين اطردهم`"
         await event.edit(del_status)
         return
@@ -289,7 +289,7 @@ async def rm_deletedacc(show):
         await edit_delete(show, "أنا لسـت مشرف هـنا", 5)
         return
     event = await edit_or_reply(
-        show, "᯽︙ جاري حذف الحسابات المحذوفة"
+        show, "✎┊‌ جاري حذف الحسابات المحذوفة"
     )
     del_u = 0
     del_a = 0
@@ -300,7 +300,7 @@ async def rm_deletedacc(show):
                 await sleep(0.5)
                 del_u += 1
             except ChatAdminRequiredError:
-                await edit_delete(event, "᯽︙  ليس لدي صلاحيات الحظر هنا", 5)
+                await edit_delete(event, "✎┊‌  ليس لدي صلاحيات الحظر هنا", 5)
                 return
             except UserAdminInvalidError:
                 del_a += 1
@@ -322,7 +322,7 @@ async def rm_deletedacc(show):
 async def banall(event):
      chat_id = event.chat_id
      if event.is_private:
-         return await edit_or_reply(event, "** ᯽︙ هذا الامر يستعمل للقنوات والمجموعات فقط !**")
+         return await edit_or_reply(event, "** ✎┊‌ هذا الامر يستعمل للقنوات والمجموعات فقط !**")
      msg = "حظر"
      is_admin = False
      try:
@@ -352,7 +352,7 @@ async def banall(event):
 @l313l.ar_cmd(pattern="كتم_الكل(?:\s|$)([\s\S]*)")
 async def muteall(event):
      if event.is_private:
-         return await edit_or_reply(event, "** ᯽︙ هذا الامر يستعمل للقنوات والمجموعات فقط !**")
+         return await edit_or_reply(event, "** ✎┊‌ هذا الامر يستعمل للقنوات والمجموعات فقط !**")
      msg = "كتم"
      is_admin = False
      try:
@@ -383,7 +383,7 @@ async def muteall(event):
 async def kickall(event):
      chat_id = event.chat_id
      if event.is_private:
-         return await edit_or_reply(event, "** ᯽︙ هذا الامر يستعمل للقنوات والمجموعات فقط !**")
+         return await edit_or_reply(event, "** ✎┊‌ هذا الامر يستعمل للقنوات والمجموعات فقط !**")
      msg = "طرد"
      is_admin = False
      try:
@@ -413,13 +413,13 @@ async def kickall(event):
 @l313l.ar_cmd(pattern="الغاء التفليش")
 async def ca_sp(event):
   if not event.chat_id in spam_chats:
-    return await edit_or_reply(event, "** ᯽︙ 🤷🏻 لا يوجد طرد او حظر او كتم لأيقافه**")
+    return await edit_or_reply(event, "** ✎┊‌  لا يوجد طرد او حظر او كتم لأيقافه**")
   else:
     try:
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await edit_or_reply(event, "** ᯽︙ تم الغاء العملية بنجاح ✓**")
+    return await edit_or_reply(event, "** ✎┊‌ تم الغاء العملية بنجاح ✓**")
 @l313l.ar_cmd(
     pattern="احصائيات الاعضاء ?([\s\S]*)",
     command=("احصائيات الاعضاء", plugin_category),
@@ -438,7 +438,7 @@ async def _(event):  # sourcery no-metrics
     if input_str:
         chat = await event.get_chat()
         if not chat.admin_rights and not chat.creator:
-            await edit_or_reply(event, " انت لست مشرف هنا ⌔︙")
+            await edit_or_reply(event, " انت لست مشرف هنا ✎┊‌")
             return False
     p = 0
     b = 0
@@ -452,7 +452,7 @@ async def _(event):  # sourcery no-metrics
     o = 0
     q = 0
     r = 0
-    et = await edit_or_reply(event, "يتم البحث في القوائم ⌔︙")
+    et = await edit_or_reply(event, "يتم البحث في القوائم ✎┊‌")
     async for i in event.client.iter_participants(event.chat_id):
         p += 1
         #
@@ -466,7 +466,7 @@ async def _(event):  # sourcery no-metrics
                 if status:
                     c += 1
                 else:
-                    await et.edit("᯽︙  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
+                    await et.edit("✎┊‌  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
                     e.append(str(e))
                     break
         if isinstance(i.status, UserStatusLastMonth):
@@ -476,7 +476,7 @@ async def _(event):  # sourcery no-metrics
                 if status:
                     c += 1
                 else:
-                    await et.edit("᯽︙  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
+                    await et.edit("✎┊‌  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
                     e.append(str(e))
                     break
         if isinstance(i.status, UserStatusLastWeek):
@@ -486,7 +486,7 @@ async def _(event):  # sourcery no-metrics
                 if status:
                     c += 1
                 else:
-                    await et.edit("᯽︙  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
+                    await et.edit("✎┊‌  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
                     e.append(str(e))
                     break
         if isinstance(i.status, UserStatusOffline):
@@ -494,7 +494,7 @@ async def _(event):  # sourcery no-metrics
             if "o" in input_str:
                 status, e = await ban_user(event.chat_id, i, rights)
                 if not status:
-                    await et.edit("᯽︙  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
+                    await et.edit("✎┊‌  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
                     e.append(str(e))
                     break
                 else:
@@ -504,7 +504,7 @@ async def _(event):  # sourcery no-metrics
             if "q" in input_str:
                 status, e = await ban_user(event.chat_id, i, rights)
                 if not status:
-                    await et.edit("᯽︙  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
+                    await et.edit("✎┊‌  احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
                     e.append(str(e))
                     break
                 else:
@@ -516,7 +516,7 @@ async def _(event):  # sourcery no-metrics
                 if status:
                     c += 1
                 else:
-                    await et.edit("᯽︙ احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
+                    await et.edit("✎┊‌ احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
                     e.append(str(e))
                     break
         if i.bot:
@@ -524,7 +524,7 @@ async def _(event):  # sourcery no-metrics
             if "b" in input_str:
                 status, e = await ban_user(event.chat_id, i, rights)
                 if not status:
-                    await et.edit("᯽︙ احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
+                    await et.edit("✎┊‌ احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
                     e.append(str(e))
                     break
                 else:
@@ -536,7 +536,7 @@ async def _(event):  # sourcery no-metrics
                 if status:
                     c += 1
                 else:
-                    await et.edit("᯽︙ احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
+                    await et.edit("✎┊‌ احتاج الى صلاحيات المشرفين للقيام بهذا الامر ")
                     e.append(str(e))
         elif i.status is None:
             n += 1
@@ -572,7 +572,7 @@ async def _(event):  # sourcery no-metrics
 
 @l313l.ar_cmd(pattern="مغادرة الكروبات")
 async def Reda (event):
-    await event.edit("**᯽︙ جارِ مغادرة جميع الكروبات الموجوده في حسابك ...**")
+    await event.edit("**✎┊‌ جارِ مغادرة جميع الكروبات الموجوده في حسابك ...**")
     gr = []
     dd = []
     num = 0
@@ -599,9 +599,9 @@ async def Reda (event):
                 num += 1
                 await sleep(1)
         if num >=1:
-            await event.edit(f"**᯽︙ تم المغادرة من {num} كروب بنجاح ✓**")
+            await event.edit(f"**✎┊‌ تم المغادرة من {num} كروب بنجاح ✓**")
         else:
-            await event.edit("**᯽︙ ليس لديك كروبات في حسابك لمغادرتها !**")
+            await event.edit("**✎┊‌ ليس لديك كروبات في حسابك لمغادرتها !**")
     except BaseException as er:
      await event.reply(f"حدث خطأ\n{er}\n{entity}")
 
@@ -617,19 +617,19 @@ async def Hussein(event):
             try:
                 entity = await l313l.get_entity(channel_username)
                 if isinstance(entity, Channel) and entity.creator or entity.admin_rights:
-                    response = "**᯽︙ لا يمكنك الخروج من هذه القناة. أنت مشرف أو مالك فيها!**"
+                    response = "**✎┊‌ لا يمكنك الخروج من هذه القناة. أنت مشرف أو مالك فيها!**"
                 else:
                     await l313l(LeaveChannelRequest(channel_username))
-                    response = "**᯽︙ تم الخروج من القناة بنجاح!**"
+                    response = "**✎┊‌ تم الخروج من القناة بنجاح!**"
             except ValueError:
                 response = "خطأ في العثور على القناة. يرجى التأكد من المعرف الصحيح"
         else:
-            response = "**᯽︙ يُرجى تحديد معرف القناة أو المجموعة مع الخروج يامطوري ❤️**"
+            response = "**✎┊‌ يُرجى تحديد معرف القناة أو المجموعة مع الخروج  ..**"
         #await event.reply(response)
         
 @l313l.ar_cmd(pattern="مغادرة القنوات")
 async def Hussein (event):
-    await event.edit("**᯽︙ جارِ مغادرة جميع القنوات الموجوده في حسابك ...**")
+    await event.edit("**✎┊‌ جارِ مغادرة جميع القنوات الموجوده في حسابك ...**")
     gr = []
     dd = []
     num = 0
@@ -647,15 +647,15 @@ async def Hussein (event):
                 num += 1
                 await sleep(1)
         if num >=1:
-            await event.edit(f"**᯽︙ تم المغادرة من {num} قناة بنجاح ✓**")
+            await event.edit(f"**✎┊‌ تم المغادرة من {num} قناة بنجاح ✓**")
         else:
-            await event.edit("**᯽︙ ليس لديك قنوات في حسابك لمغادرتها !**")
+            await event.edit("**✎┊‌ ليس لديك قنوات في حسابك لمغادرتها !**")
     except BaseException as er:
      await event.reply(f"حدث خطأ\n{er}\n{entity}")
 
 @l313l.ar_cmd(pattern="تصفية الخاص")
 async def hussein(event):
-    await event.edit("**᯽︙ جارِ حذف جميع الرسائل الخاصة الموجودة في حسابك ...**")
+    await event.edit("**✎┊‌ جارِ حذف جميع الرسائل الخاصة الموجودة في حسابك ...**")
     dialogs = await event.client.get_dialogs()
     for dialog in dialogs:
         if dialog.is_user:
@@ -663,11 +663,11 @@ async def hussein(event):
                 await event.client(DeleteHistoryRequest(dialog.id, max_id=0, just_clear=True))
             except Exception as e:
                 print(f"حدث خطأ أثناء حذف المحادثة الخاصة: {e}")
-    await event.edit("**᯽︙ تم تصفية جميع محادثاتك الخاصة بنجاح ✓ **")
+    await event.edit("**✎┊‌ تم تصفية جميع محادثاتك الخاصة بنجاح ✓ **")
 
 @l313l.ar_cmd(pattern="تصفية البوتات")
 async def Hussein(event):
-    await event.edit("**᯽︙ جارٍ حذف جميع محادثات البوتات في الحساب ...**")
+    await event.edit("**✎┊‌ جارٍ حذف جميع محادثات البوتات في الحساب ...**")
     result = await event.client(GetContactsRequest(0))
     bots = [user for user in result.users if user.bot]
     for bot in bots:
@@ -675,12 +675,12 @@ async def Hussein(event):
             await event.client(DeleteHistoryRequest(bot.id, max_id=0, just_clear=True))
         except Exception as e:
             print(f"حدث خطأ أثناء حذف محادثات البوت: {e}")
-    await event.edit("**᯽︙ تم حذف جميع محادثات البوتات بنجاح ✓ **")
+    await event.edit("**✎┊‌ تم حذف جميع محادثات البوتات بنجاح ✓ **")
 
 # الكود من كتابة فريق الجوكر بس تسرقة تنشر بقناة الفضايح انتَ وقناتك 🖤
 @l313l.ar_cmd(pattern=r"ذكاء(.*)")
 async def hussein(event):
-    await event.edit("**᯽︙ جارِ الجواب على سؤالك انتظر قليلاً ...**")
+    await event.edit("**✎┊‌ جارِ الجواب على سؤالك انتظر قليلاً ...**")
     text = event.pattern_match.group(1).strip()
     if text:
         url = f'http://api.itdevo.uz/ChatGPT/api/index.php?text={text}'
@@ -689,7 +689,7 @@ async def hussein(event):
     else:
         await event.edit("يُرجى كتابة رسالة مع الأمر للحصول على إجابة.")
 is_Reham = False
-No_group_Joker = "@jepthonsupport"
+No_group_Joker = "@Scorpions_scorp"
 # يا يلفاشل هم الك نيه تاخذه وتنشره بسورسك 🤣
 active_aljoker = []
 
@@ -699,18 +699,18 @@ async def enable_bot(event):
     if not is_Reham:
         is_Reham = True
         active_aljoker.append(event.chat_id)
-        await event.edit("**᯽︙ تم تفعيل امر الذكاء الاصطناعي سيتم الرد على اسئلة الجميع عند الرد علي.**")
+        await event.edit("**✎┊‌ تم تفعيل امر الذكاء الاصطناعي سيتم الرد على اسئلة الجميع عند الرد علي.**")
     else:
-        await event.edit("**᯽︙ الزر مُفعّل بالفعل.**")
+        await event.edit("**✎┊‌ الزر مُفعّل بالفعل.**")
 @l313l.ar_cmd(pattern=r"الذكاء تعطيل")
 async def disable_bot(event):
     global is_Reham
     if is_Reham:
         is_Reham = False
         active_aljoker.remove(event.chat_id)
-        await event.edit("**᯽︙ تم تعطيل امر الذكاء الاصطناعي.**")
+        await event.edit("**✎┊‌ تم تعطيل امر الذكاء الاصطناعي.**")
     else:
-        await event.edit("**᯽︙ الزر مُعطّل بالفعل.**")
+        await event.edit("**✎┊‌ الزر مُعطّل بالفعل.**")
 @l313l.on(events.NewMessage(incoming=True))
 async def reply_to_hussein(event):
     if not is_Reham:
@@ -743,19 +743,19 @@ async def Hussein(event):
             sender = await event.get_sender()
             aljoker_entity = await l313l.get_entity(sender.id)
             aljoker_profile = f"[{aljoker_entity.first_name}](tg://user?id={aljoker_entity.id})"
-            await event.reply(f"**᯽︙ عذرًا {aljoker_profile}، يُرجى عدم إرسال الرسائل التي تحتوي على إيموجي المُميز**")
+            await event.reply(f"**✎┊‌ عذرًا {aljoker_profile}، يُرجى عدم إرسال الرسائل التي تحتوي على إيموجي المُميز**")
 @l313l.ar_cmd(pattern="المميز تفعيل")
 async def disable_emoji_blocker(event):
     global Ya_Hussein
     Ya_Hussein = True
     active_joker.append(event.chat_id)
-    await event.edit("**᯽︙ ✓ تم تفعيل امر منع الايموجي المُميز بنجاح**")
+    await event.edit("**✎┊‌ ✓ تم تفعيل امر منع الايموجي المُميز بنجاح**")
 @l313l.ar_cmd(pattern="المميز تعطيل")
 async def disable_emoji_blocker(event):
     global Ya_Hussein
     Ya_Hussein = False
     active_joker.remove(event.chat_id)
-    await event.edit("**᯽︙ تم تعطيل امر منع الايموجي المُميز بنجاح ✓ **")
+    await event.edit("**✎┊‌ تم تعطيل امر منع الايموجي المُميز بنجاح ✓ **")
 remove_admins_aljoker = {}
 #الكود تمت كتابته من قبل مطورين الجوكر اذا الك نية تخمطه اذكر حقوق السورس @jepthon
 @l313l.on(events.ChatAction)
@@ -770,7 +770,7 @@ async def Hussein(event):
                     if (now - remove_admins_aljoker[user_id]).seconds < 60:
                         admin_info = await event.client.get_entity(user_id)
                         joker_link = f"[{admin_info.first_name}](tg://user?id={admin_info.id})"
-                        await event.reply(f"**᯽︙ تم تنزيل المشرف {joker_link} بسبب قيامه بعملية تفليش فاشلة 🤣**")
+                        await event.reply(f"**✎┊‌ تم تنزيل المشرف {joker_link} بسبب قيامه بعملية تفليش فاشلة 🤣**")
                         await event.client.edit_admin(chat, user_id, change_info=False)
                     remove_admins_aljoker.pop(user_id)
                     remove_admins_aljoker[user_id] = now
@@ -780,12 +780,12 @@ async def Hussein(event):
 @l313l.ar_cmd(pattern="منع_التفليش", require_admin=True)
 async def Hussein_aljoker(event):
     addgvar("Mn3_Kick", True)
-    await event.edit("**᯽︙ تم تفعيل منع التفليش للمجموعة بنجاح ✓**")
+    await event.edit("**✎┊‌ تم تفعيل منع التفليش للمجموعة بنجاح ✓**")
 
 @l313l.ar_cmd(pattern="سماح_التفليش", require_admin=True)
 async def Hussein_aljoker(event):
     delgvar("Mn3_Kick")
-    await event.edit("**᯽︙ تم تفعيل منع التفليش للمجموعة بنجاح ✓**")
+    await event.edit("**✎┊‌ تم تفعيل منع التفليش للمجموعة بنجاح ✓**")
 message_counts = {}
 enabled_groups = []
 Ya_Abbas = False
@@ -794,13 +794,13 @@ async def enable_code(event):
     global Ya_Abbas
     Ya_Abbas = True
     enabled_groups.append(event.chat_id)
-    await event.edit("**᯽︙ ✓ تم تفعيل امر منع النشر التلقائي بنجاح**")
+    await event.edit("**✎┊‌ ✓ تم تفعيل امر منع النشر التلقائي بنجاح**")
 @l313l.ar_cmd(pattern="النشر تفعيل")
 async def disable_code(event):
     global Ya_Abbas
     Ya_Abbas = False
     enabled_groups.remove(event.chat_id)
-    await event.edit("**᯽︙ تم تعطيل امر منع النشر التلقائي بنجاح ✓ **")
+    await event.edit("**✎┊‌ تم تعطيل امر منع النشر التلقائي بنجاح ✓ **")
 
 @l313l.on(events.NewMessage)
 async def handle_new_message(event):
@@ -823,7 +823,7 @@ async def handle_new_message(event):
             sender = await event.get_sender()
             aljoker_entity = await l313l.get_entity(sender.id)
             aljoker_profile = f"[{aljoker_entity.first_name}](tg://user?id={aljoker_entity.id})"
-            explanation_message = f"**᯽︙ تم تقييد {aljoker_profile} من إرسال الرسائل بسبب تفعيله نشر التلقائي**"
+            explanation_message = f"**✎┊‌ تم تقييد {aljoker_profile} من إرسال الرسائل بسبب تفعيله نشر التلقائي**"
             await event.reply(explanation_message)
             del message_counts[user_id]
         except ChatAdminRequiredError:
@@ -849,14 +849,14 @@ async def joker5a9(event: Message):
     global afk_start_time
     addgvar("5a9_dis", True)
     afk_start_time = datetime.now()
-    await event.edit('**᯽︙ تم قفل الخاص بنجاح الان لا احد يمكنهُ مراسلتك**')
+    await event.edit('**✎┊‌ تم قفل الخاص بنجاح الان لا احد يمكنهُ مراسلتك**')
 @l313l.ar_cmd(pattern="الخاص تفعيل")
 async def joker5a9(event: Message):
     global afk_start_time
     delgvar("5a9_dis")
     afk_start_time = None
     aljoker_Menu.clear()
-    await event.edit('**᯽︙ تم تفعيل الخاص بنجاح الان يمكنهم مراسلتك**')
+    await event.edit('**✎┊‌ تم تفعيل الخاص بنجاح الان يمكنهم مراسلتك**')
 def aljoker_waqt():
     global afk_start_time
     if afk_start_time:
@@ -907,16 +907,16 @@ async def handle_winner(event):
                 points_text = '\n'.join([f'{i+1}• {(await l313l.get_entity(participant_id)).first_name}: {participant_points}' for i, (participant_id, participant_points) in enumerate(sorted_points)])
                 await l313l.send_message(event.chat_id, f'الف مبرووووك 🎉 الاعب ( {sender_first_name} ) فاز! \n اصبحت نقاطة: {points[winner_id]}\nنقاط المشاركين:\n{points_text}')
 joker = [
-    "تلعب وخوش تلعب 👏🏻",
+    "تلعب وخوش تلعب 😂👏🏻",
     "لك عاش يابطل استمر 💪🏻",
     "على كيفك ركزززز انتَ كدها 🤨",
-    "لك وعلي ذيييب 😍",
+    "لك وعلي ذيييب 😎",
 ]
 
 correct_answer = None
-game_board = [["👊", "👊", "👊", "👊", "👊", "👊"]]
+game_board = [["👊🏻", "👊🏻", "👊🏻", "👊🏻", "👊🏻", "👊🏻"]]
 numbers_board = [["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣"]]
-original_game_board = [["👊", "👊", "👊", "👊", "👊", "👊"]]
+original_game_board = [["👊🏻", "👊🏻", "👊🏻", "👊🏻", "👊🏻", "👊🏻"]]
 joker_player = None
 is_game_started2 = False
 group_game_status = {}
@@ -934,7 +934,7 @@ async def handle_clue(event):
         group_game_status[chat_id]['is_game_started2'] = True
         group_game_status[chat_id]['joker_player'] = None
         correct_answer = random.randint(1, 6)
-        await event.edit(f"**اول من يرسل كلمة (انا) سيشارك في لعبة المحيبس\nملاحظة : لفتح العضمة ارسل طك ورقم العضمة لأخذ المحبس أرسل جيب ورقم العضمة**")
+        await event.edit(f"**حته تشارك بلعبة المحيبس ارسل ( `انا` ) 🙂\n\nطريقة اللعب : ارسل كلمة ( طك + الرقم ) او (جيب + الرقم ) حته تحصل المحبس**")
 
 @l313l.ar_cmd(pattern="محيبس")
 async def restart_game(event):
@@ -951,13 +951,13 @@ async def handle_strike(event):
     if chat_id in group_game_status and group_game_status[chat_id]['is_game_started2'] and event.sender_id == group_game_status[chat_id]['joker_player']:
         strike_position = int(event.pattern_match.group(1))
         if strike_position == correct_answer:
-            game_board = [["💍" if i == correct_answer - 1 else "🖐️" for i in range(6)]]
-            await event.reply(f"** خسرت شبيك مستعجل وجه الچوب 😒\n{format_board(game_board, numbers_board)}**")
+            game_board = [["💍" if i == correct_answer - 1 else "🖐🏻" for i in range(6)]]
+            await event.reply(f"** خسرت شبيك مستعجل وجه السمجه 😑\n{format_board(game_board, numbers_board)}**")
             game_board = [row[:] for row in original_game_board]
             group_game_status[chat_id]['is_game_started2'] = False
             group_game_status[chat_id]['joker_player'] = None
         else:
-            game_board[0][strike_position - 1] = '🖐️'
+            game_board[0][strike_position - 1] = '🖐🏻'
             lMl10l = random.choice(joker)
             await event.reply(f"**{lMl10l}**\n{format_board(game_board, numbers_board)}")
 
@@ -977,13 +977,13 @@ async def handle_guess(event):
                 sender_first_name = sender.first_name if sender else 'مجهول'
                 sorted_points = sorted(points.items(), key=lambda x: x[1], reverse=True)
                 points_text = '\n'.join([f'{i+1}• {(await l313l.get_entity(participant_id)).first_name}: {participant_points}' for i, (participant_id, participant_points) in enumerate(sorted_points)])
-                game_board = [["💍" if i == correct_answer - 1 else "🖐️" for i in range(6)]]
+                game_board = [["💍" if i == correct_answer - 1 else "🖐🏻" for i in range(6)]]
                 await l313l.send_message(event.chat_id, f'الف مبروووك 🎉 الاعب ( {sender_first_name} ) وجد المحبس 💍!\n{format_board(game_board, numbers_board)}')
                 game_board = [row[:] for row in original_game_board]
                 await l313l.send_message(event.chat_id, f'نقاط الاعب : {points[winner_id]}\nنقاط المشاركين:\n{points_text}')
             else:
-                game_board = [["💍" if i == correct_answer - 1 else "🖐️" for i in range(6)]]
-                await event.reply(f"**ضاع البات ماضن بعد تلگونة ☹️\n{format_board(game_board, numbers_board)}**")
+                game_board = [["💍" if i == correct_answer - 1 else "🖐🏻" for i in range(6)]]
+                await event.reply(f"**ضاع البات ماضن بعد تلگونة 😂\n{format_board(game_board, numbers_board)}**")
                 game_board = [row[:] for row in original_game_board]
             group_game_status[chat_id]['is_game_started2'] = False
             group_game_status[chat_id]['joker_player'] = None
@@ -999,7 +999,7 @@ async def handle_incoming_message(event):
         }
     if group_game_status[chat_id]['is_game_started2'] and not group_game_status[chat_id]['joker_player']:
         group_game_status[chat_id]['joker_player'] = event.sender_id
-        await event.reply(f"**تم تسجيلك في المسابقة روح لحسين بظهرك\n{format_board(game_board, numbers_board)}**")
+        await event.reply(f"**تم تسجيلك في اللعبه شد حيلك 😂\n{format_board(game_board, numbers_board)}**")
 
 def format_board(game_board, numbers_board):
     formatted_board = ""
