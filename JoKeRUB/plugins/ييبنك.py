@@ -26,11 +26,11 @@ plugin_category = "utils"
 async def jokerping(event):
     reply_to_id = await reply_id(event)
     start = datetime.now()
-    await edit_or_reply(event, "** ᯽︙ يتـم التـأكـد من البنك انتـظر قليلا رجاءا**")
+    await edit_or_reply(event, "** ✎┊‌ يتـم التـأكـد من البنك انتـظر قليلا رجاءا**")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "✇ ◅"
-    PING_TEXT = gvarstatus("PING_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/jepthon)**"
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "✎┊‌"
+    PING_TEXT = gvarstatus("PING_TEXT") or "**[𝗜'𝗺 𝗻𝗼𝘁 𝘀𝗲𝗲𝗶𝗻𝗴 𝘆𝗼𝘂 😌](t.me/Scorpions_scorp)**"
     PING_IMG = gvarstatus("PING_PIC") or Config.P_PIC or "https://telegra.ph/file/fb62d70ce09f4a78dfc86.jpg"
     HuRe_caption = gvarstatus("PING_TEMPLATE") or temp
     caption = HuRe_caption.format(
@@ -60,8 +60,8 @@ async def jokerping(event):
 
 
 temp = """{PING_TEXT}
-┏━━━━━━━┓
-┃ ✦ {ping}
-┃ ✦ {mention}
-┗━━━━━━━┛"""
+┏━━━━━━━
+┃ ✎┊‌ {ping}
+┃ ✎┊‌ {mention}
+┗━━━━━━━"""
 

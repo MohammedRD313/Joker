@@ -30,27 +30,27 @@ async def _(event):
         except YouBlockedUserError:
             await event.edit("** اولا الغي حظر @SpamBot وحاول مجددا**")
             return
-        await event.edit(f"- {response.message.message}\n @jepthon")
+        await event.edit(f"- {response.message.message}\n @Scorpions_scorp")
 
 
 @l313l.on(admin_cmd(pattern="الاغنية ?(.*)"))
 async def _(event):
     "To reverse search music by bot."
     if not event.reply_to_msg_id:
-        return await event.edit("**▾∮ يجب الرد على الاغنيه اولا**")
+        return await event.edit("**✎┊‌ يجب الرد على الاغنيه اولا**")
     reply_message = await event.get_reply_message()
     chat = "@auddbot"
     try:
         async with event.client.conversation(chat) as conv:
             try:
-                await event.edit("**▾∮ يتم التعرف على الاغنية انتظر**")
+                await event.edit("**✎┊‌ يتم التعرف على الاغنية انتظر**")
                 start_msg = await conv.send_message("/start")
                 response = await conv.get_response()
                 send_audio = await conv.send_message(reply_message)
                 check = await conv.get_response()
                 if not check.text.startswith("Audio received"):
                     return await event.edit(
-                        "**▾∮ يجب ان يكون حجم الاغنيه من 5 الى 10 ثواني **."
+                        "**✎┊‌ يجب ان يكون حجم الاغنيه من 5 الى 10 ثواني **."
                     )
                 await event.edit("- انتظر قليلا")
                 result = await conv.get_response()
@@ -95,26 +95,26 @@ async def _(event):
 async def aljoker313(joker313):
   rl = random.randint(1,385)
   url = f"https://t.me/DwDi1/{rl}"
-  await joker313.client.send_file(joker313.chat_id,url,caption="᯽︙ BY : @jepthon 🎀",parse_mode="html")
+  await joker313.client.send_file(joker313.chat_id,url,caption="✎┊‌ 𝗕𝘆 𝗦𝗰𝗼𝗿𝗽𝗶𝗼𝗻 🦂",parse_mode="html")
   await joker313.delete()
     
 @l313l.on(admin_cmd(outgoing=True, pattern="شعر$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/L1BBBL/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @jepthon 🎀",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="✎┊‌ 𝗕𝘆 𝗦𝗰𝗼𝗿𝗽𝗶𝗼𝗻 🦂",parse_mode="html")
   await vois.delete()
 @l313l.on(admin_cmd(outgoing=True, pattern="قران$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/QuraanJep/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="᯽︙ BY : @jepthon 🤲🏻☪️",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="✎┊‌ 𝗕𝘆 𝗦𝗰𝗼𝗿𝗽𝗶𝗼𝗻 🦂",parse_mode="html")
   await vois.delete()
 @l313l.on(admin_cmd(outgoing=True, pattern="ثيم$"))
 async def jepThe(theme):
   rl = random.randint(2,510)
   url = f"https://t.me/GSSSD/{rl}"
-  await theme.client.send_file(theme.chat_id,url,caption="᯽︙ THEME BY : @jepthon 🎊",parse_mode="html")
+  await theme.client.send_file(theme.chat_id,url,caption="✎┊‌ 𝗕𝘆 𝗦𝗰𝗼𝗿𝗽𝗶𝗼𝗻 🦂",parse_mode="html")
   await theme.delete()
 @l313l.on(admin_cmd(outgoing=True, pattern="لاتغلط$"))
 async def jepmeme(memejep):
@@ -561,7 +561,7 @@ async def Hussein(event):
     url = event.pattern_match.group(1)
     lMl10l = event.pattern_match.group(2)
     add_link(lMl10l, url)
-    await event.edit(f"**᯽︙ تم اضافة البصمة {lMl10l} بنجاح ✓ **")
+    await event.edit(f"**✎┊‌ تم اضافة البصمة {lMl10l} بنجاح ✓ **")
     joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
     joker = Get(joker)
     try:
@@ -588,7 +588,7 @@ async def Hussein(event):
 async def delete_aljoker(event):
     lMl10l = event.pattern_match.group(1)
     delete_link(lMl10l)
-    await event.edit(f"**᯽︙ تم حذف البصمة '{lMl10l}' بنجاح ✓**")
+    await event.edit(f"**✎┊‌ تم حذف البصمة '{lMl10l}' بنجاح ✓**")
     joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
     joker = Get(joker)
     try:
@@ -600,11 +600,11 @@ async def delete_aljoker(event):
 async def list_aljoker(event):
     links = SESSION.query(AljokerLink).all()
     if links:
-        message = "**᯽︙ قائمة تخزين اوامر الميمز:**\n"
+        message = "**✎┊‌ قائمة تخزين اوامر الميمز:**\n"
         for link in links:
             message += f"- البصمة : .`{link.key}`\n"
     else:
-        message = "**᯽︙ لاتوجد بصمات ميمز مخزونة حتى الآن**"
+        message = "**✎┊‌ لاتوجد بصمات ميمز مخزونة حتى الآن**"
     await event.edit(message)
     joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
     joker = Get(joker)
@@ -615,7 +615,7 @@ async def list_aljoker(event):
 @l313l.on(admin_cmd(outgoing=True, pattern="ازالة_البصمات"))
 async def delete_all_aljoker(event):
     SESSION.query(AljokerLink).delete()
-    await event.edit("**᯽︙ تم حذف جميع بصمات الميمز من القائمة **")
+    await event.edit("**✎┊‌ تم حذف جميع بصمات الميمز من القائمة **")
     joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
     joker = Get(joker)
     try:

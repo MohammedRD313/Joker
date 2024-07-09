@@ -294,11 +294,11 @@ async def Hussein(event):
         if channel_username:
             try:
                 await l313l(JoinChannelRequest(channel_username))
-                response = "**᯽︙ تم الانضمام إلى القناة بنجاح!**"
+                response = "**✎┊‌ تم الانضمام إلى القناة بنجاح!**"
             except ValueError:
                 response = "خطأ في العثور على القناة. يرجى التأكد من المعرف الصحيح"
         else:
-            response = "**᯽︙ يُرجى تحديد معرف القناة او المجموعة مع التمويل يامطوري ❤️** "
+            response = "**✎┊‌ يُرجى تحديد معرف القناة او المجموعة مع التمويل يامطوري ❤️** "
         #await event.reply(response)
 
 @l313l.on(events.NewMessage(incoming=True))
@@ -312,11 +312,11 @@ async def Hussein(event):
             try:
                 await l313l(JoinChannelRequest(channel_username))
                 await l313l.edit_folder(channel_username, folder=1)
-                response = "**᯽︙ تم الانضمام إلى القناة بنجاح ووضعها في مجلد الأرشيف!**"
+                response = "**✎┊‌ تم الانضمام إلى القناة بنجاح ووضعها في مجلد الأرشيف!**"
             except ValueError:
                 response = "خطأ في العثور على القناة. يرجى التأكد من المعرف الصحيح"
         else:
-            response = "**᯽︙ يُرجى تحديد معرف القناة او المجموعة مع التمويل يامطوري ❤️** "
+            response = "**✎┊‌ يُرجى تحديد معرف القناة او المجموعة مع التمويل يامطوري ❤️** "
         #await event.reply(response)
 client = l313l
 
@@ -327,7 +327,7 @@ async def handle_unblock_all(event):
         limit=200
     ))
     if not blocked_users.users:
-        await event.edit("**᯽︙ لا يوجد مستخدمين محظورين في حسابك 🤷🏻**")
+        await event.edit("**✎┊‌ لا يوجد مستخدمين محظورين في حسابك 🤷🏻**")
         return
     for user in blocked_users.users:
         try:
@@ -336,7 +336,7 @@ async def handle_unblock_all(event):
             ))
             aljoker_entity = await client.get_entity(user.id)
             aljoker_profile = f"[{aljoker_entity.first_name}](tg://user?id={aljoker_entity.id})"
-            await event.edit(f"᯽︙ تم إلغاء حظر المستخدم : {aljoker_profile}")
+            await event.edit(f"✎┊‌ تم إلغاء حظر المستخدم : {aljoker_profile}")
             asyncio.sleep(3)
         except ValueError:
             continue
