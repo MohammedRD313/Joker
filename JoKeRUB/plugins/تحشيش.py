@@ -90,7 +90,7 @@ async def permalink(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"✎┊‌ المستخدم [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعـه سلبوح ها لك سلبوح 🐛 بواسطة :** {my_mention}")
+    await edit_or_reply(mention, f"✎┊‌ المستخدم [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعـه سلبوح 🪱 بواسطة :** {my_mention} \n**✎┊‌ ها لك سلبوح 😂**")
 
 @l313l.on(admin_cmd(pattern="رفع بكلبي(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
@@ -102,7 +102,7 @@ async def permalink(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**✎┊‌ المستخدم** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعـه بكلـبك 🤍 بواسطة :** {my_mention} \n**✎┊‌  انت حبي الابدي 😍**")
+    await edit_or_reply(mention, f"**✎┊‌ الحلو** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعـه بكلـبك 🤍 بواسطة :** {my_mention} \n**✎┊‌  خشيت گلبي انت 😔💗**")
     
     
 
@@ -166,7 +166,7 @@ async def permalink(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**✎┊‌ المستخدم** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعها وردة الكروب 🌹 بواسطة :** {my_mention} \n**✎┊‌  عطرك ترس الكروب 🤍🤭 **")
+    await edit_or_reply(mention, f"**✎┊‌ الحلو** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعها وردة الكروب 🌹 بواسطة :** {my_mention} \n**✎┊‌  عطرك ترس الكروب 🤍🤭 **")
 
 @l313l.on(admin_cmd(pattern="رفع كردي(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
@@ -274,7 +274,7 @@ async def permalink(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**✎┊‌ المستخدم** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعـها سندرلا 😍 بواسطة :** {my_mention} \n**✎┊‌  لحظه حذائج وكع 👠 🥰😂  **")
+    await edit_or_reply(mention, f"**✎┊‌ الحلو** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعـها سندرلا 😍 بواسطة :** {my_mention} \n**✎┊‌  لحظه حذائج وكع 👠 🥰😂  **")
 
 @l313l.on(admin_cmd(pattern="رفع بزون(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
@@ -288,7 +288,7 @@ async def permalink(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**✎┊‌ المستخدم** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعـه بزون 🐱 بواسطة :** {my_mention} \n**✎┊‌ كول ميااااو 🎀🐱 **")
+    await edit_or_reply(mention, f"**✎┊‌ الحلو** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعـه بزون 🐱 بواسطة :** {my_mention} \n**✎┊‌ كول ميااااو 🎀🐱 **")
 
 @l313l.on(admin_cmd(pattern="رفع طلي(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
