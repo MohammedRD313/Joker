@@ -94,13 +94,12 @@ async def startupmessage():
         if BOTLOG:
             Config.CATUBLOGO = await l313l.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/806e83ebc8c15da72c80d.jpg",
-                caption="""**‏✎┊‌ سورس العقرب يـعـمـل بـنـجـاح ✅
+                "https://telegra.ph/file/423c42d2485116caa3f32.jpg",
+                caption="""**‏✎┊‌ سورس العقرب يـعـمـل بـنـجـاح ✅""",
                 
-                ✎┊‌ أرسل ( `.فحص` ) للتأكد
+               caption=""" ✎┊‌ أرسل ( `.فحص` ) للتأكد""",
                 
-                
-                العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 **""",
+               caption=""" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 **""",
                 buttons=[(Button.url("سورس العقرب", "https://t.me/Scorpions_scorp"),)],
             )
     except Exception as e:
