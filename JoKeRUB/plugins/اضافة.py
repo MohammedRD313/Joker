@@ -29,16 +29,16 @@ async def get_chatinfo(event):
         try:
             chat_info = await event.client(GetFullChannelRequest(chat))
         except ChannelInvalidError:
-            await event.reply("**▾∮ لم يتم العثور على المجموعة او القناة**")
+            await event.reply("**✎┊‌ لم يتم العثور على المجموعة او القناة**")
             return None
         except ChannelPrivateError:
-            await event.reply("**▾∮ لا يمكنني استخدام الامر من الكروبات او القنوات الخاصة**")
+            await event.reply("**✎┊‌ لا يمكنني استخدام الامر من الكروبات او القنوات الخاصة**")
             return None
         except ChannelPublicGroupNaError:
-            await event.reply("**▾∮ لم يتم العثور على المجموعة او القناة**")
+            await event.reply("**✎┊‌ لم يتم العثور على المجموعة او القناة**")
             return None
         except (TypeError, ValueError) as err:
-            await event.reply("**▾∮ رابط الكروب غير صحيح**")
+            await event.reply("**✎┊‌ رابط الكروب غير صحيح**")
             return None
     return chat_info
 
@@ -71,25 +71,25 @@ def user_full_name(user):
 async def get_users(event):   
     sender = await event.get_sender() ; me = await event.client.get_me()
     if not sender.id == me.id:
-        roz = await event.reply("**▾∮ تتـم العـملية انتظـࢪ قليلا 🧸♥ ...**")
+        roz = await event.reply("**✎┊‌ تتـم العـملية انتظـࢪ قليلا 🧸♥ ...**")
     else:
-        roz = await event.edit("**▾∮ تتـم العـملية انتظـࢪ قليلا 🧸♥ ...**.")
+        roz = await event.edit("**✎┊‌ تتـم العـملية انتظـࢪ قليلا 🧸♥ ...**.")
     JoKeRUB = await get_chatinfo(event) ; chat = await event.get_chat()
     if event.is_private:
               return await roz.edit("**▾∮ لا يمكننـي اضافـة المـستخدمين هـنا**")    
     s = 0 ; f = 0 ; error = 'None'   
   
-    await roz.edit("**▾∮ حـالة الأضافة:**\n\n**▾∮ تتـم جـمع معـلومات الـمستخدمين 🔄 ...⏣**")
+    await roz.edit("**✎┊‌ حـالة الأضافة:**\n\n**✎┊‌ تتـم جـمع معـلومات الـمستخدمين 🔄 ...⏣**")
     async for user in event.client.iter_participants(JoKeRUB.full_chat.id):
                 try:
                     if error.startswith("Too"):
                         return await roz.edit(f"**حـالة الأضـافة انتـهت مـع الأخـطاء**\n- (**ربـما هـنالك ضغـط عـلى الأمࢪ حاول مججـدا لاحقـا 🧸**) \n**الـخطأ** : \n`{error}`\n\n• اضالـة `{s}` \n• خـطأ بأضافـة `{f}`"),
                     await event.client(functions.channels.InviteToChannelRequest(channel=chat,users=[user.id]))
                     s = s + 1                                                    
-                    await roz.edit(f"**▾∮تتـم الأضـافة 🧸♥**\n\n• اضـيف `{s}` \n•  خـطأ بأضافـة `{f}` \n\n**× اخـر خـطأ:** `{error}`") 
+                    await roz.edit(f"**✎┊‌تتـم الأضـافة 🧸♥**\n\n• اضـيف `{s}` \n•  خـطأ بأضافـة `{f}` \n\n**× اخـر خـطأ:** `{error}`") 
                 except Exception as e:
                     error = str(e) ; f = f + 1             
-    return await roz.edit(f"**▾∮اڪتـملت الأضافـة ✅** \n\n• تـم بنجـاح اضافـة `{s}` \n• خـطأ بأضافـة `{f}`")
+    return await roz.edit(f"**✎┊‌اڪتـملت الأضافـة ✅** \n\n• تـم بنجـاح اضافـة `{s}` \n• خـطأ بأضافـة `{f}`")
 #تم كتابة الكود من قبل مطورين الجوكر ممنوع السرقة اخي الكريم
 @l313l.on(admin_cmd(pattern=r"اضافة_جهاتي ?(.*)"))
 async def Hussein(event):
@@ -104,5 +104,5 @@ async def Hussein(event):
             ))
             added_count += 1
         except Exception as e:
-            await event.reply(f"**᯽︙ تم إضافة {added_count} من جهات اتصالي**")
-    await event.reply(f"**᯽︙ تم إضافة {added_count} من جهات اتصالي**")
+            await event.reply(f"**✎┊‌ تم إضافة {added_count} من جهات اتصالي**")
+    await event.reply(f"**✎┊‌ تم إضافة {added_count} من جهات اتصالي**")
