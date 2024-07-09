@@ -66,8 +66,8 @@ async def setup_bot():
             if option.ip_address == l313l.session.server_address:
                 if l313l.session.dc_id != option.id:
                     LOGS.warning(
-                        f"⌯︙معرف ثابت في الجلسة من {l313l.session.dc_id}"
-                        f"⌯︙لـ  {option.id}"
+                        f"✎┊‌معرف ثابت في الجلسة من {l313l.session.dc_id}"
+                        f"✎┊‌لـ  {option.id}"
                     )
                 l313l.session.set_dc(option.id, option.ip_address, option.port)
                 l313l.session.save()
