@@ -35,7 +35,7 @@ async def aljoker_4ever():
         file_list = os.listdir("Scorpion")
         for file in file_list:
             await _catutils.runcmd(f"rm -rf {file}")
-            await _catutils.runcmd(f"mv ./TempCat/{file} ./")
+            await _catutils.runcmd(f"mv ./Scorpion/{file} ./")
         await _catutils.runcmd("pip3 install --no-cache-dir -r requirements.txt")
         await _catutils.runcmd("rm -rf Scorpion")
     if os.path.exists("jepvc"):
