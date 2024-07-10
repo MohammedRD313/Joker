@@ -87,19 +87,19 @@ async def amireallyalive(event):
 
 
 temp = """{ALIVE_TEXT}
- **   [𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆](t.me/Scorpions_scorp) ✅**
+ **   [𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆](t.me/Scorpions_scorp) ✅
 
-**‎{EMOJI}‌‎𝐍𝐢𝐦𝐞 | {mention}** ٫
+{EMOJI}‌‎𝐍𝐢𝐦𝐞 | {mention} ٫
 
-**‌‎{EMOJI}‌‎𝐏𝐲𝐭𝐡𝐨𝐧 | `{pyver}`** ٫
+{EMOJI}‌‎𝐏𝐲𝐭𝐡𝐨𝐧 | `{pyver}` ٫
 
-**‌‎{EMOJI}‌‎𝐒𝐜𝐨𝐫𝐩𝐢𝐨𝐧 | `{telever}`** ٫
+{EMOJI}‌‎𝐒𝐜𝐨𝐫𝐩𝐢𝐨𝐧 | `{telever}` ٫
 
-**‌‎{EMOJI}‌‎𝐔𝐩𝐭𝐢𝐦𝐞 | `{uptime}`** ٫
+{EMOJI}‌‎𝐔𝐩𝐭𝐢𝐦𝐞 | `{uptime}` ٫
 
-‌‎**{EMOJI}‌‎‌‎𝐏𝐢𝐧𝐠 | `{ping}`** ٫
+‌‎{EMOJI}‌‎‌‎𝐏𝐢𝐧𝐠 | `{ping}` ٫
 
-‌‎**{EMOJI}‌‎‌‎𝐒𝐞𝐭𝐮𝐩 𝐃𝐚𝐭𝐞 | `{Tare5}`** ٫
+‌‎{EMOJI}‌‎‌‎𝐒𝐞𝐭𝐮𝐩 𝐃𝐚𝐭𝐞 | `{Tare5}` ٫
 
-**     - 𝗚𝗼 𝗮𝗻𝗱 𝗲𝗻𝗷𝗼𝘆 😉**
+     - 𝗚𝗼 𝗮𝗻𝗱 𝗲𝗻𝗷𝗼𝘆 😉**
 ** ╚==========================╝ **"""
