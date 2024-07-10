@@ -76,7 +76,7 @@ async def permalink(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**✎┊‌ الحلو [{JoKeRUB}](tg://user?id={user.id}) \n✎┊‌  تـم رفعـه كتكوت 🐤 بواسطة : {my_mention} \n✎┊‌    تكتوووك نسنس 🎀** ")
+    await edit_or_reply(mention, f"**✎┊‌ الحلو [{JoKeRUB}](tg://user?id={user.id}) \n✎┊‌  تـم رفعـه كتكوت 🐤 بواسطة : {my_mention} \n✎┊‌    كتككووت نسنس 😚🎀** ")
 
 @l313l.on(admin_cmd(pattern="رفع تاج(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
