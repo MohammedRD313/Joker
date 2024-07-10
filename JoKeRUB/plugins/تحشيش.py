@@ -344,7 +344,7 @@ async def permalink(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**✎┊‌ المستخدم** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعه جانتي بواسطة :** {my_mention} \n**✎┊‌ لك انتة تبقة عار مع احترامي الك 😂 **")
+    await edit_or_reply(mention, f"**✎┊‌ المستخدم** [{JoKeRUB}](tg://user?id={user.id}) \n**✎┊‌  تـم رفعه جانتي بواسطة :** {my_mention} \n**✎┊‌ لك انتة تبقة ثور مع احترامي الك 😂 **")
 
 @l313l.on(admin_cmd(pattern="رفع مميز(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
@@ -458,10 +458,8 @@ async def Hussein(event):
                await event.reply("**الأمام علي عليه الصلاة والسلام ❤️**")
            elif event.message.message == "تاج راسك منو؟":
                await event.reply("**محمد و علوش**")
-           elif event.message.message == "منو اقوة سورس؟":
-               await event.reply("**سورس العقرب واحد عراق 🦂😉**")
-           elif event.message.message == "منو عمك؟":
-               await event.reply("**لـوفـي 😹**")
+           elif event.message.message == " عمك منو؟  ":
+               await event.reply("لوفي🥺")
 @l313l.on(admin_cmd(pattern="همسه(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
