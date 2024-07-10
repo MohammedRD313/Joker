@@ -17,7 +17,7 @@ from ..sql_helper.globals import gvarstatus
 
 plugin_category = "extra"
 
-rehu = [ "[𝗔𝗹𝘄𝗮𝘆𝘀 𝗦𝗰𝗼𝗿𝗽𝗶𝗼𝗻 𝟯𝗺𝗸](t.me/Scorpions_scorp) 💪🏻😉   ========================== ",]
+rehu = [ "   [𝗔𝗹𝘄𝗮𝘆𝘀 𝗦𝗰𝗼𝗿𝗽𝗶𝗼𝗻 𝟯𝗺𝗸](t.me/Scorpions_scorp) 💪🏻😉   ========================== ",]
 @l313l.ar_cmd(pattern="الاوامر(?:\s|$)([\s\S]*)")
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
