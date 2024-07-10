@@ -27,7 +27,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
         idd = reply_message.sender_id
-        if idd == 705475246:
+        if idd == 7045643989:
             await edit_or_reply(
                 event, "**✎┊‌ عـذرا لا استـطيع اخـتراق مـطوري اعـتذر او سيقـوم بتهـكيرك**"
             )
@@ -44,7 +44,7 @@ async def _(event):
                 "**تهكيـر**... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ ",
                 "**تهكيـر**... 84%\n█████████████████████▒▒▒▒ ",
                 "**تهكيـر**... 100%\n████████████████████████ ",
-                f"✎┊‌ ** تـم اخـتراق الضـحية**..\n\nقـم بالـدفع الى {ALIVE_NAME} لعـدم نشـر معلوماتك وصـورك",
+                f"✎┊‌ ** تـم اخـتراق الضـحية**..\n\n انزع حتة  {@ZS_SQ} ما انشـر معلوماتك وصـورك",
             ]
             animation_interval = 3
             animation_ttl = range(11)
@@ -158,7 +158,7 @@ async def _(event):
     await asyncio.sleep(5)
     await event.edit("`100%\n█████████████████████████ `\n\n\n  TERMINAL:\nيتم تنزيل Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  يتم تنزيل Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e\n  Stored in directory: `")
     await asyncio.sleep(5)
-    await event.edit(f"`تم سحب جميع معلومات الحساب\n قم بلدفع الى {ALIVE_NAME} 100$ \n حتى لا يقم بنشر صورك ومحادثاتك !`")
+    await event.edit(f"`تم سحب جميع معلومات الحساب\n قم بلدفع الى {@ZS_SQ} 100$ \n حتى لا يقم بنشر صورك ومحادثاتك !`")
     await asyncio.sleep(5)
     h=(random.randrange(1,5)) 
     if h==1:
