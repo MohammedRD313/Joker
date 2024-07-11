@@ -137,7 +137,7 @@ async def startupmessage():
 async def mybot():
     try:
         starkbot = await l313l.tgbot.get_me()
-        joker = "** العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**"
+        Scorpion = "** العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**"
         bot_name = starkbot.first_name
         botname = f"@{starkbot.username}"
         if bot_name.endswith("Assistant"):
@@ -150,8 +150,20 @@ async def mybot():
                 await asyncio.sleep(1)
                 await l313l.send_message("@BotFather", botname)
                 await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", joker)
+                await l313l.send_message("@BotFather", Scorpion)
                 await asyncio.sleep(2)
+                await bot.send_message("@BotFather", "/setuserpic")
+            await asyncio.sleep(1)
+            await l313l.send_message("@BotFather", botname)
+            await asyncio.sleep(1)
+            await l313l.send_file("@BotFather", "Scorpion.jpg")
+            await asyncio.sleep(3)
+            await l313l.send_message("@BotFather", "/setabouttext")
+            await asyncio.sleep(1)
+            await l313l.send_message("@BotFather", botname)
+            await asyncio.sleep(1)
+            await l313l.send_message("@BotFather", f"-  بوت العقرب المساعد 🦂 الخاص بـ  {bot.me.first_name} ")
+            await asyncio.sleep(3)
             except Exception as e:
                 print(e)
     except Exception as e:
