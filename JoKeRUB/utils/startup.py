@@ -153,10 +153,10 @@ async def mybot():
                 await l313l.send_message("@BotFather", Scorpion)
                 await asyncio.sleep(1)
                 await l313l.send_message("@BotFather", "/setuserpic")
-            await l313l.send_message("@BotFather", botname)
-            await asyncio.sleep(1)
-            await l313l.send_file("@BotFather", "Scorpion.jpg")
-            await asyncio.sleep(3)
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_file("@BotFather", "Scorpion.jpg")
+                await asyncio.sleep(3)
             except Exception as e:
                 print(e)
     except Exception as e:
