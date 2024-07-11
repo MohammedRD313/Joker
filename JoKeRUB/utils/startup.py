@@ -153,7 +153,6 @@ async def mybot():
                 await l313l.send_message("@BotFather", Scorpion)
                 await asyncio.sleep(1)
                 await l313l.send_message("@BotFather", "/setuserpic")
-            await asyncio.sleep(1)
             await l313l.send_message("@BotFather", botname)
             await asyncio.sleep(1)
             await l313l.send_file("@BotFather", "Scorpion.jpg")
