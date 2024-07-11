@@ -461,7 +461,7 @@ async def Hussein(event):
            elif event.message.message == "علوش؟":
                await event.reply("**لك هاذ تاج راسيييي😔**") 
            elif event.message.message == "اقوة سورس منو؟":
-               await event.reply("**سورس العقرب واحد عراق**")
+               await event.reply("سورس العقرب واحد عراق")
            elif event.message.message == "محمد؟":
                await event.reply("**لك هاذ تاج راسيييي😔**")
            elif event.message.message == "عمك منو؟":
