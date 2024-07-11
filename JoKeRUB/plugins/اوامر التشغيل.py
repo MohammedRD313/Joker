@@ -57,8 +57,8 @@ async def aljoker_4ever():
 )
 async def Hussein(event):
     "To reload Your bot"
-    joker = await edit_or_reply(event, """** ✎┊‌ عيوني 5 دقايق واحدثلك السورس ✋🏻 ...
-    العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**""")
+    joker = await edit_or_reply(event, """** ✎┊‌ عيوني 5 دقايق واحدثلك السورس ✋🏻 ... 
+✎┊‌ العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**""")
     await aljoker_4ever()
     await event.client.reload(joker)
 
