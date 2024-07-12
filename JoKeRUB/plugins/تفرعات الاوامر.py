@@ -683,8 +683,8 @@ async def _(event):
 
 )
 l313l.ar_cmd(
-    pattern="ثيم$",
-    command=("ثيم", plugin_category),
+    pattern="ثيمس$",
+    command=("ثيمس", plugin_category),
 )
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
