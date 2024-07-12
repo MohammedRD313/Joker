@@ -103,35 +103,35 @@ def gen_user(choice):
 @l313l.ar_cmd(pattern="الصيد")
 async def _(event):
     await event.edit(
-        """
-أوامر الصيد الخاصة بسورس جمثون : 
+        """**
+أوامر الصيد الخاصة بالعقرب 🦂 : 
 
-ٴ— — — — — — — — — —
+✎┊‌ اختر احدى هذه الاوامر
 
-النوع :(  سداسي حرفين/ ثلاثيات/ سداسيات/ بوتات/ خماسي حرفين/خماسي /سباعيات )
+النوع :(  سداسي حرفين/ ثلاثيات/ سداسيات/ بوتات/ خماسي حرفين/خماسي /سباعيات ) ✎┊‌
 
-الامر:  `.صيد` + النوع
+الامر:  `.صيد` + النوع ✎┊‌
 - يقوم بصيد معرفات عشوائية حسب النوع
 
-الامر:  `تثبيت` + معرف
+الامر:  `تثبيت` + معرف ✎┊‌
 * وظيفة الامر : يقوم بالتثبيت على المعرف عندما يصبح متاح يأخذه
 
 ٴ— — — — — — — — — —
-الامر:   `.حالة الصيد`
+الامر:   `.حالة الصيد` ✎┊‌
 • لمعرفة عدد المحاولات للصيد
 
-الامر:  `.حالة التثبيت`
+الامر:  `.حالة التثبيت` ✎┊‌
 • لمعرفة عدد المحاولات للصيد
 
-@jmthon  - channle userbot 
-
+[العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼](t.me/Scorpions_scorp) 🦂
+**
 """
     )
 
 
 @l313l.ar_cmd(pattern="صيد بوتات")
 async def huntbot(event):
-    await event.edit(f"**- تم تفعيل الصيد بنجاح الان**")
+    await event.edit(f"**✎┊‌ تم تفعيل الصيد بنجاح الان**")
     isclaim.clear()
     isclaim.append("on")
     botmod = True
@@ -141,17 +141,17 @@ async def huntbot(event):
         if isav == True:
             try:
                 await l313l.send_message("@botfather", "/newbot")
-                await l313l.send_message("@botfather", "@jmthon - @R0R77 🐊")
+                await l313l.send_message("@botfather", "@Scorpions_scorp 🐊")
                 await l313l.send_message("@botfather", username)
                 await event.client.send_file(
                     event.chat_id,
                     "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
+                    caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
                         username, trys3
                     ),
                 )
                 await event.client.send_message(
-                    "@r0r77", f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !"
+                    "@r0r77", f"- Done : @{username} !\n- العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂"
                 )
                 botmod = False
                 break
@@ -188,7 +188,7 @@ async def hunterusername(event):
     if event.text[1:].startswith("صيد بوتات"):
         return
     choice = str(event.pattern_match.group(1))
-    await event.edit(f"**- تم تفعيل الصيد بنجاح الان**")
+    await event.edit(f"**✎┊‌ تم تفعيل الصيد بنجاح الان**")
     try:
         ch = await l313l(
             functions.channels.CreateChannelRequest(
@@ -209,7 +209,7 @@ async def hunterusername(event):
     while sedmod:
         username = gen_user(choice)
         if username == "error":
-            await event.edit("**- يرجى وضع النوع بشكل صحيح**")
+            await event.edit("**✎┊‌ يرجى وضع النوع بشكل صحيح**")
             break
         isav = check_user(username)
         if isav == True:
@@ -222,15 +222,15 @@ async def hunterusername(event):
                 await event.client.send_file(
                     event.chat_id,
                     "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
-                        username, trys, choice
+                    caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
+                        username, trys3
                     ),
                 )
                 await event.client.send_file(
                     ch,
                     "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
-                        username, trys, choice
+                    caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
+                        username, trys3
                     ),
                 )
                 await event.client.send_message(
@@ -275,17 +275,17 @@ async def _(event):
     try:
         ch = str(msg[2])
         ch = ch.replace("@", "")
-        await event.edit(f"حسناً سيتم بدء التثبيت في**-  @{ch} .**")
+        await event.edit(f"✎┊‌ حسناً سيتم بدء التثبيت في**-  @{ch} .**")
     except:
         try:
             ch = await l313l(
                 functions.channels.CreateChannelRequest(
-                    title="JMTHON HUNTER - تثبيت جمثون",
+                    title="تثبيت العقرب 🦂",
                     about="This channel to hunt username by - @jmthon ",
                 )
             )
             ch = ch.updates[1].channel_id
-            await event.edit(f"**- تم بنجاح بدأ التثبيت**")
+            await event.edit(f"**✎┊‌ تم بنجاح بدأ التثبيت**")
         except Exception as e:
             await l313l.send_message(
                 event.chat_id, f"خطأ في انشاء القناة , الخطأ : {str(e)}"
@@ -307,15 +307,15 @@ async def _(event):
                 await event.client.send_file(
                     ch,
                     "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
-                        username, trys2
+                    caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
+                        username, trys3
                     ),
                 )
                 await event.client.send_file(
                     event.chat_id,
                     "https://t.me/jmthongif/2",
-                    caption="🐊 jmthon the best 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @jmthon - @R0R77 ❳ ".format(
-                        username, trys2
+                    caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
+                        username, trys3
                     ),
                 )
                 await event.client.send_message(
@@ -354,18 +354,18 @@ async def _(event):
 @l313l.ar_cmd(pattern="حالة الصيد")
 async def _(event):
     if "on" in isclaim:
-        await event.edit(f"**- الصيد وصل لـ({trys[0]}) **من المحاولات")
+        await event.edit(f"**✎┊‌ الصيد وصل لـ({trys[0]}) **من المحاولات")
     elif "off" in isclaim:
-        await event.edit("**- الصيد بالاصل لا يعمل .**")
+        await event.edit("**✎┊‌ الصيد بالاصل لا يعمل .**")
     else:
-        await event.edit("- لقد حدث خطأ ما وتوقف الامر لديك")
+        await event.edit("**✎┊‌ لقد حدث خطأ ما وتوقف الامر لديك**")
 
 
 @l313l.ar_cmd(pattern="حالة التثبيت")
 async def _(event):
     if "on" in isauto:
-        await event.edit(f"**- التثبيت وصل لـ({trys2[0]}) من المحاولات**")
+        await event.edit(f"**✎┊‌ التثبيت وصل لـ({trys2[0]}) من المحاولات**")
     elif "off" in isauto:
-        await event.edit("**- التثبيت بالاصل لا يعمل .**")
+        await event.edit("**✎┊‌ التثبيت بالاصل لا يعمل .**")
     else:
-        await event.edit("-لقد حدث خطأ ما وتوقف الامر لديك")
+        await event.edit("**✎┊‌لقد حدث خطأ ما وتوقف الامر لديك**")
