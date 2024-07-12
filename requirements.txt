@@ -4,6 +4,7 @@ flask
 flask_restful
 ocrspace
 ShazamAPI
+akinator
 selenium
 Flask
 flask_restful
