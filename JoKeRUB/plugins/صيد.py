@@ -145,13 +145,13 @@ async def huntbot(event):
                 await l313l.send_message("@botfather", username)
                 await event.client.send_file(
                     event.chat_id,
-                    "https://t.me/jmthongif/2",
+                    "https://t.me/ZS_SQ",
                     caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
                         username, trys3
                     ),
                 )
                 await event.client.send_message(
-                    "@r0r77", f"- Done : @{username} !\n- العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂"
+                    "@Zo_r0", f"- Done : @{username} !\n- العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂"
                 )
                 botmod = False
                 break
@@ -192,8 +192,8 @@ async def hunterusername(event):
     try:
         ch = await l313l(
             functions.channels.CreateChannelRequest(
-                title="JMTHON HUNTER - صيد جمثون",
-                about="This channel to hunt username by - @jmthon ",
+                title="scorpion  HUNTER - صيد العقرب",
+                about="This channel to hunt username by - @Scorpions_scorp ",
             )
         )
         ch = ch.updates[1].channel_id
@@ -221,20 +221,20 @@ async def hunterusername(event):
                 )
                 await event.client.send_file(
                     event.chat_id,
-                    "https://t.me/jmthongif/2",
+                    "https://t.me/ZS_SQ",
                     caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
                         username, trys3
                     ),
                 )
                 await event.client.send_file(
                     ch,
-                    "https://t.me/jmthongif/2",
+                    "https://t.me/ZS_SQ",
                     caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
                         username, trys3
                     ),
                 )
                 await event.client.send_message(
-                    "@r0r77", f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !"
+                    "@ZS_SQ", f"- Done : @{username} !\n- By : @ZS_SQ - @Scorpions_scorp !"
                 )
                 sedmod = False
                 break
@@ -306,21 +306,21 @@ async def _(event):
                 )
                 await event.client.send_file(
                     ch,
-                    "https://t.me/jmthongif/2",
+                    "https://t.me/ZS_SQ",
                     caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
                         username, trys3
                     ),
                 )
                 await event.client.send_file(
                     event.chat_id,
-                    "https://t.me/jmthongif/2",
+                    "https://t.me/ZS_SQ",
                     caption=" العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 \n- - - - - - - - - - - - - - - - - - - - - - - -\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @Scorpions_scorp ❳ ".format(
                         username, trys3
                     ),
                 )
                 await event.client.send_message(
-                    "@r0r77",
-                    f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !\n- Hunting Log {trys2}",
+                    "@ZS_SQ",
+                    f"- Done : @{username} !\n- By : @ZS_SQ - @JMTHON !\n- Hunting Log {trys2}",
                 )
                 swapmod = False
                 break
