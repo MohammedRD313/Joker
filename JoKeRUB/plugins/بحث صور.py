@@ -18,13 +18,13 @@ from datetime import datetime
 from telethon.utils import guess_extension
 from urllib.parse import urlencode
 
-from . import zedub
+from JoKeRUB import l313l
 from ..Config import Config
 
 ZELZAL_APP_ID = "6e65179ed1d879f3d905e28ef8803625"
 
 
-@zedub.zed_cmd(pattern="صور (.*)")
+@l313l.ar_cmd(pattern="صور (.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -90,7 +90,7 @@ async def _(event):
 
 
 
-@zedub.zed_cmd(pattern="خلفيات (.*)")
+@l313l.ar_cmd(pattern="خلفيات (.*)")
 async def _(event):
     if event.fwd_from:
         return
