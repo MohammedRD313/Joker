@@ -80,6 +80,7 @@ wand
 ujson==5.8.0
 youtube_dl==2021.5.16
 user_agent
+cv2
 randomstuff.py
 git+https://github.com/buddhhu/img2html.git
 git+https://github.com/alexmercerind/youtube-search-python
