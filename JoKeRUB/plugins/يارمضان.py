@@ -173,7 +173,7 @@ async def random_hadith(event):
 )
 async def akinator_game(event):
     aki = akinator.Akinator()
-    q = aki.start_game(language=True)
+    q = aki.start_game(language)
 
     async with l313l.conversation(event.chat_id) as conv:
         question_msg = await edit_or_reply(event,
