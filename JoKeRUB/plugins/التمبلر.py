@@ -13,14 +13,7 @@ from l313l.razan.resources.strings import *
 plugin_category = "extra" 
 
 #by ~ @lMl10l
-@l313l.ar_cmd(
-    pattern="م17$",
-    command=("م17", plugin_category),)
-async def _(event):
-     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-            await event.edit(
-                "**قائمة اوامر التمبـلر 🦂 :\n\n ✎┊‌ اختر احدى هذه القوائم\n\n- { `.الزغرفة` } \n- { `.اسماء تمبلر` }   \n- { `.اسماء عربية` }\n- { `.اشهر مزغرفة` } \n- { `.الاختصارات` } \n- { `.البايو` }\n- { `.المتحركات` }\n\n\nالعقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**"
-            )
+
 #by ~ @lMl10l
 @l313l.ar_cmd(
     pattern="الزغرفة$",
