@@ -1,7 +1,7 @@
 """
-JoKeRUB team ©
-By Reda
-sub Hussein
+# فريق العقرب 
+# علوش @ZS_SQ
+# محمد @Zo_r0
 """
 import os
 from datetime import datetime
@@ -16,7 +16,9 @@ import ocrspace
 
 plugin_category = "utils"
 
-#لتخمط الملف اذا انته ابن گحبة انسخ وألصق لسورسك وصيح اني مطور الملف متعوب عليه وشغل ايد
+# فريق العقرب 
+# علوش @ZS_SQ
+# محمد @Zo_r0
 
 @l313l.ar_cmd(pattern="احجي(?:\s|$)([\s\S]*)",
                command=("احجي", plugin_category),
