@@ -1,5 +1,6 @@
-#    جميع الحقوق محفوظة كتابة وتعديل  :   @lMl10l
-#    اخمط مع ذكر الحقوق غيرها انت مطور فاشل
+# فريق العقرب 
+# علوش @ZS_SQ
+# محمد @Zo_r0
 marculs=9
 from telethon.errors.rpcerrorlist import (UserIdInvalidError,
                                             MessageTooLongError)
