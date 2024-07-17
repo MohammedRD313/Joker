@@ -1,5 +1,6 @@
-# Copyright (C) 2021 JoKeRUB TEAM
-# FILES WRITTEN BY  @lMl10l
+# فريق العقرب 
+# علوش @ZS_SQ
+# محمد @Zo_r0
 import requests
 from validators.url import url
 from JoKeRUB import l313l
