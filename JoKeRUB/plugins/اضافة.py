@@ -6,7 +6,9 @@ from telethon.tl import functions, types
 from telethon.tl.functions.messages import  CheckChatInviteRequest, GetFullChatRequest
 from telethon.errors import (ChannelInvalidError, ChannelPrivateError, ChannelPublicGroupNaError, InviteHashEmptyError, InviteHashExpiredError, InviteHashInvalidError)
 from telethon.tl.functions.channels import GetFullChannelRequest, GetParticipantsRequest
-#Jepthon old
+# فريق العقرب 
+# علوش @ZS_SQ
+# محمد @Zo_r0
 
 async def get_chatinfo(event):
     chat = event.pattern_match.group(1)
@@ -63,9 +65,9 @@ def user_full_name(user):
  
 
 
-# كتابة فريق الجوكر المتغيرات تثبت ودي
-# تخمط اذكر حقوق غيرها انت فرخ و دي 😂
-
+# فريق العقرب 
+# علوش @ZS_SQ
+# محمد @Zo_r0
 
 @l313l.on(admin_cmd(pattern=r"ضيف ?(.*)"))
 async def get_users(event):   
