@@ -61,13 +61,6 @@ async def zelzal_gpt(event):
         except YouBlockedUserError: 
             await l313l(unblock("@ScorGPTbot"))
             await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
             await conv.get_response()
             await conv.send_message(zelzal)
             zzzthon = await conv.get_response()
@@ -80,7 +73,7 @@ async def zelzal_gpt(event):
             l313l = await conv.get_response()
             malath = l313l.text
             if "understanding" in l313l.text:
-                aa = malath.replace("I'm sorry, I'm not quite understanding the question. Could you please rephrase it?", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**") 
+                aa = malath.replace("I'm sorry, I'm not quite understading the question. Could you please rephrase it?", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             if "Please wait a moment" in l313l.text:
@@ -128,13 +121,6 @@ async def zelzal_gpt(event):
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
         except YouBlockedUserError:
             await l313l(unblock("ScorGPTbot"))
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
-            await conv.send_message("/start")
             await conv.send_message("/start")
             await conv.get_response()
             await conv.send_message(zelzal)
