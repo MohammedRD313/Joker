@@ -32,7 +32,7 @@ plugin_category = "البوت"
 async def zelzal_gpt(event):
     zilzal = event.pattern_match.group(1)
     zzz = await event.get_reply_message()
-    chat = "@GPT4Tbot"
+    chat = "@ScorGPTbot"
     if not zilzal and not event.reply_to_msg_id:
         return await edit_or_reply(event, "**✎┊‌ بالرد على السؤال او بأضافة سؤال \n يعني تكتب (`.سؤال`) وبعده سؤالك وخلص 😌 \n\n مثال : \n `.سؤال من هو مخترع الكهرباء`**")
     if not zilzal and event.reply_to_msg_id and zzz.text: 
@@ -89,7 +89,7 @@ async def zelzal_gpt(event):
 async def zelzal_gpt(event):
     zilzal = event.pattern_match.group(1)
     zzz = await event.get_reply_message()
-    chat = "@GPT4Telegrambot"
+    chat = "@ScorGPTbot"
     if not zilzal and not event.reply_to_msg_id:
         return await edit_or_reply(event, "**✎┊‌ بالرد على السؤال او بأضافة سؤال \n يعني تكتب (`.سؤال`) وبعده سؤالك وخلص 😌 \n\n مثال : \n `.سؤال من هو مخترع الكهرباء`**")
     if not zilzal and event.reply_to_msg_id and zzz.text:
