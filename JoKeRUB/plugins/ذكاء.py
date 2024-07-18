@@ -59,7 +59,7 @@ async def zelzal_gpt(event):
             await zed.delete()
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
         except YouBlockedUserError: 
-            await zedub(unblock("@ScorGPTbot"))
+            await l313l(unblock("@ScorGPTbot"))
             await conv.send_message("/start")
             await conv.send_message("/start")
             await conv.send_message("/start")
@@ -127,7 +127,7 @@ async def zelzal_gpt(event):
             await zed.delete()
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
         except YouBlockedUserError:
-            await zedub(unblock("ScorGPTbot"))
+            await l313l(unblock("ScorGPTbot"))
             await conv.send_message("/start")
             await conv.send_message("/start")
             await conv.send_message("/start")
