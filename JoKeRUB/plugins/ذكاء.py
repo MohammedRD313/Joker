@@ -87,6 +87,8 @@ async def zelzal_gpt(event):
                 await asyncio.sleep(5)
                 l313l = await conv.get_response()
                 malath = l313l.text
+                chat_id = '@GPT4Tbot'
+            result = await client.delete_dialog(chat_id)
             await zed.delete()
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
 
@@ -96,7 +98,7 @@ async def zelzal_gpt(event):
 async def zelzal_gpt(event):
     zilzal = event.pattern_match.group(1)
     zzz = await event.get_reply_message()
-    chat = "@ScorGPTbot"
+    chat = "@GPT4Tbot"
     if not zilzal and not event.reply_to_msg_id:
         return await edit_or_reply(event, "**✎┊‌ بالرد على السؤال او بأضافة سؤال \n يعني تكتب (`.سؤال`) وبعده سؤالك وخلص 😌 \n\n مثال : \n `.سؤال من هو مخترع الكهرباء`**")
     if not zilzal and event.reply_to_msg_id and zzz.text:
@@ -152,4 +154,6 @@ async def zelzal_gpt(event):
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             await zed.delete()
+            chat_id = '@GPT4Tbot'
+            result = await client.delete_dialog(chat_id)
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\[\n")
