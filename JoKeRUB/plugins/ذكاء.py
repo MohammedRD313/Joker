@@ -32,14 +32,14 @@ plugin_category = "البوت"
 async def zelzal_gpt(event):
     zilzal = event.pattern_match.group(1)
     zzz = await event.get_reply_message()
-    chat = "@GPT4Telegrambot"
+    chat = "@GPT4Tbot"
     if not zilzal and not event.reply_to_msg_id:
-        return await edit_or_reply(event, "بالـرد ع سـؤال او باضـافة السـؤال ✎┊‌باع تكتب سؤال بعدين سؤالك وبس أيزي 😂😭 مثال \n `.سؤال من هو مخترع الكهرباء`")
+        return await edit_or_reply(event, "**✎┊‌ بالرد على السؤال او بأضافة سؤال \n يعني تعتب (`.سؤال`) وبعده سؤالك وخلص 😌 \n\n مثال : \n `.سؤال من هو مخترع الكهرباء`**")
     if not zilzal and event.reply_to_msg_id and zzz.text: 
         zelzal = zzz.text
     if not event.reply_to_msg_id: 
         zelzal = event.pattern_match.group(1)
-    zed = await edit_or_reply(event, "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**")
+    zed = await edit_or_reply(event, "**✎┊‌اصبر حبيبي هسة يجاوبك 😁**")
     async with borg.conversation(chat) as conv:
         try:
             await conv.send_message(zelzal)
@@ -59,14 +59,14 @@ async def zelzal_gpt(event):
             await zed.delete()
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
         except YouBlockedUserError: 
-            await zedub(unblock("GPT4Telegrambot"))
+            await zedub(unblock("@GPT4Tbot"))
             await conv.send_message("/start")
             await conv.get_response()
             await conv.send_message(zelzal)
             zzzthon = await conv.get_response()
             ahmed = zzzthon.text
             if "another 8 seconds" in zzzthon.text:
-                aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**") 
+                aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌ اصبر حبيبي هسة يجاوبك 😁**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             await asyncio.sleep(5)
@@ -91,12 +91,12 @@ async def zelzal_gpt(event):
     zzz = await event.get_reply_message()
     chat = "@GPT4Telegrambot"
     if not zilzal and not event.reply_to_msg_id:
-        return await edit_or_reply(event, "بالـرد ع سـؤال او باضـافة السـؤال ✎┊‌باع تكتب سؤال بعدين سؤالك وبس أيزي 😂😭 مثال \n `.سؤال من هو مخترع الكهرباء`")
+        return await edit_or_reply(event, "**✎┊‌ بالرد على السؤال او بأضافة سؤال \n يعني تعتب (`.سؤال`) وبعده سؤالك وخلص 😌 \n\n مثال : \n `.سؤال من هو مخترع الكهرباء`**")
     if not zilzal and event.reply_to_msg_id and zzz.text:
         zelzal = zzz.text
     if not event.reply_to_msg_id:
         zelzal = event.pattern_match.group(1)
-    zed = await edit_or_reply(event, "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**")
+    zed = await edit_or_reply(event, "**✎┊‌ اصبر حبيبي هسة يجاوبك 😁**")
     async with borg.conversation(chat) as conv:
         try:
             await conv.send_message(zelzal)
