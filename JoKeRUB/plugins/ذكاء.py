@@ -43,6 +43,7 @@ async def l313l(event):
     async with borg.conversation(chat) as conv:
         try:
             await conv.send_message(zelzal)
+            await asyncio.sleep(5)
             zzzthon = await conv.get_response()
             ahmed = zzzthon.text
             await bot.delete_chat(chat)
@@ -64,6 +65,7 @@ async def l313l(event):
             await conv.send_message("/start")
             await conv.get_response()
             await conv.send_message(zelzal)
+            await asyncio.sleep(5)
             zzzthon = await conv.get_response()
             ahmed = zzzthon.text
             if "another 8 seconds" in zzzthon.text:
