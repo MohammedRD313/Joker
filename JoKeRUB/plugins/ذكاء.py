@@ -21,7 +21,6 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from JoKeRUB import l313l
 from . import l313l
-from . import zedthon
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import reply_id
@@ -44,18 +43,18 @@ async def l313l(event):
     async with borg.conversation(chat) as conv:
         try:
             await conv.send_message(zelzal)
-            future = get_response()
-            loop = asyncio.get_event_loop()
-            zzzthon_future = loop.run_until_complete(future)
-            ahmed = zzzthon_future.text
+            zzzthon = await conv.get_response()
+            ahmed = zzzthon.text
+            chat_id = '7446061313'
+            await bot.delete_chat(chat_id)
             if "another 8 seconds" in zzzthon.text: 
                 aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             await asyncio.sleep(5)
-            zedthon = await conv.get_response()
-            malath = zedthon.text
-            if "understanding" in zedthon.text: 
+            l313l = await conv.get_response()
+            malath = l313l.text
+            if "understanding" in l313l.text: 
                 aa = malath.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
@@ -71,17 +70,19 @@ async def l313l(event):
             if "another 8 seconds" in zzzthon.text:
                 aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**") 
                 await event.delete()
+                chat_id = '7446061313'
+                await bot.delete_chat(chat_id)
                 return await borg.send_message(event.chat_id, aa)
             await asyncio.sleep(5)
-            zedthon = await conv.get_response()
-            malath = zedthon.text
-            if "understanding" in zedthon.text:
+            l313l = await conv.get_response()
+            malath = l313l.text
+            if "understanding" in l313l.text:
                 aa = malath.replace("I'm sorry, I'm not quite understanding the question. Could you please rephrase it?", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
-            if "Please wait a moment" in zedthon.text:
+            if "Please wait a moment" in l313l.text:
                 await asyncio.sleep(5)
-                zedthon = await conv.get_response()
-                malath = zedthon.text
+                l313l = await conv.get_response()
+                malath = l313l.text
             await zed.delete()
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
