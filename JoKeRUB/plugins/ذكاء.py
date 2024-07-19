@@ -70,15 +70,15 @@ async def l313l(event):
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             await asyncio.sleep(5)
-            l313l = await conv.get_response()
-            malath = l313l.text
-            if "understanding" in l313l.text:
+            zedthon = await conv.get_response()
+            malath = zedthon.text
+            if "understanding" in zedthon.text:
                 aa = malath.replace("I'm sorry, I'm not quite understanding the question. Could you please rephrase it?", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
-            if "Please wait a moment" in l313l.text:
+            if "Please wait a moment" in zedthon.text:
                 await asyncio.sleep(5)
-                l313l = await conv.get_response()
-                malath = l313l.text
+                zedthon = await conv.get_response()
+                malath = zedthon.text
             await zed.delete()
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
