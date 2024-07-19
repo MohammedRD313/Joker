@@ -21,6 +21,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from JoKeRUB import l313l
 from . import l313l
+from . import zedthon
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import reply_id
@@ -43,8 +44,10 @@ async def l313l(event):
     async with borg.conversation(chat) as conv:
         try:
             await conv.send_message(zelzal)
-            zzzthon = await conv.get_response()
-            ahmed = zzzthon.text
+            future = get_response()
+            loop = asyncio.get_event_loop()
+            zzzthon_future = loop.run_until_complete(future)
+            ahmed = zzzthon_future.text
             if "another 8 seconds" in zzzthon.text: 
                 aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**") 
                 await event.delete()
