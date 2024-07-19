@@ -52,7 +52,7 @@ async def l313l(event):
             await asyncio.sleep(5)
             zedthon = await conv.get_response()
             malath = zedthon.text
-            if "understanding" in l313l.text: 
+            if "understanding" in zedthon.text: 
                 aa = malath.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
