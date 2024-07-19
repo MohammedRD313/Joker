@@ -51,10 +51,7 @@ async def l313l(event):
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             await asyncio.sleep(5)
-            malath = l313l.text
-            if "understanding" in l313l.text: 
-                aa = malath.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**") 
-                await event.delete()
+            await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             await zed.delete()
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
