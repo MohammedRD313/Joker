@@ -46,7 +46,6 @@ async def l313l(event):
             await asyncio.sleep(5)
             zzzthon = await conv.get_response()
             ahmed = zzzthon.text
-            await bot.delete_chat(chat)
             if "another 8 seconds" in zzzthon.text: 
                 aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**") 
                 await event.delete()
@@ -71,7 +70,6 @@ async def l313l(event):
             if "another 8 seconds" in zzzthon.text:
                 aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**") 
                 await event.delete()
-                await bot.delete_chat(chat)
                 return await borg.send_message(event.chat_id, aa)
             await asyncio.sleep(5)
             l313l = await conv.get_response()
