@@ -32,7 +32,7 @@ plugin_category = "البوت"
 async def zelzal_gpt(event):
     zilzal = event.pattern_match.group(1)
     zzz = await event.get_reply_message()
-    chat = "@GPT4Telegrambot"
+    chat = "@ScorGPTbot"
     if not zilzal and not event.reply_to_msg_id:
         return await edit_or_reply(event, "بالـرد ع سـؤال او باضـافة السـؤال ✎┊‌باع تكتب سؤال بعدين سؤالك وبس أيزي 😂😭 مثال \n `.سؤال من هو مخترع الكهرباء`")
     if not zilzal and event.reply_to_msg_id and zzz.text: 
@@ -59,7 +59,7 @@ async def zelzal_gpt(event):
             await zed.delete()
             await borg.send_message(event.chat_id, f"**السؤال : {zelzal}\n\n{malath}**\n\n───────────────────\n")
         except YouBlockedUserError: 
-            await zedub(unblock("GPT4Telegrambot"))
+            await zedub(unblock("ScorGPTbot"))
             await conv.send_message("/start")
             await conv.get_response()
             await conv.send_message(zelzal)
