@@ -43,15 +43,15 @@ async def l313l(event):
     async with borg.conversation(chat) as conv:
         try:
             await conv.send_message(zelzal)
-            l313l = await conv.get_response()
-            ahmed = l313l.text
+            zzzthon = await conv.get_response()
+            ahmed = zzzthon.text
             if "another 8 seconds" in zzzthon.text: 
                 aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             await asyncio.sleep(5)
-            l313l = await conv.get_response()
-            malath = l313l.text
+            zedthon = await conv.get_response()
+            malath = zedthon.text
             if "understanding" in l313l.text: 
                 aa = malath.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**") 
                 await event.delete()
