@@ -29,7 +29,7 @@ plugin_category = "البوت"
 
 
 @l313l.ar_cmd(pattern="سؤال(?: |$)(.*)")
-async def zelzal_gpt(event):
+async def l313l(event):
     zilzal = event.pattern_match.group(1)
     zzz = await event.get_reply_message()
     chat = "@ScorGPTbot"
