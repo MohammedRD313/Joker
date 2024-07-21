@@ -1,6 +1,7 @@
 import time
 
 import heroku3
+from JoKeRUB import PRIVATE_GROUP_BOT_API_ID
 
 from .Config import Config
 from .core.logger import logging
