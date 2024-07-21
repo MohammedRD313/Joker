@@ -2,7 +2,7 @@ import asyncio
 
 from JoKeRUB import l313l
 from JoKeRUB.core.logger import logging
-
+from telethon.errors.rpcerrorlist import MessageNotModifiedError
 from ..Config import Config
 from ..core.managers import edit_delete
 from ..helpers.tools import media_type
