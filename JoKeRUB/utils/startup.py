@@ -12,7 +12,7 @@ from telethon import Button, functions, types, utils
 from telethon.sync import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.errors import FloodWaitError
-from JoKeRUB import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID
+from JoKeRUB import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID, PRIVATE_GROUP_BOT_API_ID
 from ..Config import Config
 from aiohttp import web
 from ..core import web_server
