@@ -8,6 +8,7 @@ import urllib.request
 from datetime import timedelta
 from pathlib import Path
 import requests
+import PRIVATE_GROUP_BOT_API_ID
 from telethon import Button, functions, types, utils
 from telethon.sync import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
