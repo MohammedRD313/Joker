@@ -458,13 +458,11 @@ async def Hussein(event):
            elif event.message.message == "تاج راسك منو؟":
                await event.reply("**محمد و علوش**")
            elif event.message.message == "علوش":
-               await event.reply("**لك هاذ تاج راسيييي😔**") 
+               await event.reply("**لك هاذ تاج راسيييي😔@ZS_SQ**") 
            elif event.message.message == "اقوة سورس منو؟":
                await event.reply("سورس العقرب واحد عراق")
            elif event.message.message == "محمد":
-               await event.reply("**لك هاذ تاج راسيييي😔**")
-           elif event.message.message == "عمك منو؟":
-               await event.reply("**لوفي🥺**")
+               await event.reply("**لك هاذ تاج راسيييي😔@Zo_r0**")
 @l313l.on(admin_cmd(pattern="همسه(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
