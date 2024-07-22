@@ -8,7 +8,6 @@ import urllib.request
 from datetime import timedelta
 from pathlib import Path
 import requests
-import PRIVATE_GROUP_BOT_API_ID
 from telethon import Button, functions, types, utils
 from telethon.sync import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
@@ -23,6 +22,7 @@ from ..helpers.utils import install_pip
 from ..helpers.utils.utils import runcmd
 from ..sql_helper.global_collection import (
     del_keyword_collectionlist,
+    add_bot_to_logger_group,
     get_item_collectionlist,
 )
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
