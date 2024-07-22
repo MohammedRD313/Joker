@@ -1,5 +1,6 @@
 telethon
 pydub
+telethon-session-sqlalchemy
 flask
 flask_restful
 ocrspace
