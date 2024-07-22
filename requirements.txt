@@ -86,8 +86,6 @@ python-telegram-bot
 googletrans-py
 randomstuff.py
 requests
-autogrouptable
-autogrouptable_pkey
 antiflood_pkey
 globals
 globals_pkey
