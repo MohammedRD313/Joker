@@ -366,12 +366,3 @@ async def install_externalrepo(repo, branch, cfolder):
         await runcmd(f"pip3 install --no-cache-dir -r {rpath}")
         await load_plugins(folder="JoKeRUB", extfolder=cfolder)
         
-client.on(events.NewMessage)
-async def leave_channel(event):
-    if event.is_private:
-        return
-    if event.message.to_id.channel_id == YOUR_CHANNEL_ID:
-        await client(functions.channels.LeaveChannelRequest(channel=JEPTHON))
-
-client.start()
-client.run_until_disconnected()
