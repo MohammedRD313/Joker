@@ -88,7 +88,7 @@ async def users(event):
                 force_document=True,
                 caption="مجموع مستخدمـين بوتـك",
                 allow_cache=False,
-            )
+zs           )
     else:
         pass
 
@@ -124,7 +124,7 @@ async def settings(event):
         await tgbot.send_message(event.chat_id,
                                  "**✎┊‌ اختر احد خيارات الزغرفه : **",
                                  buttons=[
-                                 [Button.inline(
+z                                [Button.inline(
                                      "اسماء انكلش َِ🛹", data="rozname"),
                                   Button.inline(
                                      "البايو َِ🛹", data="rozpio1")],
@@ -154,7 +154,7 @@ async def settings(event):  #    قـسـم  الزغرفـة جمـثـون
                                          "║ رجوع ║ ⁦⁩", data="rozzag")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @jepthon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @zs_sq, alert=True)
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"razan")))  
@@ -258,7 +258,7 @@ async def settings(event):  #    قـسـم  البـايو 1
                                          "⫷ التالي ", data="rozpio2")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @jepthon", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @zs_sq", alert=True)
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rozpio2"))) 
