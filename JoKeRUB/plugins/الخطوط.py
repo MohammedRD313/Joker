@@ -7,7 +7,7 @@ from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from ..core.managers import edit_delete
 from telethon import functions
 from telethon.errors.rpcerrorlist import MessageIdInvalidError
-@l313l.on(admin_cmd(pattern="(إيقاف الخط الغامق|خط غامق)"))
+@l313l.on(admin_cmd(pattern="(إيقاف الخط الغامق|الخط الغامق)"))
 async def btext(event):
     isbold = gvarstatus("bold")
     if not isbold:
@@ -19,7 +19,7 @@ async def btext(event):
         delgvar("bold")
         await edit_delete(event, "**✎┊‌ تم اطفاء خط الغامق بنجاح ✓ **")
         return
-@l313l.on(admin_cmd(pattern="(ايقاف خط البرمجة|خط برمجة)"))
+@l313l.on(admin_cmd(pattern="(ايقاف خط البرمجة|خط البرمجة)"))
 async def btext(event):
     isprogramming = gvarstatus("programming")
     if not isprogramming:
@@ -31,7 +31,7 @@ async def btext(event):
         delgvar("programming")
         await edit_delete(event, "**✎┊‌ تم اطفاء خط البرمجة بنجاح ✓ **")
         return
-@l313l.on(admin_cmd(pattern="(خط رمز|ايقاف خط الرمز)"))
+@l313l.on(admin_cmd(pattern="(خط الرمز|ايقاف خط الرمز)"))
 async def btext(event):
     isramz = gvarstatus("ramz")
     if not isramz:
