@@ -45,14 +45,12 @@ async def startup_process():
     await load_plugins("assistant")
     print("=========================================")
     print("""
-    
     ✎┊‌ تم تفعيل سورس العرب بنجاح  """)
     print(
         f"تم تشغيل الانلاين تلقائياً ارسل {cmdhr}فحص للتأكد \
         \n العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂"
     )
     print("""
-    
     =========================================""")
     await verifyLoggerGroup()
     await saves()
@@ -67,6 +65,7 @@ async def externalrepo():
         await install_externalrepo("https://github.com/MohammedRD313/Scorpion", "jepvc", "jepthonvc")
 
 l313l.loop.run_until_complete(externalrepo())
+l313l.loop.run_until_complete(startup_process())
 
 if len(sys.argv) in {1, 3, 4}:
     with contextlib.suppress(ConnectionError):
