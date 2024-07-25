@@ -17,7 +17,6 @@ async def is_admin(l313l, chat_id, userid):
         ):
             return True
     except Exception as e:
-        LOGS.error(str(e))
         return False
     else:
         return False
