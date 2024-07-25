@@ -1,6 +1,5 @@
 telethon
 pydub
-telethon-session-sqlalchemy
 flask
 flask_restful
 ocrspace
@@ -82,7 +81,6 @@ ujson==5.8.0
 youtube_dl==2021.5.16
 user_agent
 img2html
-python-telegram-bot
 googletrans-py
 randomstuff.py
 requests
