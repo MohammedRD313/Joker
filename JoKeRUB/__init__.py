@@ -7,22 +7,22 @@ from .core.logger import logging
 from .core.session import l313l
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-__version__ = "3.1.3"
-__license__ = "كـتابة وتـعديل فريـق الجوكر"
-__author__ = "الجوكر <https://T.ME/Jepthon>"
-__copyright__ = "AlJOKER TEAM (C) 2021 - 2023  " + __author__
+__version__ = "1.0.0"
+__license__ = "كـتابة وتـعديل فريـق العقرب"
+__author__ = "العقرب <https://T.ME/Scorpions_scorp>"
+__copyright__ = " " + __author__
 
 l313l.version = __version__
 l313l.tgbot.version = __version__
-LOGS = logging.getLogger("jepthon")
+LOGS = logging.getLogger("Scorpions_scorp")
 bot = l313l
 
 StartTime = time.time()
-JEPVERSION = "3.1.3"
+JEPVERSION = "1.0.0"
 
 
-if Config.UPSTREAM_REPO == "jepthoniq":
-    UPSTREAM_REPO_URL = "https://github.com/redaiq90/jepthon"
+if Config.UPSTREAM_REPO == "MohammedRD313":
+    UPSTREAM_REPO_URL = "https://github.com/MohammedRD313/Scorpion"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
