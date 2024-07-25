@@ -66,8 +66,8 @@ async def setup_bot():
             if option.ip_address == l313l.session.server_address:
                 if l313l.session.dc_id != option.id:
                     LOGS.warning(
-                        f"✎┊‌معرف ثابت في الجلسة من {l313l.session.dc_id}"
-                        f"✎┊‌لـ  {option.id}"
+                        f"⌯︙معرف ثابت في الجلسة من {l313l.session.dc_id}"
+                        f"⌯︙لـ  {option.id}"
                     )
                 l313l.session.set_dc(option.id, option.ip_address, option.port)
                 l313l.session.save()
@@ -94,16 +94,9 @@ async def startupmessage():
         if BOTLOG:
             Config.CATUBLOGO = await l313l.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/423c42d2485116caa3f32.jpg",
-                caption="""**‏✎┊‌ سورس العقرب يـعـمـل بـنـجـاح ✅
-
-✎┊‌ أرسل ( `.فحص` ) للتأكد
-
-العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂 
-              **  """,
-                
-               
-                buttons=[(Button.url("سورس العقرب", "https://t.me/Scorpions_scorp"),)],
+                "https://t.me/MemeSoundJep/24",
+                caption="**‏᯽︙ بــوت الجوكر يـعـمـل بـنـجـاح ✓ \n᯽︙ أرسل `.الاوامر`لرؤية اوامر السورس \n  ᯽︙ لأستعمال بوت الأختراق عبر كود التيرمكس أرسل`.هاك`**",
+                buttons=[(Button.url("سورس الجوكر", "https://t.me/jepthon"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -137,44 +130,21 @@ async def startupmessage():
 async def mybot():
     try:
         starkbot = await l313l.tgbot.get_me()
-        Scorpion = "** العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**"
+        joker = "الجوكر 🤡"
         bot_name = starkbot.first_name
         botname = f"@{starkbot.username}"
         if bot_name.endswith("Assistant"):
             print("تم تشغيل البوت")
         if starkbot.bot_inline_placeholder:
-            print("Scorpion ForEver")
+            print("Aljoker ForEver")
         else:
             try:
                 await l313l.send_message("@BotFather", "/setinline")
                 await asyncio.sleep(1)
                 await l313l.send_message("@BotFather", botname)
                 await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", Scorpion)
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", "/setname")
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", botname)
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", f"مساعد العقرب  {bot.me.first_name} ")
-                await asyncio.sleep(3)
-                await l313l.send_message("@BotFather", "/setuserpic")
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", botname)
-                await asyncio.sleep(1)
-                await l313l.send_file("@BotFather", "zelz/zilzal/logozed.jpg")
-                await asyncio.sleep(3)
-                await l313l.send_message("@BotFather", "/setabouttext")
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", botname)
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", f"- بـوت العقرب المساعد 🦂 الخاص بـ  {bot.me.first_name} ")
-                await asyncio.sleep(3)
-                await l313l.send_message("@BotFather", "/setuserpic")
-                await l313l.send_message("@BotFather", botname)
-                await asyncio.sleep(1)
-                await l313l.send_file("@BotFather", "Scorpion.jpg")
-                await asyncio.sleep(3)
+                await l313l.send_message("@BotFather", joker)
+                await asyncio.sleep(2)
             except Exception as e:
                 print(e)
     except Exception as e:
@@ -204,8 +174,8 @@ async def add_bot_to_logger_group(chat_id):
             )
         except Exception as e:
             LOGS.error(str(e))
-#by @Scorpions_scorp بس اشوفك خامطه للكود اهينك وافضحك
-JoKeRUB = {"@Scorpions_scorp", "@Scorpions_scorp"}
+#by @jepthon بس اشوفك خامطه للكود اهينك وافضحك
+JoKeRUB = {"@jepthon", "@jepthonsupport"}
 async def saves():
    for lMl10l in JoKeRUB:
         try:
@@ -293,39 +263,39 @@ async def verifyLoggerGroup():
             if not isinstance(entity, types.User) and not entity.creator:
                 if entity.default_banned_rights.send_messages:
                     LOGS.info(
-                        "✎┊‌الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."
+                        "᯽︙الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."
                     )
                 if entity.default_banned_rights.invite_users:
                     LOGS.info(
-                        "✎┊‌الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."
+                        "᯽︙الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."
                     )
         except ValueError:
-            LOGS.error("✎┊‌ تـأكد من فـار المجـموعة  PRIVATE_GROUP_BOT_API_ID.")
+            LOGS.error("᯽︙تـأكد من فـار المجـموعة  PRIVATE_GROUP_BOT_API_ID.")
         except TypeError:
             LOGS.error(
-                "✎┊‌ لا يمكـن العثور على فار المجموعه PRIVATE_GROUP_BOT_API_ID. تأكد من صحتها."
+                "᯽︙لا يمكـن العثور على فار المجموعه PRIVATE_GROUP_BOT_API_ID. تأكد من صحتها."
             )
         except Exception as e:
             LOGS.error(
-                "✎┊‌ حدث استثناء عند محاولة التحقق من PRIVATE_GROUP_BOT_API_ID.\n"
+                "᯽︙حدث استثناء عند محاولة التحقق من PRIVATE_GROUP_BOT_API_ID.\n"
                 + str(e)
             )
     else:
-        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Scorpions_scorp"
+        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Jepthon"
         photobt = await l313l.upload_file(file="l313l/razan/resources/start/Jepthon.JPEG")
-        botlog_group_id = await aljoker_the_best(l313l, "مجموعة أشعارات العقرب")
+        botlog_group_id = await aljoker_the_best(l313l, "مجموعة أشعارات الجوكر")
         if botlog_group_id:
             addgvar("PRIVATE_GROUP_BOT_API_ID", botlog_group_id)
-            print("✎┊‌ تم العثور على مجموعة المساعدة بالفعل وإضافتها إلى المتغيرات.")
+            print("᯽︙تم العثور على مجموعة المساعدة بالفعل وإضافتها إلى المتغيرات.")
         else:
             _, groupid = await create_supergroup(
-                "مجموعة أشعارات العقرب", l313l, Config.TG_BOT_USERNAME, descript, photobt
+                "مجموعة أشعارات الجوكر", l313l, Config.TG_BOT_USERNAME, descript, photobt
             )
             addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
-            print("✎┊‌تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
+            print("᯽︙تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
         flag = True
     if PM_LOGGER_GROUP_ID == -100:
-        descript = "✎┊‌ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Scorpions_scorp"
+        descript = "᯽︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Jepthon"
         photobt = await l313l.upload_file(file="l313l/razan/resources/start/Jepthon2.JPEG")
         pm_logger_group_id = await aljoker_the_best(l313l, "مجموعة التخزين")
         if pm_logger_group_id:
