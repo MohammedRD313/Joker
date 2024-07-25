@@ -2,7 +2,6 @@ import sys
 import contextlib
 import JoKeRUB
 from JoKeRUB import BOTLOG_CHATID, HEROKU_APP, PM_LOGGER_GROUP_ID
-
 from .Config import Config
 from .core.logger import logging
 from .core.session import l313l
@@ -65,7 +64,7 @@ async def startup_process():
 
 async def externalrepo():
     if Config.VCMODE:
-        await install_externalrepo("https://github.com/MohammedRD313/Scorpion", "jepvc", "jeptnvc")
+        await install_externalrepo("https://github.com/MohammedRD313/Scorpion", "jepvc", "jepthonvc")
 
 l313l.loop.run_until_complete(externalrepo())
 l313l.loop.run_until_complete(startup_process())
