@@ -66,8 +66,8 @@ async def setup_bot():
             if option.ip_address == l313l.session.server_address:
                 if l313l.session.dc_id != option.id:
                     LOGS.warning(
-                        f"⌯︙معرف ثابت في الجلسة من {l313l.session.dc_id}"
-                        f"⌯︙لـ  {option.id}"
+                        f"✎┊‌معرف ثابت في الجلسة من {l313l.session.dc_id}"
+                        f"✎┊‌لـ  {option.id}"
                     )
                 l313l.session.set_dc(option.id, option.ip_address, option.port)
                 l313l.session.save()
@@ -94,9 +94,9 @@ async def startupmessage():
         if BOTLOG:
             Config.CATUBLOGO = await l313l.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://t.me/MemeSoundJep/24",
-                caption="**‏᯽︙ بــوت الجوكر يـعـمـل بـنـجـاح ✓ \n᯽︙ أرسل `.الاوامر`لرؤية اوامر السورس \n  ᯽︙ لأستعمال بوت الأختراق عبر كود التيرمكس أرسل`.هاك`**",
-                buttons=[(Button.url("سورس الجوكر", "https://t.me/jepthon"),)],
+                "https://telegra.ph/file/423c42d2485116caa3f32.jpg",
+                caption="**‏✎┊‌ سورس العقرب يـعـمـل بـنـجـاح ✅\n\n✎┊‌ أرسل ( `.فحص` ) للتأكد\n\nالعقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**",
+                buttons=[(Button.url("سورس العقرب", "https://t.me/Scorpions_scorp"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -125,6 +125,7 @@ async def startupmessage():
     except Exception as e:
         LOGS.error(e)
         return None
+
 
 
 async def mybot():
