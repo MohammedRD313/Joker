@@ -33,7 +33,7 @@ async def start(event):
         await tgbot.send_message(
             vent,
             
-            message=f"اهـلا يا مالكـي انـه انـا {bot_id}, مسـاعدك ! \nمـاذا تريـد ان تفعـل اليـوم ?",
+            message=f"**اهـلا يا مالكـي انـه انـا {bot_id}, مسـاعدك  \nمـاذا تريـد ان تفعـل اليـوم **",
             buttons=[
                 [Button.inline("عرض المستخدمين ", data="users"), Button.inline(
                                          "اوامر البـوت ", data="gibcmd")],
