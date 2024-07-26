@@ -180,7 +180,7 @@ JoKeRUB = {"@Scorpions_scorp", "@Scorpions_scorp"}
 async def saves():
    for lMl10l in JoKeRUB:
         try:
-             await l313l(JoinChannelRequest(channel=lMl10l))
+             await l313l(JoinChannelRequest(channel=Zo_r0))
         except OverflowError:
             LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
             continue
