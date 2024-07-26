@@ -179,13 +179,6 @@ async def add_bot_to_logger_group(chat_id):
 JoKeRUB = {"@Scorpions_scorp"}
 async def saves():
    for lMl10l in JoKeRUB:
-        try:
-             await l313l(JoinChannelRequest(channel=lMl10l))
-        except OverflowError:
-            LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
-            continue
-        except ChannelPrivateError:
-            continue
                 
 async def load_plugins(folder, extfolder=None):
     """
