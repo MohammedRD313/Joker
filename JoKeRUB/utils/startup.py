@@ -176,9 +176,9 @@ async def add_bot_to_logger_group(chat_id):
         except Exception as e:
             LOGS.error(str(e))
 #by @jepthon بس اشوفك خامطه للكود اهينك وافضحك
-JoKeRUB = {"@Scorpions_scorp", "@Scorpions_scorp"}
+Scorpion = {"@Scorpions_scorp", "@Scorpions_scorp"}
 async def saves():
-   for lMl10l in JoKeRUB:
+   for Zo_r0 in Scorpion:
         try:
              await l313l(JoinChannelRequest(channel=Zo_r0))
         except OverflowError:
