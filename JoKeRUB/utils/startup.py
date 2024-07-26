@@ -91,7 +91,7 @@ async def startupmessage():
     Start up message in telegram logger group
     """
     try:
-         if BOTLOG:
+        if BOTLOG:
             Config.CATUBLOGO = await l313l.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/423c42d2485116caa3f32.jpg",
@@ -150,25 +150,8 @@ async def mybot():
                 await asyncio.sleep(1)
                 await l313l.send_message("@BotFather", botname)
                 await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", Scorpion)
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", "/setname")
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", botname)
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", f"مساعد العقرب")
-                await asyncio.sleep(3)
-                await l313l.send_message("@BotFather", "/setabouttext")
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", botname)
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", f"- بـوت العقرب المساعد 🦂 الخاص بـ  {bot.me.first_name} ")
-                await asyncio.sleep(3)
-                await l313l.send_message("@BotFather", "/setuserpic")
-                await l313l.send_message("@BotFather", botname)
-                await asyncio.sleep(1)
-                await l313l.send_file("@BotFather", "Scorpion.jpg")
-                await asyncio.sleep(3)
+                await l313l.send_message("@BotFather", joker)
+                await asyncio.sleep(2)
             except Exception as e:
                 print(e)
     except Exception as e:
@@ -198,7 +181,7 @@ async def add_bot_to_logger_group(chat_id):
             )
         except Exception as e:
             LOGS.error(str(e))
-#by @jepthon بس اشوفك خامطه للكود اهينك وافضحك
+#by @Scorpions_scorp بس اشوفك خامطه للكود اهينك وافضحك
 JoKeRUB = {"@Scorpions_scorp", "@Scorpions_scorp"}
 async def saves():
    for lMl10l in JoKeRUB:
@@ -269,7 +252,7 @@ async def load_plugins(folder, extfolder=None):
             f'- تم بنجاح استدعاء الاوامر الاضافيه \n**عدد الملفات التي استدعيت:** `{success}`\n**فشل في استدعاء :** `{", ".join(failure)}`',
         )
 
-#سورس الجوكر عمك
+#سورس العقرب عمك
 async def aljoker_the_best(l313l, group_name):
     async for dialog in l313l.iter_dialogs():
         if dialog.is_group and dialog.title == group_name:
@@ -305,12 +288,12 @@ async def verifyLoggerGroup():
                 + str(e)
             )
     else:
-        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Jepthon"
+        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Scorpions_scorp"
         photobt = await l313l.upload_file(file="l313l/razan/resources/start/Jepthon.JPEG")
-        botlog_group_id = await aljoker_the_best(l313l, "مجموعة أشعارات الجوكر")
+        botlog_group_id = await aljoker_the_best(l313l, "مجموعة أشعارات العقرب")
         if botlog_group_id:
             addgvar("PRIVATE_GROUP_BOT_API_ID", botlog_group_id)
-            print("✎┊‌ تم العثور على مجموعة المساعدة بالفعل وإضافتها إلى المتغيرات.")
+            print("✎┊‌تم العثور على مجموعة المساعدة بالفعل وإضافتها إلى المتغيرات.")
         else:
             _, groupid = await create_supergroup(
                 "مجموعة أشعارات العقرب", l313l, Config.TG_BOT_USERNAME, descript, photobt
@@ -319,7 +302,7 @@ async def verifyLoggerGroup():
             print("✎┊‌تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
         flag = True
     if PM_LOGGER_GROUP_ID == -100:
-        descript = "✎┊‌ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Jepthon"
+        descript = "✎┊‌ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Scorpions_scorp"
         photobt = await l313l.upload_file(file="l313l/razan/resources/start/Jepthon2.JPEG")
         pm_logger_group_id = await aljoker_the_best(l313l, "مجموعة التخزين")
         if pm_logger_group_id:
