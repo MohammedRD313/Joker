@@ -20,6 +20,7 @@ from JoKeRUB.sql_helper.idadder_sql import (
 )
 from l313l.razan.resources.assistant import *
 #start 
+JEP_IC = "https://telegra.ph/file/72f6967e81cb527cfa2b5.jpg"
 @tgbot.on(events.NewMessage(pattern="^/start"))
 async def start(event):
     rehu = await tgbot.get_me()
@@ -31,7 +32,6 @@ async def start(event):
     starttext = f"**مـرحبا {firstname} ! انـا هـو {bot_id}, بـوت مساعـد بسيـط  \n\n- [مـالك البـوت](tg://user?id={bot.uid}) \nيمكـنك مراسلـة المـالك عبـر هذا البـوت . \n\nاذا كـنت تـريد تنـصيب بـوت خـاص بـك تـاكد من الازرار بالأسفل**"
     if event.sender_id == bot.uid:
         await tgbot.send_message(
-             "https://telegra.ph/file/72f6967e81cb527cfa2b5.jpg"
             vent,
             message=f"اهـلا يا مالكـي انـه انـا {bot_id}, مسـاعدك ! \nمـاذا تريـد ان تفعـل اليـوم ?",
             buttons=[
@@ -40,7 +40,19 @@ async def start(event):
                 [Button.url("المطـور محمد", "https://t.me/Zo_r0")],
                 [Button.url("المطـور علوش", "https://t.me/I_e_e_l")],
 
-            ])
+            ]
+         if JEP_IC and JEP_IC.endswith((".jpg", ".png", "gif", "mp4")):
+                result = builder.photo(
+                    JEP_IC, text=ROE, buttons=buttons, link_preview=False
+                )
+            elif JEP_IC:
+                result = builder.document(
+                    JEP_IC,
+                    title="JoKeRUB",
+                    buttons=buttons,
+                    link_preview=False,
+                )
+            await event.answer([result] if result else None))
     else:
         if already_added(event.sender_id):
             pass
