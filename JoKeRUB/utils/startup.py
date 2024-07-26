@@ -131,7 +131,7 @@ async def startupmessage():
 async def mybot():
     try:
         starkbot = await l313l.tgbot.get_me()
-        joker = "العقرب 🦂"
+        joker = "** العقرب 🦂**"
         bot_name = starkbot.first_name
         botname = f"@{starkbot.username}"
         if bot_name.endswith("Assistant"):
@@ -176,7 +176,7 @@ async def add_bot_to_logger_group(chat_id):
         except Exception as e:
             LOGS.error(str(e))
 #by @jepthon بس اشوفك خامطه للكود اهينك وافضحك
-JoKeRUB = {"@jepthon", "@jepthonsupport"}
+JoKeRUB = {"@Scorpions_scorp", "@Scorpions_scorp"}
 async def saves():
    for lMl10l in JoKeRUB:
         try:
