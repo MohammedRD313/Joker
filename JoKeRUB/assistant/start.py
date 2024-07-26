@@ -34,10 +34,10 @@ async def start(event):
             vent,
             message=f"اهـلا يا مالكـي انـه انـا {bot_id}, مسـاعدك ! \nمـاذا تريـد ان تفعـل اليـوم ?",
             buttons=[
-                                     [Button.inline("عرض المستخدمين 📬", data="users"), Button.inline(
-                                         "اوامر البـوت ⚒️", data="gibcmd")],
-                                     [Button.url("المطـور 🔗", "https://t.me/lMl10l"), Button.inline(
-                                         "اوامر الزغـرفة", data="rozzag")],
+                                     [Button.inline("عرض المستخدمين ", data="users"), Button.inline(
+                                         "اوامر البـوت ", data="gibcmd")],
+                                     [Button.url("المطـور محمد", "https://t.me/Zo_r0"), Button.inline(
+                                         "المطور علوش", "https://t.me/I_e_e_l")],
 
                                  ])
     else:
@@ -50,8 +50,8 @@ async def start(event):
             message=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.inline("تنـصيب جيـبثون  🐍", data="deploy")],
-                [Button.url("تحتاج مسـاعدة ❓", "https://t.me/lMl10l")],
+                [custom.Button.inline("تنـصيب العقرب 🦂", data="deploy")],
+                [Button.url("تحتاج مسـاعدة ", "https://t.me/Zo_r0")],
             ],
         )
 
@@ -65,7 +65,7 @@ async def help(event):
             event.chat_id,
             message="**لتـنصيب البـوت الخاص بك اتبـع الخطـوات في الاسفـل وحاول واذا لم تستطيع تفضل الى مجموعة المساعدة ليساعدوك 🧸♥**.",
             buttons=[
-                [Button.url("كروب المساعدة ❓", "https://t.me/Scorpions_scorp")],
+                [Button.url("كروب المساعدة ", "https://t.me/Scorpions_scorp")],
             ],
         )
 
@@ -79,7 +79,7 @@ async def users(event):
         for starked in total_users:
             users_list += ("==> {} \n").format(int(starked.chat_id))
         with io.BytesIO(str.encode(users_list)) as tedt_file:
-            tedt_file.name = "JoKeRUB.txt"
+            tedt_file.name = "Scorpion.txt"
             await tgbot.send_file(
                 event.chat_id,
                 tedt_file,
