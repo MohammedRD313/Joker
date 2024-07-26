@@ -176,11 +176,11 @@ async def add_bot_to_logger_group(chat_id):
         except Exception as e:
             LOGS.error(str(e))
 #by @jepthon بس اشوفك خامطه للكود اهينك وافضحك
-Scorpion = {"@Scorpions_scorp", "@Scorpions_scorp"}
+JoKeRUB = {"@jepthon", "@jepthonsupport"}
 async def saves():
-   for Zo_r0 in Scorpion:
+   for lMl10l in JoKeRUB:
         try:
-             await l313l(JoinChannelRequest(channel=Zo_r0))
+             await l313l(JoinChannelRequest(channel=lMl10l))
         except OverflowError:
             LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
             continue
