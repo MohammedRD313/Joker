@@ -54,6 +54,7 @@ async def start(event):
             add_usersid_in_db(event.sender_id)
         await tgbot.send_message(
             event.chat_id,
+            PIC,
             message=starttext,
             link_preview=False,
             buttons=[
