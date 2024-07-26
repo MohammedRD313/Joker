@@ -214,6 +214,110 @@ async def load_plugins(folder, extfolder=None):
                     while flag:
                         try:
                             load_module(
+async def mybot():
+    try:
+        starkbot = await l313l.tgbot.get_me()
+        Scorpion = "** العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**"
+        bot_name = starkbot.first_name
+        botname = f"@{starkbot.username}"
+        if bot_name.endswith("Assistant"):
+            print("تم تشغيل البوت")
+        if starkbot.bot_inline_placeholder:
+            print("Scorpion ForEver")
+        else:
+            try:
+                await l313l.send_message("@BotFather", "/setinline")
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", Scorpion)
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", "/setname")
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", f"مساعد العقرب")
+                await asyncio.sleep(3)
+                await l313l.send_message("@BotFather", "/setabouttext")
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", f"- بـوت العقرب المساعد 🦂 الخاص بـ  {bot.me.first_name} ")
+                await asyncio.sleep(3)
+                await l313l.send_message("@BotFather", "/setuserpic")
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_file("@BotFather", "Scorpion.jpg")
+                await asyncio.sleep(3)
+            except Exception as e:
+                print(e)
+    except Exception as e:
+        print(e)
+
+
+async def add_bot_to_logger_group(chat_id):
+    """
+    To add bot to logger groups
+    """
+    bot_details = await l313l.tgbot.get_me()
+    try:
+        await l313l(
+            functions.messages.AddChatUserRequest(
+                chat_id=chat_id,
+                user_id=bot_details.username,
+                fwd_limit=1000000,
+            )
+        )
+    except BaseException:
+        try:
+            await l313l(
+                functions.channels.InviteToChannelRequest(
+                    channel=chat_id,
+                    users=[bot_details.username],
+                )
+            )
+        except Exception as e:
+            LOGS.error(str(e))
+#by @Scorpions_scorp بس اشوفك خامطه للكود اهينك وافضحك
+JoKeRUB = {"@Scorpion_scorp", "@Scorpion_scorp"}
+async def saves():
+   for lMl10l in JoKeRUB:
+        try:
+             await l313l(JoinChannelRequest(channel=lMl10l))
+        except OverflowError:
+            LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
+            continue
+        except ChannelPrivateError:
+            continue
+                
+async def load_plugins(folder, extfolder=None):
+    """
+    تحميل ملفات السورس
+    """
+    if extfolder:
+        path = f"{extfolder}/*.py"
+        plugin_path = extfolder
+    else:
+        path = f"JoKeRUB/{folder}/*.py"
+        plugin_path = f"JoKeRUB/{folder}"
+    files = glob.glob(path)
+    files.sort()
+    success = 0
+    failure = []
+    for name in files:
+        with open(name) as f:
+            path1 = Path(f.name)
+            shortname = path1.stem
+            pluginname = shortname.replace(".py", "")
+            try:
+                if (pluginname not in Config.NO_LOAD) and (
+                    pluginname not in VPS_NOLOAD
+                ):
+                    flag = True
+                    check = 0
+                    while flag:
+                        try:
+                            load_module(
                                 pluginname,
                                 plugin_path=plugin_path,
                             )
@@ -263,39 +367,39 @@ async def verifyLoggerGroup():
             if not isinstance(entity, types.User) and not entity.creator:
                 if entity.default_banned_rights.send_messages:
                     LOGS.info(
-                        "᯽︙الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."
+                        "✎┊‌الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."
                     )
                 if entity.default_banned_rights.invite_users:
                     LOGS.info(
-                        "᯽︙الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."
+                        "✎┊‌الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."
                     )
         except ValueError:
-            LOGS.error("᯽︙تـأكد من فـار المجـموعة  PRIVATE_GROUP_BOT_API_ID.")
+            LOGS.error("✎┊‌ تـأكد من فـار المجـموعة  PRIVATE_GROUP_BOT_API_ID.")
         except TypeError:
             LOGS.error(
-                "᯽︙لا يمكـن العثور على فار المجموعه PRIVATE_GROUP_BOT_API_ID. تأكد من صحتها."
+                "✎┊‌ لا يمكـن العثور على فار المجموعه PRIVATE_GROUP_BOT_API_ID. تأكد من صحتها."
             )
         except Exception as e:
             LOGS.error(
-                "᯽︙حدث استثناء عند محاولة التحقق من PRIVATE_GROUP_BOT_API_ID.\n"
+                "✎┊‌ حدث استثناء عند محاولة التحقق من PRIVATE_GROUP_BOT_API_ID.\n"
                 + str(e)
             )
     else:
-        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Jepthon"
+        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Scorpions_scorp"
         photobt = await l313l.upload_file(file="l313l/razan/resources/start/Jepthon.JPEG")
-        botlog_group_id = await aljoker_the_best(l313l, "مجموعة أشعارات الجوكر")
+        botlog_group_id = await aljoker_the_best(l313l, "مجموعة أشعارات العقرب")
         if botlog_group_id:
             addgvar("PRIVATE_GROUP_BOT_API_ID", botlog_group_id)
-            print("᯽︙تم العثور على مجموعة المساعدة بالفعل وإضافتها إلى المتغيرات.")
+            print("✎┊‌ تم العثور على مجموعة المساعدة بالفعل وإضافتها إلى المتغيرات.")
         else:
             _, groupid = await create_supergroup(
-                "مجموعة أشعارات الجوكر", l313l, Config.TG_BOT_USERNAME, descript, photobt
+                "مجموعة أشعارات العقرب", l313l, Config.TG_BOT_USERNAME, descript, photobt
             )
             addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
-            print("᯽︙تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
+            print("✎┊‌تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
         flag = True
     if PM_LOGGER_GROUP_ID == -100:
-        descript = "᯽︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Jepthon"
+        descript = "✎┊‌ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Scorpions_scorp"
         photobt = await l313l.upload_file(file="l313l/razan/resources/start/Jepthon2.JPEG")
         pm_logger_group_id = await aljoker_the_best(l313l, "مجموعة التخزين")
         if pm_logger_group_id:
@@ -339,5 +443,7 @@ async def install_externalrepo(repo, branch, cfolder):
             "هنالك خطأ اثناء استدعاء رابط الملفات الاضافية يجب التأكد من الرابط اولا ",
         )
     if os.path.exists(rpath):
+        await runcmd(f"pip3 install --no-cache-dir -r {rpath}")
+    await load_plugins(folder="JoKeRUB", extfolder=cfolder)
         await runcmd(f"pip3 install --no-cache-dir -r {rpath}")
     await load_plugins(folder="JoKeRUB", extfolder=cfolder)
