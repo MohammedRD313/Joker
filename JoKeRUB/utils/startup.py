@@ -131,13 +131,13 @@ async def startupmessage():
 async def mybot():
     try:
         starkbot = await l313l.tgbot.get_me()
-        joker = "الجوكر 🤡"
+        joker = "العقرب 🦂"
         bot_name = starkbot.first_name
         botname = f"@{starkbot.username}"
         if bot_name.endswith("Assistant"):
             print("تم تشغيل البوت")
         if starkbot.bot_inline_placeholder:
-            print("Aljoker ForEver")
+            print(" ScoR ForEver")
         else:
             try:
                 await l313l.send_message("@BotFather", "/setinline")
