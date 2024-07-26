@@ -32,6 +32,7 @@ async def start(event):
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
+            "https://telegra.ph/file/b300df8bfca25fd9a905f.jpg"
             message=f"اهـلا يا مالكـي انـه انـا {bot_id}, مسـاعدك ! \nمـاذا تريـد ان تفعـل اليـوم ?",
             buttons=[
                 [Button.inline("عرض المستخدمين ", data="users"), Button.inline(
