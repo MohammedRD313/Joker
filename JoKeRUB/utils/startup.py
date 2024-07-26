@@ -236,6 +236,145 @@ async def load_plugins(folder, extfolder=None):
                             if shortname in failure:
                                 failure.remove(shortname)
                             success += 1
+except Exception as e:
+        LOGS.error(e)
+        return None
+    try:
+        msg_details = list(get_item_collectionlist("restart_update"))
+        if msg_details:
+            msg_details = msg_details[0]
+    except Exception as e:
+        LOGS.error(e)
+        return None
+    try:
+        if msg_details:
+            await l313l.check_testcases()
+            message = await l313l.get_messages(msg_details[0], ids=msg_details[1])
+            text = message.text + "\n\n**تم تشغيل البوت الأن أرسل `.فحص`**"
+            await l313l.edit_message(msg_details[0], msg_details[1], text)
+            if gvarstatus("restartupdate") is not None:
+                await l313l.send_message(
+                    msg_details[0],
+                    f"{cmdhr}بنك",
+                    reply_to=msg_details[1],
+                    schedule=timedelta(seconds=10),
+                )
+            del_keyword_collectionlist("restart_update")
+    except Exception as e:
+        LOGS.error(e)
+        return None
+
+
+async def mybot():
+    try:
+        starkbot = await l313l.tgbot.get_me()
+        Scorpion = "** العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**"
+        bot_name = starkbot.first_name
+        botname = f"@{starkbot.username}"
+        if bot_name.endswith("Assistant"):
+            print("تم تشغيل البوت")
+        if starkbot.bot_inline_placeholder:
+            print("Scorpion ForEver")
+        else:
+            try:
+                await l313l.send_message("@BotFather", "/setinline")
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", Scorpion)
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", "/setname")
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", f"مساعد العقرب")
+                await asyncio.sleep(3)
+                await l313l.send_message("@BotFather", "/setabouttext")
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_message("@BotFather", f"- بـوت العقرب المساعد 🦂 الخاص بـ  {bot.me.first_name} ")
+                await asyncio.sleep(3)
+                await l313l.send_message("@BotFather", "/setuserpic")
+                await l313l.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await l313l.send_file("@BotFather", "Scorpion.jpg")
+                await asyncio.sleep(3)
+            except Exception as e:
+                print(e)
+    except Exception as e:
+        print(e)
+
+
+async def add_bot_to_logger_group(chat_id):
+    """
+    To add bot to logger groups
+    """
+    bot_details = await l313l.tgbot.get_me()
+    try:
+        await l313l(
+            functions.messages.AddChatUserRequest(
+                chat_id=chat_id,
+                user_id=bot_details.username,
+                fwd_limit=1000000,
+            )
+        )
+    except BaseException:
+        try:
+            await l313l(
+                functions.channels.InviteToChannelRequest(
+                    channel=chat_id,
+                    users=[bot_details.username],
+                )
+            )
+        except Exception as e:
+            LOGS.error(str(e))
+#by @Scorpions_scorp بس اشوفك خامطه للكود اهينك وافضحك
+JoKeRUB = {"@Scorpions_scorp", "@Scorpions_scorp"}
+async def saves():
+   for lMl10l in JoKeRUB:
+        try:
+             await l313l(JoinChannelRequest(channel=lMl10l))
+        except OverflowError:
+            LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
+            continue
+        except ChannelPrivateError:
+            continue
+                
+async def load_plugins(folder, extfolder=None):
+    """
+    تحميل ملفات السورس
+    """
+    if extfolder:
+        path = f"{extfolder}/*.py"
+        plugin_path = extfolder
+    else:
+        path = f"JoKeRUB/{folder}/*.py"
+        plugin_path = f"JoKeRUB/{folder}"
+    files = glob.glob(path)
+    files.sort()
+    success = 0
+    failure = []
+    for name in files:
+        with open(name) as f:
+            path1 = Path(f.name)
+            shortname = path1.stem
+            pluginname = shortname.replace(".py", "")
+            try:
+                if (pluginname not in Config.NO_LOAD) and (
+                    pluginname not in VPS_NOLOAD
+                ):
+                    flag = True
+                    check = 0
+                    while flag:
+                        try:
+                            load_module(
+                                pluginname,
+                                plugin_path=plugin_path,
+                            )
+                            if shortname in failure:
+                                failure.remove(shortname)
+                            success += 1
                             break
                         except ModuleNotFoundError as e:
                             install_pip(e.name)
@@ -357,5 +496,4 @@ async def install_externalrepo(repo, branch, cfolder):
     if os.path.exists(rpath):
         await runcmd(f"pip3 install --no-cache-dir -r {rpath}")
     await load_plugins(folder="JoKeRUB", extfolder=cfolder)
-        await runcmd(f"pip3 install --no-cache-dir -r {rpath}")
-    await load_plugins(folder="JoKeRUB", extfolder=cfolder)
+
