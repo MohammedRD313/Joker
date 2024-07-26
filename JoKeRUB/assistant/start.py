@@ -32,7 +32,7 @@ async def start(event):
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
-            
+            _bt_.send_photo(_msg_.chat.id, "https://t.me/ikgsittitickkhkg/95220",
             message=f"**اهـلا يا مالكـي انـه انـا {bot_id}, مسـاعدك  \nمـاذا تريـد ان تفعـل اليـوم **",
             buttons=[
                 [Button.inline("عرض المستخدمين ", data="users"), Button.inline(
@@ -49,6 +49,7 @@ async def start(event):
             add_usersid_in_db(event.sender_id)
         await tgbot.send_message(
             event.chat_id,
+            _bt_.send_photo,
             message=starttext,
             link_preview=False,
             buttons=[
