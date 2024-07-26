@@ -32,12 +32,7 @@ async def start(event):
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
-            CAT_IMG = "https://telegra.ph/file/d619daa249b56eb805eb5.jpg"
-    if CAT_IMG:
-        CAT = [x for x in CAT_IMG.split()]
-        A_IMG = list(CAT)
-        PIC = random.choice(A_IMG)
-        
+            
             message=f"**اهـلا يا مالكـي انـه انـا {bot_id}, مسـاعدك  \nمـاذا تريـد ان تفعـل اليـوم **",
             buttons=[
                 [Button.inline("عرض المستخدمين ", data="users"), Button.inline(
@@ -54,7 +49,6 @@ async def start(event):
             add_usersid_in_db(event.sender_id)
         await tgbot.send_message(
             event.chat_id,
-            PIC,
             message=starttext,
             link_preview=False,
             buttons=[
