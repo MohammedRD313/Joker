@@ -31,8 +31,8 @@ async def start(event):
     starttext = f"**مـرحبا {firstname} ! انـا هـو {bot_id}, بـوت مساعـد بسيـط  \n\n- [مـالك البـوت](tg://user?id={bot.uid}) \nيمكـنك مراسلـة المـالك عبـر هذا البـوت . \n\nاذا كـنت تـريد تنـصيب بـوت خـاص بـك تـاكد من الازرار بالأسفل**"
     if event.sender_id == bot.uid:
         await tgbot.send_message(
+             "https://telegra.ph/file/72f6967e81cb527cfa2b5.jpg"
             vent,
-            "https://telegra.ph/file/b300df8bfca25fd9a905f.jpg"
             message=f"اهـلا يا مالكـي انـه انـا {bot_id}, مسـاعدك ! \nمـاذا تريـد ان تفعـل اليـوم ?",
             buttons=[
                 [Button.inline("عرض المستخدمين ", data="users"), Button.inline(
