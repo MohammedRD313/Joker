@@ -125,99 +125,11 @@ async def startupmessage():
     except Exception as e:
         LOGS.error(e)
         return None
-
-
-
+        
 async def mybot():
     try:
         starkbot = await l313l.tgbot.get_me()
-        joker = " العقرب 🦂"
-        bot_name = starkbot.first_name
-        botname = f"@{starkbot.username}"
-        if bot_name.endswith("Assistant"):
-            print("تم تشغيل البوت")
-        if starkbot.bot_inline_placeholder:
-            print(" ScoR ForEver")
-        else:
-            try:
-                await l313l.send_message("@BotFather", "/setinline")
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", botname)
-                await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", joker)
-                await asyncio.sleep(2)
-            except Exception as e:
-                print(e)
-    except Exception as e:
-        print(e)
-
-
-async def add_bot_to_logger_group(chat_id):
-    """
-    To add bot to logger groups
-    """
-    bot_details = await l313l.tgbot.get_me()
-    try:
-        await l313l(
-            functions.messages.AddChatUserRequest(
-                chat_id=chat_id,
-                user_id=bot_details.username,
-                fwd_limit=1000000,
-            )
-        )
-    except BaseException:
-        try:
-            await l313l(
-                functions.channels.InviteToChannelRequest(
-                    channel=chat_id,
-                    users=[bot_details.username],
-                )
-            )
-        except Exception as e:
-            LOGS.error(str(e))
-JoKeRUB = {"@Scorpion_scorp"}
-
-async def saves():
-   for lMl10l in JoKeRUB:
-        try:
-             await l313l(JoinChannelRequest(channel=lMl10l))
-        except OverflowError:
-            LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
-            continue
-        except ChannelPrivateError:
-            continue
-async def load_plugins(folder, extfolder=None):
-    """
-    تحميل ملفات السورس
-    """
-    if extfolder:
-        path = f"{extfolder}/*.py"
-        plugin_path = extfolder
-    else:
-        path = f"JoKeRUB/{folder}/*.py"
-        plugin_path = f"JoKeRUB/{folder}"
-    files = glob.glob(path)
-    files.sort()
-    success = 0
-    failure = []
-    for name in files:
-        with open(name) as f:
-            path1 = Path(f.name)
-            shortname = path1.stem
-            pluginname = shortname.replace(".py", "")
-            try:
-                if (pluginname not in Config.NO_LOAD) and (
-                    pluginname not in VPS_NOLOAD
-                ):
-                    flag = True
-                    check = 0
-                    while flag:
-                        try:
-                            load_module(
-async def mybot():
-    try:
-        starkbot = await l313l.tgbot.get_me()
-        Scorpion = "** العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**"
+        Scorpion = "** العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂**"
         bot_name = starkbot.first_name
         botname = f"@{starkbot.username}"
         if bot_name.endswith("Assistant"):
@@ -281,9 +193,9 @@ async def add_bot_to_logger_group(chat_id):
 #by @Scorpions_scorp بس اشوفك خامطه للكود اهينك وافضحك
 JoKeRUB = {"@Scorpion_scorp", "@Scorpion_scorp"}
 async def saves():
-   for lMl10l in JoKeRUB:
+   for Zo_r0 in JoKeRUB:
         try:
-             await l313l(JoinChannelRequest(channel=lMl10l))
+             await l313l(JoinChannelRequest(channel=Zo_r0))
         except OverflowError:
             LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
             continue
