@@ -1,6 +1,7 @@
+
 {
-  "name": "العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂"
-  "description": "استمتعو مع سورس العقرب  😹",
+  "name": "🦂 العقرب",
+  "description": "اللهم صلِ على محمد وآل محمد",
   "logo": "https://telegra.ph/file/05785e96cba092d17ea0c.jpg",
   "keywords": [
     "plugin",
@@ -19,14 +20,6 @@
       "description": "لا تغير هذه القيمه",
       "value": "ANYTHING"
     },
-    "API_HASH": {
-      "description": " آيبي هاش ",
-      "value": ""
-      }, 
-      "APP_ID": {
-      "description":" ايبي ايدي ",
-      "value": ""
-      }, 
     "STRING_SESSION": {
       "description": "هنا ضع كود سيشن تيليثون كود تيرمكس الخاص بك(كود السيشن)",
       "value": ""
@@ -41,6 +34,10 @@
       "value": "",
       "required": false
     },
+    "TG_BOT_USERNAME": {
+      "description": "هنا ضع معرف بوتك بدون @",
+      "value": ""
+    },
     "TG_BOT_TOKEN": {
       "description": "هنا ضع توكن بوتك الذي صنعته",
       "value": ""
@@ -51,12 +48,12 @@
       "required": false
     }
   },
-  "addons": [{
+  "addons": [
     "plan": "heroku-postgresql",
     "options": {
-      "version": "15"
-    }
-  }],
+      "version": "15
+  }]
+}
   "buildpacks": [{
     "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
   },{
@@ -73,5 +70,4 @@
     "url": "https://github.com/jepthoniq/heroku-buildpack-ffmpeg-latest"
   },{
     "url": "heroku/python"
-  }]
-}
+  }
