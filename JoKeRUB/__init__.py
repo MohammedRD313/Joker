@@ -21,7 +21,7 @@ StartTime = time.time()
 JEPVERSION = "1.0.0"
 
 
-if Config.UPSTREAM_REPO == "MohammedRD313":
+if Config.UPSTREAM_REPO == "Heroku":
     UPSTREAM_REPO_URL = "https://github.com/MohammedRD313/Scorpion"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
