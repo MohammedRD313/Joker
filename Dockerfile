@@ -1,6 +1,4 @@
 FROM MohammedRD313/Scorpion:slim-buster
-RUN git clone https://github.com/MohammedRD313/Scorpion.git/root/JoKeRUB
-WORKDIR /root/JoKeRUB
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install git curl python3-pip ffmpeg -y
 RUN pip3 install -U pip
