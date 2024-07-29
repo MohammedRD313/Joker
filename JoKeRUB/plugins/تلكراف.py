@@ -119,50 +119,8 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).seconds
         joker = f"https://telegra.ph/{response['path']}"
-        await jmevent.edit(
+        await jokevent.edit(
             f"** ✎┊‌الـرابـط : ** [اضغـط هنـا]({joker})\
                  \n** ✎┊‌الـوقـت المـأخـوذ : **`{ms} ثـانيـة.`",
             link_preview=False,
         )
-@l313l.ar_cmd(
-    pattern="ctg(?: |$)([\\s\\S]*)",
-    command=("ctg", plugin_category),
-    info={
-        "header": "Reply to link To get link preview using telegrah.s.",
-        "usage": "{tr}ctg <reply/text>",
-    },
-)
-async def ctg(event):
-    "To get link preview"
-    input_str = event.pattern_match.group(1)
-    reply = await event.get_reply_message()
-    reply_to_id = await reply_id(event)
-    if not input_str and reply:
-        input_str = reply.text
-    if not input_str:
-        return await edit_delete(event, "**ಠ∀ಠ Give me link to search..**", 20)
-    urls = extractor.find_urls(input_str)
-    if not urls:
-        return await edit_delete(event, "**There no link to search in the text..**", 20)
-    chat = "@chotamreaderbot"
-    jmevent = await edit_or_reply(event, "```Processing...```")
-    async with event.client.conversation(chat) as conv:
-        try:
-            msg_flag = await conv.send_message(urls[0])
-        except YouBlockedUserError:
-            await edit_or_reply(
-                jmevent, "**Error:** Trying to unblock & retry, wait a sec..."
-            )
-            await zedub(unblock("chotamreaderbot"))
-            msg_flag = await conv.send_message(urls[0])
-        response = await conv.get_response()
-        await event.client.send_read_acknowledge(conv.chat_id)
-        if response.text.startswith(""):
-            await edit_or_reply(jmevent, "Am I Dumb Or Am I Dumb?")
-        else:
-            await jmevent.delete()
-            await event.client.send_message(
-                event.chat_id, response, reply_to=reply_to_id, link_preview=True
-            )
-        await delete_conv(event, chat, msg_flag)
-    
