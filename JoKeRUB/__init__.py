@@ -7,7 +7,7 @@ from .core.logger import logging
 from .core.session import l313l
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __license__ = "كـتابة وتـعديل فريـق العقرب"
 __author__ = "العقرب <https://T.ME/Scorpions_scorp>"
 __copyright__ = " " + __author__
