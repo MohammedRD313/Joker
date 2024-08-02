@@ -6,6 +6,7 @@ from .telegraph_utils import post_to_telegraph
 from .time_utils import time_formatter
 from .utiles import sanga_seperator
 from .times_utils import readable_time
+from .media_utils import media_type
     # تأكد من أنك قد حصلت على مفتاح API من Telegraph
                             
 flag = True
