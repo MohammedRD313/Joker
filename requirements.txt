@@ -83,8 +83,11 @@ youtube_dl==2021.5.16
 user_agent
 img2html
 googletrans-py
-randomstuff.py
 ipaddress
+sanga_seperator
+time_formatter
+readable_time
+media_type
 git+https://github.com/yt-dlp/yt-dlp
 git+https://github.com/buddhhu/img2html.git
 git+https://github.com/alexmercerind/youtube-search-python
