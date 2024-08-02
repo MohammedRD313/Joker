@@ -1,11 +1,16 @@
-from .utils.extdl import install_pip
+import asyncio
+from randomstuff import AsyncClient
+from .Config import Config
 
-try:
-    import randomstuff
-except ModuleNotFoundError:
-    install_pip("randomstuff.py")
-    import randomstuff
+loop = asyncio.get_event_loop()
+rs_client = None
 
-from ..Config import Config
+async def initialize_client():
+    global rs_client
+    rs_client = AsyncClient(api_key=Config.RANDOM_STUFF_API_KEY, version="4")
 
-rs_client = randomstuff.AsyncClient(api_key=Config.RANDOM_STUFF_API_KEY, version="4")
+# تأكد من استدعاء `initialize_client` في السياق المناسب
+if not loop.is_running():
+    loop.run_until_complete(initialize_client())
+else:
+    asyncio.ensure_future(initialize_client())
