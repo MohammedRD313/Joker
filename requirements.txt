@@ -5,6 +5,7 @@ flask_restful
 ocrspace
 ShazamAPI
 akinator
+asyncio
 selenium
 Flask
 flask_restful
