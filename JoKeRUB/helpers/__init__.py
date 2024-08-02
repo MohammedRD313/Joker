@@ -3,6 +3,7 @@ from . import memeshelper as catmemes
 from .aiohttp_helper import AioHttp
 from .utils import *
 from .some_module import post_to_telegraph
+from .some_module import time_formatter
 flag = True
 check = 0
 while flag:
