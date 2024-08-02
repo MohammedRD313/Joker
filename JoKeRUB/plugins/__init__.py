@@ -19,6 +19,7 @@ from ..helpers import *
 from ..helpers.utils import _cattools, _catutils, _format, install_pip, reply_id
 from l313l.razan.resources.Gif import *
 from .humanbytes import humanbytes
+from .covidindia import covidindia
 # =================== CONSTANT ===================
 bot = l313l
 LOGS = logging.getLogger(__name__)
