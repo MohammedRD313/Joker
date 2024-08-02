@@ -2,6 +2,12 @@ from . import fonts
 from . import memeshelper as catmemes
 from .aiohttp_helper import AioHttp
 from .utils import *
+import post_to_telegraph
+
+def post_to_telegraph(title, content):
+
+    # تأكد من أنك قد حصلت على مفتاح API من Telegraph
+                            
 flag = True
 check = 0
 while flag:
