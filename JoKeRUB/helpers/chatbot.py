@@ -1,10 +1,11 @@
-import asyncio
-from randomstuff import AsyncClient
-from .Config import Config
+from .utils.extdl import install_pip
 
-async def main():
-    rs_client = AsyncClient(api_key=Config.RANDOM_STUFF_API_KEY, version="4")
-    # قم بإجراء عملياتك مع rs_client هنا
+try:
+    import randomstuff
+except ModuleNotFoundError:
+    install_pip("randomstuff")
+    import randomstuff
 
-if __name__ == '__main__':
-    asyncio.run(main())
+from ..Config import Config
+
+rs_client = randomstuff.AsyncClient(api_key=Config.RANDOM_STUFF_API_KEY, version="4")
