@@ -84,7 +84,6 @@ user_agent
 img2html
 googletrans-py
 randomstuff.py
-googletrans==3.1.0a0
 ipaddress
 git+https://github.com/yt-dlp/yt-dlp
 git+https://github.com/buddhhu/img2html.git
