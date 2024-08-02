@@ -4,8 +4,6 @@ from .aiohttp_helper import AioHttp
 from .utils import *
 from .some_module import post_to_telegraph
 
-def post_to_telegraph(title, content):
-
     # تأكد من أنك قد حصلت على مفتاح API من Telegraph
                             
 flag = True
