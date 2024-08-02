@@ -14,7 +14,7 @@ __copyright__ = " " + __author__
 
 l313l.version = __version__
 l313l.tgbot.version = __version__
-LOGS = logging.getLogger("Scorpion_scorp")
+LOGS = logging.getLogger("Scorpions_scorp")
 bot = l313l
 
 StartTime = time.time()
