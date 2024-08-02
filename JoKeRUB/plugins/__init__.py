@@ -18,6 +18,7 @@ from ..core.session import l313l
 from ..helpers import *
 from ..helpers.utils import _cattools, _catutils, _format, install_pip, reply_id
 from l313l.razan.resources.Gif import *
+from .humanbytes import humanbytes
 # =================== CONSTANT ===================
 bot = l313l
 LOGS = logging.getLogger(__name__)
