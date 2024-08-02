@@ -10,7 +10,7 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 __version__ = "1.1.0"
 __license__ = "كـتابة وتـعديل فريـق العقرب"
 __author__ = "العقرب <https://T.ME/Scorpions_scorp>"
-__copyright__ = " " + __author__
+__copyright__ = ".." + __author__
 
 l313l.version = __version__
 l313l.tgbot.version = __version__
