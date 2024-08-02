@@ -4,6 +4,9 @@ from .aiohttp_helper import AioHttp
 from .utils import *
 from .some_module import post_to_telegraph
 from .some_module import time_formatter
+from .some_module import sanga_seperator
+from .some_module import readable_time
+from .some_module import media_type
 flag = True
 check = 0
 while flag:
