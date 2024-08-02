@@ -22,7 +22,9 @@ from ..helpers.functions import (
     vid_to_gif,
 )
 from ..helpers.utils import _cattools, _catutils, _format, parse_pre, reply_id
-
+def thumb_from_audio(audio_file):
+    # تنفيذ الدالة
+    pass
 plugin_category = "misc"
 
 if not os.path.isdir("./temp"):
