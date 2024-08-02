@@ -21,6 +21,7 @@ from l313l.razan.resources.Gif import *
 from .humanbytes import humanbytes
 from .covidindia import covidindia
 from .deEmojify import deEmojify
+from .convert_toimage import convert_toimage
 # =================== CONSTANT ===================
 bot = l313l
 LOGS = logging.getLogger(__name__)
