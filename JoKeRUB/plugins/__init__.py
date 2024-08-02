@@ -22,7 +22,7 @@ from .humanbytes import humanbytes
 from .covidindia import covidindia
 from .deEmojify import deEmojify
 from .convert_toimage import convert_toimage
-from .extract_time import extract_time
+
 # =================== CONSTANT ===================
 bot = l313l
 LOGS = logging.getLogger(__name__)
