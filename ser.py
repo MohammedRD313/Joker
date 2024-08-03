@@ -1,5 +1,11 @@
-from waitress import serve
-from app import app  # تأكد من تعديل هذا حسب مسار تطبيقك
+from flask import Flask
+app = Flask(__name__)
+
+
+@app.route('/')
+def hello_world():
+    return ''
+
 
 if __name__ == "__main__":
-    serve(app, host='0.0.0.0', port=8000)
+    app.run()
