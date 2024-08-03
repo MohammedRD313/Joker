@@ -58,7 +58,7 @@ def load_module(shortname, plugin_path=None):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["JoKeRUB.plugins." + shortname] = mod
-        LOGS.info("✎┊‌ تم بنجاح تحميل ملف ✓" + shortname)
+        LOGS.info("✎┊‌ Uploaded " + shortname)
 
 
 def remove_plugin(shortname):
