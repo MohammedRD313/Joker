@@ -20,9 +20,13 @@ api.add_resource(Greeting, '/')
 api.add_resource(HealthCheck, '/health')
 
 @app.errorhandler(404)
-def not_found(e):
-    return jsonify({"error": "Not found"}), 404
+def not_found(error):
+    return jsonify({"error": "Resource not found"}), 404
 
 @app.errorhandler(500)
-def internal_error(e):
+def internal_error(error):
     return jsonify({"error": "Internal server error"}), 500
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
