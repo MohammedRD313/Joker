@@ -17,7 +17,7 @@ from .utils import (
     saves,
 )
 
-LOGS = logging.getLogger("")
+LOGS = logging.getLogger(".")
 
 
 LOGS.info(JoKeRUB.__copyright__)
