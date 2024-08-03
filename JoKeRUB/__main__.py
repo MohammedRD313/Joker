@@ -46,14 +46,9 @@ async def startup_process():
     await load_plugins("plugins")
     await load_plugins("assistant")
     LOGS.info("╔══════════════════════════════╗")
-    LOGS.info("""
- ✎┊‌ الانلاين يعمل الان ✓ """)
-    LOGS.info(
-        f" تم تشغيل سورس العقرب بنجاح ارسل كلمة {cmdhr}فحص للتأكد \
-        \n 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 ✅"
-    )
-    LOGS.info("""
-╚══════════════════════════════╝""")
+    LOGS.info("""✎┊‌ الانلاين يعمل الان ✓ """)
+    LOGS.info(f" تم تشغيل سورس العقرب بنجاح ارسل كلمة {cmdhr}فحص للتأكد \n 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 ✅")
+    LOGS.info("╚══════════════════════════════╝")
     await verifyLoggerGroup()
     await saves()
     await add_bot_to_logger_group(BOTLOG_CHATID)
