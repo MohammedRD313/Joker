@@ -10,7 +10,7 @@ from JoKeRUB import l313l
 
 from ..core.managers import edit_or_reply
 from ..helpers.utils import _cattools, reply_id
-from . import convert_toimage, deEmojify, phcomment, threats, trap, trash
+from . import convert_toimage, deEmojify, phcomment, trap, trash
 
 plugin_category = "fun"
 
