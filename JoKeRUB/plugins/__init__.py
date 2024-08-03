@@ -22,6 +22,7 @@ from .humanbytes import humanbytes
 from .covidindia import covidindia
 from .deEmojify import deEmojify
 from .convert_toimage import convert_toimage
+from .phcomment import SomeClassOrFunction
 # =================== CONSTANT ===================
 bot = l313l
 LOGS = logging.getLogger(__name__)
