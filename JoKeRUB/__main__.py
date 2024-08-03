@@ -61,7 +61,7 @@ async def externalrepo():
 
 l313l.loop.run_until_complete(externalrepo())
 l313l.loop.run_until_complete(startup_process())
-async def test_print():
+
     print("╔══════════════════════════════╗")
     print("""
  ✎┊‌ الانلاين يعمل الان ✓ """)
@@ -71,7 +71,7 @@ async def test_print():
     )
     print("""
 ╚══════════════════════════════╝""")
-    asyncio.run(test_print())
+
 
 if len(sys.argv) in {1, 3, 4}:
     with contextlib.suppress(ConnectionError):
