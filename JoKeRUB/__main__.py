@@ -44,6 +44,16 @@ async def startup_process():
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
+    
+    await verifyLoggerGroup()
+    await saves()
+    await add_bot_to_logger_group(BOTLOG_CHATID)
+    if PM_LOGGER_GROUP_ID != -100:
+        await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
+    await startupmessage()
+    return
+    
+async def test_print():
     print("╔══════════════════════════════╗")
     print("""
  ✎┊‌ الانلاين يعمل الان ✓ """)
@@ -54,14 +64,7 @@ async def startup_process():
     print("""
 ╚══════════════════════════════╝""")
     asyncio.run(test_print())
-    await verifyLoggerGroup()
-    await saves()
-    await add_bot_to_logger_group(BOTLOG_CHATID)
-    if PM_LOGGER_GROUP_ID != -100:
-        await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
-    await startupmessage()
-    return
-
+    
 async def externalrepo():
     if Config.VCMODE:
         await install_externalrepo("https://github.com/MohammedRD313/Scorpion", "jepvc", "jepthonvc")
