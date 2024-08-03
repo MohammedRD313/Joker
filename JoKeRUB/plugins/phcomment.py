@@ -1,6 +1,2 @@
-class SomeClassOrFunction:
-       def __init__(self):
-           pass
-
-       def some_method(self):
-           return "Hello from phcomment!"
+def sample_function():
+    return "Hello from threats module!"
