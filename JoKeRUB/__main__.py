@@ -17,11 +17,8 @@ from .utils import (
     saves,
 )
 
-LOGS = logging.getLogger("JoKeRUB")
+LOGS = logging.getLogger("")
 
-
-LOGS.info(JoKeRUB.)
-LOGS.info(f"Licensed under the terms of the {JoKeRUB.__license__}")
 
 cmdhr = Config.COMMAND_HAND_LER
 
