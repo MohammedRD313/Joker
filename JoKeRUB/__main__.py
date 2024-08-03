@@ -2,7 +2,7 @@ import sys
 import contextlib
 import JoKeRUB
 import asyncio
-from JoKeRUB import BOTLOG_CHATID, HEROKU_APP, PM_LOGGER_GROUP_ID, startup_process
+from JoKeRUB import BOTLOG_CHATID, HEROKU_APP, PM_LOGGER_GROUP_ID
 from .Config import Config
 from .core.logger import logging
 from .core.session import l313l
@@ -44,15 +44,7 @@ async def startup_process():
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
-    print("╔══════════════════════════════╗")
-    print("""
- ✎┊‌ الانلاين يعمل الان ✓ """)
-    print(
-        f" تم تشغيل سورس العقرب بنجاح ارسل كلمة {cmdhr}فحص للتأكد \
-        \n 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 ✅"
-    )
-    print("""
-╚══════════════════════════════╝""")
+
     await verifyLoggerGroup()
     await saves()
     await add_bot_to_logger_group(BOTLOG_CHATID)
@@ -72,4 +64,13 @@ if len(sys.argv) in {1, 3, 4}:
     with contextlib.suppress(ConnectionError):
         l313l.run_until_disconnected()
 else:
+    print("╔══════════════════════════════╗")
+    print("""
+ ✎┊‌ الانلاين يعمل الان ✓ """)
+    print(
+        f" تم تشغيل سورس العقرب بنجاح ارسل كلمة {cmdhr}فحص للتأكد \
+        \n 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 ✅"
+    )
+    print("""
+╚══════════════════════════════╝""")
     l313l.disconnect()
