@@ -15,7 +15,7 @@ from JoKeRUB import l313l
 from telethon import types
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
-from ..helpers import media_type, progress, thumb_from_audio
+from ..helpers import media_type, progress
 from ..helpers.functions import (
     convert_toimage,
     convert_tosticker,
