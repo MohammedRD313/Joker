@@ -1,22 +1,16 @@
-import http.server
-import socketserver
 import os
+from flask import Flask
+from flask_restful import Resource, Api
 
-PORT = int(os.environ.get("PORT", 8080))
+app = Flask(__name__)
+api = Api(app)
 
-class SimpleHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == '/':
-            self.send_response(200)
-            self.send_header('Content-type', 'text/plain')
-            self.end_headers()
-            self.wfile.write(b'𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 ✅')
-        else:
-            self.send_response(404)
-            self.send_header('Content-type', 'text/plain')
-            self.end_headers()
-            self.wfile.write(b'Not Found')
+class Greeting(Resource):
+    def get(self):
+        return {"message": "𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 ✅"}
 
-with socketserver.TCPServer(("", PORT), SimpleHTTPRequestHandler) as httpd:
-    print(f"Serving at port {PORT}")
-    httpd.serve_forever()
+api.add_resource(Greeting, '/')
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
