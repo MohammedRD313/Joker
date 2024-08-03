@@ -11,5 +11,5 @@ RUN pip install -r requirements.txt
 ENV PATH="/home/JoKeRUB/bin:$PATH"
 ENV PORT=10000
 # تشغيل تطبيق Flask باستخدام Gunicorn
-CMD ["gunicorn", "-w", "4", "app:app", "-b", "0.0.0.0:10000"]
+CMD ["gunicorn", "-w", "4", "app:app", "-b", "0.0.0.0:8080"]
 CMD python3 ser.py & python3 -m JoKeRUB
