@@ -12,6 +12,7 @@ from .utils import (
     setup_bot,
     mybot,
     startupmessage,
+    startup_process,
     verifyLoggerGroup,
     saves,
 )
