@@ -2,8 +2,7 @@ import sys
 import contextlib
 import JoKeRUB
 import asyncio
-import startup_process
-from JoKeRUB import BOTLOG_CHATID, HEROKU_APP, PM_LOGGER_GROUP_ID
+from JoKeRUB import BOTLOG_CHATID, HEROKU_APP, PM_LOGGER_GROUP_ID, startup_process
 from .Config import Config
 from .core.logger import logging
 from .core.session import l313l
