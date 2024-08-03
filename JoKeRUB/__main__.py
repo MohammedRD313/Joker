@@ -53,6 +53,14 @@ async def startup_process():
     await startupmessage()
     return
     
+
+    
+async def externalrepo():
+    if Config.VCMODE:
+        await install_externalrepo("https://github.com/MohammedRD313/Scorpion", "jepvc", "jepthonvc")
+
+l313l.loop.run_until_complete(externalrepo())
+l313l.loop.run_until_complete(startup_process())
 async def test_print():
     print("╔══════════════════════════════╗")
     print("""
@@ -64,14 +72,6 @@ async def test_print():
     print("""
 ╚══════════════════════════════╝""")
     asyncio.run(test_print())
-    
-async def externalrepo():
-    if Config.VCMODE:
-        await install_externalrepo("https://github.com/MohammedRD313/Scorpion", "jepvc", "jepthonvc")
-
-l313l.loop.run_until_complete(externalrepo())
-l313l.loop.run_until_complete(startup_process())
-l313l.disconnect()
 
 if len(sys.argv) in {1, 3, 4}:
     with contextlib.suppress(ConnectionError):
