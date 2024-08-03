@@ -44,9 +44,6 @@ async def startup_process():
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
-    
-    await verifyLoggerGroup()
-    await saves()
     print("╔══════════════════════════════╗")
     print("""
  ✎┊‌ الانلاين يعمل الان ✓ """)
@@ -56,6 +53,8 @@ async def startup_process():
     )
     print("""
 ╚══════════════════════════════╝""")
+    await verifyLoggerGroup()
+    await saves()
     await add_bot_to_logger_group(BOTLOG_CHATID)
     if PM_LOGGER_GROUP_ID != -100:
         await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
