@@ -20,6 +20,9 @@ from .utils import (
 LOGS = logging.getLogger("")
 
 
+LOGS.info(JoKeRUB.__copyright__)
+LOGS.info(f"Licensed under the terms of the {JoKeRUB.__license__}")
+
 cmdhr = Config.COMMAND_HAND_LER
 
 try:
