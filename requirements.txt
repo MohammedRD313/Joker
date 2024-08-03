@@ -3,7 +3,6 @@ pydub
 waitress
 Flask==2.3.2
 Flask-RESTful==0.3.10
-startup_process
 gunicorn
 ocrspace
 ShazamAPI
