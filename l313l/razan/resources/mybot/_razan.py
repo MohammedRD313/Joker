@@ -2,6 +2,7 @@ from JoKeRUB.Config import Config
 from JoKeRUB.plugins import mention
 
 RAZAN = Config.TG_BOT_USERNAME
+mention = first_name
 # for alive
 ROZ = (
     f"**✎┊‌ [بوت العقرب يعمل بنجاح](t.me/Scorpions_scorp) ✅**\n"
