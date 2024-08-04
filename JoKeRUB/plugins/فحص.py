@@ -49,8 +49,7 @@ async def amireallyalive(event):
     HuRe_IMG = gvarstatus("ALIVE_PIC") or Config.A_PIC
     l313l_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     me = await l313l.get_me()
-    first_name = me.first_name
-    mention = first_name
+    mention = f"[{me.first_name}](tg://user?id={me.id})"
     caption = l313l_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         EMOJI=EMOJI,
