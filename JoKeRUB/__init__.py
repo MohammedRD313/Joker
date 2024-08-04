@@ -9,12 +9,12 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "1.1.0"
 __license__ = "كـتابة وتـعديل فريـق العقرب"
-__author__ = "العقرب <https://T.ME/Scorpions_scorp>"
+__author__ = "العقرب <https://T.ME/Scorpion_scorp>"
 __copyright__ = ".." + __author__
 
 l313l.version = __version__
 l313l.tgbot.version = __version__
-LOGS = logging.getLogger("Scorpions_scorp")
+LOGS = logging.getLogger("Scorpion_scorp")
 bot = l313l
 
 StartTime = time.time()
