@@ -33,6 +33,8 @@ async def jokerping(event):
     PING_TEXT = gvarstatus("PING_TEXT") or "**[𝗜'𝗺 𝗻𝗼𝘁 𝘀𝗲𝗲𝗶𝗻𝗴 𝘆𝗼𝘂 😌](t.me/Scorpions_scorp)**"
     PING_IMG = gvarstatus("PING_PIC") or Config.P_PIC or "https://telegra.ph/file/423c42d2485116caa3f32.jpg"
     HuRe_caption = gvarstatus("PING_TEMPLATE") or temp
+    me = await l313l.get_me()
+    mention = f"[{me.first_name}](tg://user?id={me.id})"
     caption = HuRe_caption.format(
         PING_TEXT=PING_TEXT,
         EMOJI=EMOJI,
