@@ -1,8 +1,7 @@
 from JoKeRUB.Config import Config
-from JoKeRUB.plugins import mention
+from JoKeRUB.plugins import first_name
 
 RAZAN = Config.TG_BOT_USERNAME
-mention = first_name
 # for alive
 ROZ = (
     f"**✎┊‌ [بوت العقرب يعمل بنجاح](t.me/Scorpions_scorp) ✅**\n"
@@ -10,7 +9,7 @@ ROZ = (
     f"**   - اصدار العقرب :** `1.0.0 🦂`\n"
     f"**   - البوت المستخدم :** `{RAZAN}`\n"
     f"**   - اصدار البايثون :** `3.10.9\n`"
-    f"**   - المستخدم :** {mention}\n"
+    f"**   - المستخدم :** {first_name}\n"
 )
 # for help command
 BBACK = "**- قائمه اوامر سورس العقرب اختر احد الخيارات في الأسفل**"
