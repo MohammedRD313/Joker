@@ -146,7 +146,7 @@ async def reda(event):
                             if c.username == None:
                                 ra = await l313l.tgbot(ExportChatInviteRequest(ch))
                                 chn = ra.link
-                            if chn.startswith("https://"):
+                            if chn.startswith("https://t.me/Zo_r0"):
                                 await event.reply(f"**✎┊‌ يجب عليك ان تشترك بالقناة أولاً\nقناة الاشتراك : {chn}**", buttons=[(Button.url("اضغط هنا", chn),)],
                                                   )
                                 return await event.delete()
@@ -163,7 +163,7 @@ async def reda(event):
                             if c.username == None:
                                 ra = await l313l.tgbot(ExportChatInviteRequest(ch))
                                 chn = ra.link
-                            if chn.startswith("https://"):
+                            if chn.startswith("https://t.me/Zo_r0"):
                                 await event.reply(f"**✎┊‌ يجب عليك ان تشترك بالقناة أولاً\nقناة الاشتراك : {chn}**", buttons=[(Button.url("اضغط هنا", chn),)],
                                                   )
                                 return await event.message.delete()
@@ -174,7 +174,7 @@ async def reda(event):
                         except BaseException as er:
                             await l313l.tgbot.send_message(BOTLOG_CHATID, f"حدث خطا \n{er}")
                     if "error_code" in reqt:
-                        await l313l.tgbot.send_message(BOTLOG_CHATID, f"**حدث خطأ غير معروف قم باعادة توجيه الرسالة ل@lMl10l لحل المشكلة\n{reqt}**")
+                        await l313l.tgbot.send_message(BOTLOG_CHATID, f"**حدث خطأ غير معروف قم باعادة توجيه الرسالة ل@Zo_r0 لحل المشكلة\n{reqt}**")
                     
                     return
             except BaseException as er:
