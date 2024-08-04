@@ -65,7 +65,7 @@ async def mutejep(event):
             return
         if user.id == l313l.uid:
             return await edit_or_reply(event, "** . لمـاذا تࢪيـد كتم نفسـك؟  **")
-        if user.id == 7045643989:
+        if user.id == 7275336620:
             return await edit_or_reply(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  **")
         if is_muted(user.id, event.chat_id):
             return await edit_or_reply(
