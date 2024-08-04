@@ -3,7 +3,6 @@ from JoKeRUB.plugins import mention
 
 RAZAN = Config.TG_BOT_USERNAME
 # for alive
-mention = f"[{me.first_name}](tg://user?id={me.id})"
 ROZ = (
     f"**✎┊‌ [بوت العقرب يعمل بنجاح](t.me/Scorpions_scorp) ✅**\n"
     f"**   - اصدار التليثون :** `1.23.0\n`"
