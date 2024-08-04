@@ -1,10 +1,9 @@
 from JoKeRUB.Config import Config
-from JoKeRUB.plugins import first_name
 
 RAZAN = Config.TG_BOT_USERNAME
 # for alive
 ROZ = (
-    f"✎┊‌ [بوت العقرب يعمل بنجاح](t.me/Scorpions_scorp) ✅**\n"
+    f"✎┊‌ [العقرب يعمل بنجاح](t.me/Scorpion_scorp) ✅**\n"
     f"✎┊‌ اصدار التليثون : 1.23.0\n"
     f"✎┊‌ اصدار العقرب : 1.1.0 \n"
     f"✎┊‌ البوت المستخدم : {RAZAN}\n"
