@@ -13,7 +13,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = event.text
         await bot.get_me()
         if query.startswith("السورس") and event.query.user_id == bot.uid:
-            buttons = [[Button.url("قناة السورس", "https://t.me/Scorpions_scorp"), Button.url(" استخراج ايبيات", "https://my.telegram.org/"),],[Button.url(" استخراج تيرمكس", "t.me/Termx00bot"), Button.url(" بوت فاذر", "http://t.me/BotFather"),],[Button.url("المطور محمد", "https://t.me/Zo_r0"),],[Button.url("المطور علوش", "https://t.me/ZS_SQ"),]]
+            buttons = [[Button.url("قناة السورس", "https://t.me/Scorpion_scorp"), Button.url(" استخراج ايبيات", "https://my.telegram.org/"),],[Button.url(" استخراج تيرمكس", "t.me/Termx00bot"), Button.url(" بوت فاذر", "http://t.me/BotFather"),],[Button.url("المطور محمد", "https://t.me/Zo_r0"),],[Button.url("المطور علوش", "https://t.me/I_e_e_l"),]]
             if ROZ_PIC and ROZ_PIC.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(ROZ_PIC, text=ROZ, buttons=buttons, link_preview=False)
             elif ROZ_PIC:
