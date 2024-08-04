@@ -156,7 +156,7 @@ async def mybot():
                 await asyncio.sleep(1)
                 await l313l.send_message("@BotFather", botname)
                 await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", f"مساعد العقرب  {bot.me.first_name} ")
+                await l313l.send_message("@BotFather", f"مساعد العقرب")
                 await asyncio.sleep(3)
                 await l313l.send_message("@BotFather", "/setuserpic")
                 await asyncio.sleep(1)
@@ -168,7 +168,7 @@ async def mybot():
                 await asyncio.sleep(1)
                 await l313l.send_message("@BotFather", botname)
                 await asyncio.sleep(1)
-                await l313l.send_message("@BotFather", f"- بـوت العقرب المساعد 🦂 الخاص بـ  {bot.me.first_name} ")
+                await l313l.send_message("@BotFather", f"- بـوت العقرب المساعد الخاص بـ  {bot.me.first_name} ")
                 await asyncio.sleep(3)
                 await l313l.send_message("@BotFather", "/setuserpic")
                 await l313l.send_message("@BotFather", botname)
@@ -325,7 +325,7 @@ async def verifyLoggerGroup():
             print("✎┊‌تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
         flag = True
     if PM_LOGGER_GROUP_ID == -100:
-        descript = "✎┊‌ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Scorpions_scorp"
+        descript = "✎┊‌ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Scorpion_scorp"
         photobt = await l313l.upload_file(file="l313l/razan/resources/start/Jepthon2.JPEG")
         pm_logger_group_id = await aljoker_the_best(l313l, "مجموعة التخزين")
         if pm_logger_group_id:
