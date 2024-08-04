@@ -3,7 +3,7 @@ from ..Config import Config
 from ..sql_helper.globals import gvarstatus
 from l313l.razan.resources.mybot import *
 
-ROZ_PIC = "https://telegra.ph/file/d94c222c321f6d3352842.jpg"
+ROZ_PIC = "https://telegra.ph/file/423c42d2485116caa3f32.jpg"
 
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(events.InlineQuery)
