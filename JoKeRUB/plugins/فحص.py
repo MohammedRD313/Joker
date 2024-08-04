@@ -48,6 +48,8 @@ async def amireallyalive(event):
     ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**╔==========================╗ **"
     HuRe_IMG = gvarstatus("ALIVE_PIC") or Config.A_PIC
     l313l_caption = gvarstatus("ALIVE_TEMPLATE") or temp
+    first_name = me.first_name
+    mention = first_name
     caption = l313l_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         EMOJI=EMOJI,
