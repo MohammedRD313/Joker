@@ -24,7 +24,7 @@ DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
 DEFAULTUSERBIO = (
     str(DEFAULT_BIO)
     if DEFAULT_BIO
-    else "الحمد لله دائماً وابداً @Scorpions_scorp"
+    else "الحمد لله دائماً وابداً @Scorpion_scorp"
 )
 
 @l313l.ar_cmd(pattern="انتحال(?:\s|$)([\s\S]*)")
@@ -163,7 +163,7 @@ async def reda(event):
         message = base64.b64decode(base64m)
         messageo = message.decode()
         if len(messageo) != 8:
-            return await edit_delete(event, "لا تغير الرسالة @Scorpions_scorp")
+            return await edit_delete(event, "لا تغير الرسالة @Scorpion_scorp")
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID,
