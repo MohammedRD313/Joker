@@ -287,7 +287,7 @@ async def permalink(mention):
 
 @l313l.on(admin_cmd(pattern="سورس(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
-    await edit_or_reply(mention, f"@Scorpions_scorp")
+    await edit_or_reply(mention, f"@Scorpion_scorp")
 
 @l313l.on(admin_cmd(pattern="رفع سندرلا(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
