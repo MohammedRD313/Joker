@@ -689,7 +689,7 @@ async def hussein(event):
     else:
         await event.edit("يُرجى كتابة رسالة مع الأمر للحصول على إجابة.")
 is_Reham = False
-No_group_Joker = "@Scorpions_scorp"
+No_group_Joker = "@Scorpion_scorp"
 # يا يلفاشل هم الك نيه تاخذه وتنشره بسورسك 🤣
 active_aljoker = []
 
