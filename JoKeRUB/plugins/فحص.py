@@ -89,7 +89,7 @@ async def amireallyalive(event):
 
 
 temp = """{ALIVE_TEXT}
- **   [𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆](t.me/Scorpions_scorp) ✅
+ **   [𝗦𝗰𝗼𝗿𝗽𝗶𝗼 𝘄𝗼𝗿𝗸𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆](t.me/Scorpion_scorp) ✅
 
 {EMOJI}‌‎𝐍𝐢𝐦𝐞 | {mention} ٫
 
