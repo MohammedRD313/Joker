@@ -84,7 +84,7 @@ R = [
     "  ⓲ **⪼**  [الالـوان 🔮](https://t.me/gamee?game=ColorHit)   \n"
     "  ⓳ **⪼**  [مدفع الكرات🏮](https://t.me/gamee?game=NeonBlaster)   \n"
     
-    "[العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂](t.me/Scorpions_scorp)   "
+    "[العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂](t.me/Scorpion_scorp)   "
 ]
 
 @l313l.on(admin_cmd(pattern="بلي$"))
