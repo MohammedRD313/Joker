@@ -159,7 +159,7 @@ async def stsfanan(zelzal):
         zelzal_c = f"**{FANAN}**\n"
         zelzal_c += f"**✎┊‌ ثيـم علـم العـراق 🇮🇶**\n"
         zelzal_c += f"**✎┊‌ لـ تحميـل الثيـم ارســل **`.ث1`"
-        zelzal_c += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        zelzal_c += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await zelzal.client.send_file(zelzal.chat_id, sts_fanan, caption=zelzal_c, reply_to=zel)
 
 
@@ -172,7 +172,7 @@ async def stsfanan(lon):
         zed_c = f"**{FANAN}**\n"
         zed_c += f"**✎┊‌ ثيم البشير شو HD غير مضر للعيون ❤️ ...**\n"
         zed_c += f"**✎┊‌ لـ تحميـل الثيـم ارســل **`.ث2`"
-        zed_c += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        zed_c += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await lon.client.send_file(lon.chat_id, sts_fanan2, caption=zed_c, reply_to=lonid)
 
 
@@ -185,7 +185,7 @@ async def stsfanan(i):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم البشير_شو2..ثيم تجريبي🧸❤️ **\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث3` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await i.client.send_file(i.chat_id, sts_fanan3, caption=tumc, reply_to=sic_id)
 
 
@@ -198,7 +198,7 @@ async def stsfanan(lon):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم احمر وازرق بخلفية جوكر بنت كارتونيه متدرج بأحترافيه🧸🧡**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث4` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await lon.client.send_file(
             lon.chat_id, sts_fanan4, caption=tumc, reply_to=reply_to_id
         )
@@ -213,7 +213,7 @@ async def stsfanan(malat):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم بخلفية بناتية بألوان متنوعة ومتدرجه ولماعة جداً غير مضر للعيون🎁🤍**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث5` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await malat.client.send_file(
             malat.chat_id, sts_fanan5, caption=tumc, reply_to=reply_to_id
         )
@@ -228,7 +228,7 @@ async def stsfanan(zelzalo):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم للفنانة (بيلي اليش) الثيم ازرق فاتح وأبيض غير مضر للعيون🧸💙**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث6` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await zelzalo.client.send_file(
             zelzalo.chat_id, sts_fanan6, caption=tumc, reply_to=reply_to_id
         )
@@ -243,7 +243,7 @@ async def stsfanan(zed):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم اخضر وأبيض للفنانه بيلي اليش🧸💚...**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث7` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await zed.client.send_file(
             zed.chat_id, sts_fanan7, caption=tumc, reply_to=reply_to_id
         )
@@ -258,7 +258,7 @@ async def stsfanan(zed):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم فرقه ( BTS ) الثيم متناسق مع قليل من الشفافيه 🧸🌌...**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث8` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await zed.client.send_file(
             zed.chat_id, sts_fanan8, caption=tumc, reply_to=reply_to_id
         )
@@ -272,7 +272,7 @@ async def stsfanan(zed):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم لفرقة bts الكورية باللون الأسود🧸🌌..**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث9` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await zed.client.send_file(
             zed.chat_id, sts_fanan9, caption=tumc, reply_to=reply_to_id
         )
@@ -286,7 +286,7 @@ async def stsfanan(zed):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم لفرقة bts الكورية بلون فاتح غير مضر للعيون 🧸🌁...**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث10` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await zed.client.send_file(
             zed.chat_id, sts_fanan10, caption=tumc, reply_to=reply_to_id
         )
@@ -300,7 +300,7 @@ async def stsfanan(zed):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم أنمي برسائل شفافه غير مضر للعيون 🧸🤍...**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث11` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await zed.client.send_file(
             zed.chat_id, sts_fanan11, caption=tumc, reply_to=reply_to_id
         )
@@ -314,7 +314,7 @@ async def stsfanan(zed):
         tumc = f"**{FANAN}**\n\n"
         tumc += f"**✎┊‌ ثيم داكن أزرق غامق وأبيض خفيف، بقليل من الشفافية🤍...**\n"
         tumc += f"**✎┊‌ لـ تحميـل الثيـم ارســل ** `.ث12` "
-        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpions_scorp)**🦂"
+        tumc += f"\n\n** [العقرب | 𝗦𝗰𝗼𝗿𝗽𝗶𝗼 ](t.me/Scorpion_scorp)**🦂"
         await zed.client.send_file(
             zed.chat_id, sts_fanan12, caption=tumc, reply_to=reply_to_id
         )
