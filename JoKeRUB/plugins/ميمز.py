@@ -30,7 +30,7 @@ async def _(event):
         except YouBlockedUserError:
             await event.edit("** اولا الغي حظر @SpamBot وحاول مجددا**")
             return
-        await event.edit(f"- {response.message.message}\n @Scorpions_scorp")
+        await event.edit(f"- {response.message.message}\n @Scorpion_scorp")
 
 
 @l313l.on(admin_cmd(pattern="الاغنية ?(.*)"))
