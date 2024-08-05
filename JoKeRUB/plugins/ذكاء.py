@@ -2,9 +2,6 @@ import asyncio
 from telethon import events
 from telethon.errors import FloodWaitError, YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
-
-from JoKeRUB import l313l
-from . import l313l
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 
@@ -15,8 +12,9 @@ async def zelzal_gpt(event):
     zilzal = event.pattern_match.group(1)
     zzz = await event.get_reply_message()
     
-    bot_username = "@ScorGPTbot"
-    
+    # الحصول على اسم البوت من إعدادات التكوين أو تعيين قيمة افتراضية
+    bot_username = Config.BOT_USERNAME if hasattr(Config, 'BOT_USERNAME') else "@YourDefaultBot"
+
     if not zilzal and not event.reply_to_msg_id:
         return await edit_or_reply(event, "**✎┊‌ بالرد على السؤال او بأضافة سؤال \n يعني تكتب (`.سؤال`) وبعده سؤالك وخلص 😌 \n\n مثال : \n `.سؤال من هو مخترع الكهرباء`**")
     
