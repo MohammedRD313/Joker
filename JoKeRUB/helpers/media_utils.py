@@ -1,6 +1,7 @@
-defdef media_type(content_type):
-    # تأكد من أن content_type هو نص
-    if isinstance(content_type, str):
+def media_type(message):
+    # تحقق من أن message هو كائن يحتوي على content_type
+    if hasattr(message, 'content_type') and isinstance(message.content_type, str):
+        content_type = message.content_type
         if content_type.startswith('application/json'):
             return 'JSON'
         elif content_type.startswith('text/html'):
@@ -12,7 +13,14 @@ defdef media_type(content_type):
         else:
             return 'Unknown'
     else:
-        # إذا لم يكن content_type نصًا، ارجع 'Unknown'
+        # إذا لم يكن message يحتوي على content_type نصي، ارجع 'Unknown'
         return 'Unknown'
 
-# مثال على كيفية استخدام الدالةسيطبع 'Audio'
+# مثال على كيفية استخدام الدالة
+class Message:
+    def __init__(self, content_type):
+        self.content_type = content_type
+
+reply = Message('audio/mpeg')
+mediatype = media_type(reply)
+print(mediatype)  # سيطبع 'Audio'
