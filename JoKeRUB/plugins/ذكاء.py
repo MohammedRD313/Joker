@@ -1,22 +1,13 @@
-import requests
 import asyncio
-import os
-import sys
-import urllib.request
-from datetime import timedelta
 from telethon import events
-from telethon.errors import FloodWaitError
-from telethon.tl.functions.messages import GetHistoryRequest, ImportChatInviteRequest
-from telethon.tl.functions.channels import JoinChannelRequest
-from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telethon.tl.functions.contacts import UnblockRequest as unblock
-from telethon.tl.functions.messages import ImportChatInviteRequest as Get
+from telethon.errors import FloodWaitError, YouBlockedUserError
+from telethon.tl.functions.messages import ImportChatInviteRequest, GetHistoryRequest
+from telethon.tl.functions.contacts import UnblockRequest
 
 from JoKeRUB import l313l
 from . import l313l
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
-from ..helpers.utils import reply_id
 
 plugin_category = "البوت"
 
@@ -25,14 +16,15 @@ async def zelzal_gpt(event):
     zilzal = event.pattern_match.group(1)
     zzz = await event.get_reply_message()
     
-    # تعيين اسم البوت، يمكن تعديله وفقًا لاحتياجاتك أو تغييره إلى اسم بوت مخصص
-    bot_username = "@ScorGPTbot"  
+    # تعيين اسم البوت
+    bot_username = "@ScorGPTbot"
     
     if not zilzal and not event.reply_to_msg_id:
         return await edit_or_reply(event, "**✎┊‌ بالرد على السؤال او بأضافة سؤال \n يعني تكتب (`.سؤال`) وبعده سؤالك وخلص 😌 \n\n مثال : \n `.سؤال من هو مخترع الكهرباء`**")
-    if not zilzal and event.reply_to_msg_id and zzz.text: 
+    
+    if not zilzal and event.reply_to_msg_id and zzz:
         zilzal = zzz.text
-    if not event.reply_to_msg_id: 
+    elif not event.reply_to_msg_id:
         zilzal = event.pattern_match.group(1)
     
     zed = await edit_or_reply(event, "**✎┊‌ اصبر حبيبي هسة يجاوبك 😁**")
@@ -40,52 +32,53 @@ async def zelzal_gpt(event):
     async with borg.conversation(bot_username) as conv:
         try:
             await conv.send_message(zilzal)
-            zzzthon = await conv.get_response()
-            ahmed = zzzthon.text
+            response = await conv.get_response()
+            response_text = response.text
             
-            if "another 8 seconds" in zzzthon.text:
-                aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌ اصبر حبيبي هسة يجاوبك 😘**")
+            # تحقق من الأخطاء المحتملة
+            if "another 8 seconds" in response_text:
+                response_text = response_text.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌ اصبر حبيبي هسة يجاوبك 😘**")
                 await event.delete()
-                return await borg.send_message(event.chat_id, aa)
+                return await borg.send_message(event.chat_id, response_text)
             
             await asyncio.sleep(5)
-            l313l = await conv.get_response()
-            malath = l313l.text
+            response = await conv.get_response()
+            response_text = response.text
             
-            if "understanding" in l313l.text:
-                aa = malath.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**")
+            if "understanding" in response_text:
+                response_text = response_text.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**")
                 await event.delete()
-                return await borg.send_message(event.chat_id, aa)
+                return await borg.send_message(event.chat_id, response_text)
             
             await zed.delete()
-            await borg.send_message(event.chat_id, f"**السؤال : {zilzal}\n\n{malath}**\n\n───────────────────\n")
+            await borg.send_message(event.chat_id, f"**السؤال : {zilzal}\n\n{response_text}**\n\n───────────────────\n")
         
         except YouBlockedUserError:
-            await unblock(bot_username)
+            await borg(UnblockRequest(bot_username))
             await conv.send_message("/start")
             await conv.get_response()
             await conv.send_message(zilzal)
-            zzzthon = await conv.get_response()
-            ahmed = zzzthon.text
+            response = await conv.get_response()
+            response_text = response.text
             
-            if "another 8 seconds" in zzzthon.text:
-                aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌ اصبر حبيبي هسة يجاوبك 😁**")
+            if "another 8 seconds" in response_text:
+                response_text = response_text.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌ اصبر حبيبي هسة يجاوبك 😁**")
                 await event.delete()
-                return await borg.send_message(event.chat_id, aa)
+                return await borg.send_message(event.chat_id, response_text)
             
             await asyncio.sleep(5)
-            l313l = await conv.get_response()
-            malath = l313l.text
+            response = await conv.get_response()
+            response_text = response.text
             
-            if "understanding" in l313l.text:
-                aa = malath.replace("I'm sorry, I'm not quite understanding the question. Could you please rephrase it?", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**")
+            if "understanding" in response_text:
+                response_text = response_text.replace("I'm sorry, I'm not quite understanding the question. Could you please rephrase it?", "**- عـذرًا .. لم أفهم سؤالك\n- قم بـ إعادة صياغته من فضلك؟!**")
                 await event.delete()
-                return await borg.send_message(event.chat_id, aa)
+                return await borg.send_message(event.chat_id, response_text)
             
-            if "Please wait a moment" in l313l.text:
+            if "Please wait a moment" in response_text:
                 await asyncio.sleep(5)
-                l313l = await conv.get_response()
-                malath = l313l.text
+                response = await conv.get_response()
+                response_text = response.text
             
             await zed.delete()
-            await borg.send_message(event.chat_id, f"**السؤال : {zilzal}\n\n{malath}**\n\n───────────────────\n")
+            await borg.send_message(event.chat_id, f"**السؤال : {zilzal}\n\n{response_text}**\n\n───────────────────\n")
