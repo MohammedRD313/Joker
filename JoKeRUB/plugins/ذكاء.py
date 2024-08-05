@@ -49,7 +49,7 @@ async def zelzal_gpt(event):
                 aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌اصبر حبيبي هسة يجاوبك 😘**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
-            await asyncio.sleep(5)
+            await asyncio.sleep(15)
             l313l = await conv.get_response()
             malath = l313l.text
             if "understanding" in l313l.text: 
@@ -69,7 +69,7 @@ async def zelzal_gpt(event):
                 aa = ahmed.replace("⏳ Please wait another 8 seconds before sending the next question . . .", "**✎┊‌ اصبر حبيبي هسة يجاوبك 😁**") 
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
-            await asyncio.sleep(5)
+            await asyncio.sleep(15)
             l313l = await conv.get_response()
             malath = l313l.text
             if "understanding" in l313l.text:
@@ -77,7 +77,7 @@ async def zelzal_gpt(event):
                 await event.delete()
                 return await borg.send_message(event.chat_id, aa)
             if "Please wait a moment" in l313l.text:
-                await asyncio.sleep(5)
+                await asyncio.sleep(15)
                 l313l = await conv.get_response()
                 malath = l313l.text
             await zed.delete()
