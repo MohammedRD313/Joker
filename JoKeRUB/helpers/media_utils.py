@@ -15,7 +15,4 @@ defdef media_type(content_type):
         # إذا لم يكن content_type نصًا، ارجع 'Unknown'
         return 'Unknown'
 
-# مثال على كيفية استخدام الدالة
-reply = 'audio/mpeg'
-mediatype = media_type(reply)
-print(mediatype)  # سيطبع 'Audio'
+# مثال على كيفية استخدام الدالةسيطبع 'Audio'
