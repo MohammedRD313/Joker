@@ -30,7 +30,7 @@ async def jokerping(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✎┊‌"
-    PING_TEXT = gvarstatus("PING_TEXT") or "**[𝗜'𝗺 𝗻𝗼𝘁 𝘀𝗲𝗲𝗶𝗻𝗴 𝘆𝗼𝘂 😌](t.me/Scorpions_scorp)**"
+    PING_TEXT = gvarstatus("PING_TEXT") or "**[𝗜'𝗺 𝗻𝗼𝘁 𝘀𝗲𝗲𝗶𝗻𝗴 𝘆𝗼𝘂 😌](t.me/Scorpion_scorp)**"
     PING_IMG = gvarstatus("PING_PIC") or Config.P_PIC or "https://telegra.ph/file/423c42d2485116caa3f32.jpg"
     HuRe_caption = gvarstatus("PING_TEMPLATE") or temp
     me = await l313l.get_me()
