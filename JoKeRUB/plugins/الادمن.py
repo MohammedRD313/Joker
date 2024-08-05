@@ -71,7 +71,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 plugin_category = "الادمن"
 
 repthon_mute = "https://telegra.ph/file/df10f68f2c057d120c8d0.jpg"
-repthon_ban = "https://telegra.ph/file/16285a887dc3d74279e8b.jpg"
+repthon_ban = "https://telegra.ph/file/7a425faaaec3b56f92743.jpg"
 
 ADMZ = gvarstatus("R_ADMIN") or "رفع مشرف"
 UNADMZ = gvarstatus("R_UNADMIN") or "تنزيل مشرف"
